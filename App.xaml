@@ -1,0 +1,299 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AceMicEV"
+             x:Class="AceMicEV.App">
+    <Application.Resources>
+
+        <Style x:Key="lblScr" TargetType="StackLayout">
+            <Setter Property="WidthRequest" Value ="380"/>
+            <Setter Property="HeightRequest" Value="800"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="VerticalOptions" Value="Start"/>
+        </Style>
+
+        <Style x:Key="lblimage" TargetType="Image">
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="Margin" Value="20"/>
+            <Setter Property="WidthRequest" Value="300"/>
+            <Setter Property="HeightRequest" Value="300"/>
+        </Style>
+
+        <Style x:Key="lblHeader" TargetType="Label" >
+            <Setter Property="WidthRequest" Value="328"/>
+            <Setter Property="TextColor" Value="#211e1f"/>
+            <Setter Property="Margin" Value="30"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            <Setter Property="FontSize" Value="23"/>
+        </Style>
+
+        <Style x:Key="lbldescription"  TargetType="Label">
+            <Setter Property="WidthRequest" Value="328"/>
+            <Setter Property="TextColor" Value="#7d7d7d"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Margin" Value="0"/>
+        </Style>
+
+        <Style x:Key="lblimage2" TargetType="Image">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="WidthRequest" Value="300"/>
+            <Setter Property="HeightRequest" Value="150"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+        </Style>
+
+        <Style x:Key="lblHeader2" TargetType="Label">
+            <Setter Property="WidthRequest" Value="230"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="TextColor" Value="#211e1f"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            <Setter Property="Margin" Value="0"/>
+        </Style>
+
+        <Style x:Key="lblline" TargetType="StackLayout">
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+        </Style>
+
+        <Style x:Key="lblFn" TargetType="Entry" >
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="WidthRequest" Value="165"/>
+            <Setter Property="BackgroundColor" Value="#eef0f2"/>
+            <Setter Property="Opacity" Value="5"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+        </Style>
+
+        <Style x:Key="lblLn" TargetType="Entry">
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="WidthRequest" Value="165"/>
+            <Setter Property="BackgroundColor" Value="#eef0f2"/>
+            <Setter Property="Opacity" Value="5"/>
+            <Setter Property="Margin" Value="10,0,20,0"/>
+        </Style>
+
+        <Style x:Key="lblline2" TargetType="StackLayout">
+            <Setter Property="Orientation" Value="Vertical"/>
+            <Setter Property="VerticalOptions" Value="Start"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+
+        <Style x:Key="lblemail" TargetType="Entry">
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="WidthRequest" Value="355"/>
+            <Setter Property="BackgroundColor" Value="#eef0f2"/>
+            <Setter Property="Opacity" Value="5"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="Margin" Value="3"/>
+        </Style>
+
+        <Style x:Key="lblDes" TargetType="Label">
+            <Setter Property="WidthRequest" Value="340"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
+        <Style x:Key="lblbtn3" TargetType="Button">
+            <Setter Property="WidthRequest" Value="180"/>
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="BackgroundColor" Value="#00BF81"/>
+            <Setter Property="Margin" Value="30"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+
+        <Style x:Key="lbllin1" TargetType="Label">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="LineHeight" Value="0.1"/>
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+        
+        <!--ButtonGroup-->
+        <Style x:Key="lblbtn1"  TargetType="Label">
+            <Setter Property="WidthRequest" Value="194"/>
+            <Setter Property="HeightRequest" Value="60"/>
+            <Setter Property="Opacity" Value="1"/>
+        </Style>
+
+        <!--Button-->
+        <Style x:Key="lblbtn2"  TargetType="Button">
+            <Setter Property="WidthRequest" Value="180"/>
+            <Setter Property="HeightRequest" Value="60"/>
+            <Setter Property="BackgroundColor" Value="#00BF81"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+
+        <Style x:Key="lblSkipbtn"  TargetType="Button">
+            <Setter Property="WidthRequest" Value="180"/>
+            <Setter Property="HeightRequest" Value="60"/>
+            <Setter Property="BackgroundColor" Value="#00BF81"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Margin" Value="20"/>
+
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+
+        <Style x:Key="lblPrebtn"  TargetType="Button">
+            <Setter Property="WidthRequest" Value="165"/>
+            <Setter Property="HeightRequest" Value="60"/>
+            <Setter Property="BackgroundColor" Value="White"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="Padding" Value="5"/>
+
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+
+        <Style x:Key="lbluser" TargetType="Label">
+            <Setter Property="WidthRequest" Value="328"/>
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="TextColor" Value="#211e1f"/>
+        </Style>
+
+        <Style x:Key="lblbtn4" TargetType="Button">
+            <Setter Property="WidthRequest" Value="180"/>
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="BackgroundColor" Value="#00BF81"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+
+        <Style x:Key="lblline3" TargetType="StackLayout">
+            <Setter Property="Orientation" Value="Vertical"/>
+            <Setter Property="VerticalOptions" Value="Start"/>
+            <Setter Property="HeightRequest" Value="200"/>
+            <Setter Property="WidthRequest" Value="400"/>
+            <Setter Property="BackgroundColor" Value="#d0f8d8"/>
+        </Style>
+
+        <Style x:Key="lblImage3" TargetType="Image">
+            <Setter Property="WidthRequest" Value="180"/>
+            <Setter Property="HeightRequest" Value="350"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="VerticalOptions" Value="End"/>
+            <Setter Property="HorizontalOptions" Value="End"/>
+        </Style>
+
+        <Style x:Key="lblDes1" TargetType="Label">
+            <Setter Property="WidthRequest" Value="370"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="VerticalOptions" Value="Start"/>
+            <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            <Setter Property="Margin" Value="0,80,0,0"/>
+            <Setter Property="Padding" Value="7"/>
+        </Style>
+
+        <Style x:Key="lbllineSpace" TargetType="Label">
+            <Setter Property="WidthRequest" Value="370"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="VerticalOptions" Value="Start"/>
+            <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            <Setter Property="Padding" Value="7"/>
+        </Style>
+
+        <Style x:Key="lblOtpline" TargetType="StackLayout">
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+            <Setter Property="WidthRequest" Value="380"/>
+        </Style>
+
+        <Style x:Key="lblotp1" TargetType="Entry" >
+            <Setter Property="HeightRequest" Value="60"/>
+            <Setter Property="WidthRequest" Value="60"/>
+            <Setter Property="BackgroundColor" Value="#eef0f2"/>
+            <Setter Property="Opacity" Value="5"/>
+            <Setter Property="Margin" Value="8"/>
+           <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="FontSize" Value="30"></Setter>
+            <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+        </Style>
+
+        <Style x:Key="lbltext" TargetType="Label">
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="HeightRequest" Value="60"/>
+            <Setter Property="WidthRequest" Value="380"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            <Setter Property="Padding" Value="8"/>
+        </Style>
+
+        <Style x:Key="lblPassimage" TargetType="Image">
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="Margin" Value="30"/>
+            <Setter Property="WidthRequest" Value="260"/>
+            <Setter Property="HeightRequest" Value="260"/>
+        </Style>
+
+        <Style x:Key="lblHeader3" TargetType="Label">
+            <Setter Property="WidthRequest" Value="230"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="TextColor" Value="#211e1f"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            <Setter Property="Margin" Value="7"/>
+        </Style>
+
+        <Style x:Key="lblPass" TargetType="Entry">
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="WidthRequest" Value="350"/>
+            <Setter Property="BackgroundColor" Value="#eef0f2"/>
+            <Setter Property="Opacity" Value="5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+        </Style>
+
+        <Style x:Key="lblProScr" TargetType="StackLayout">
+            <Setter Property="WidthRequest" Value="370"/>
+            <Setter Property="HeightRequest" Value="125"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="VerticalOptions" Value="Start"/>
+            <Setter Property="BackgroundColor" Value="#E6F9F2"/>
+        </Style>
+
+        <Style x:Key="lblScr2" TargetType="Frame">
+            <Setter Property="WidthRequest" Value="370"/>
+            <Setter Property="HeightRequest" Value="800"/>
+            <Setter Property="CornerRadius" Value="35"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+        </Style>
+        
+    </Application.Resources>
+</Application>

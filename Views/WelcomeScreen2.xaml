@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AceMicEV.Views.WelcomeScreen2"
+             Title="WelcomeScreen2"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout Style="{StaticResource lblScr}">
+        <Image Style="{StaticResource lblimage}"  Source="v1_121.png"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Image Source="line2.png" Margin="0,0,10,0"></Image>
+                <Image Source="line1.png" Margin="0,0,10,0"></Image>
+                <Image Source="line3.png" Margin="0,0,10,0"></Image>
+            </StackLayout>
+
+            <Label Style="{StaticResource lblHeader}" Text="Looking for Charging Station for your electric vehicle ?"/>
+
+        <Label Style="{StaticResource lbldescription}"  Text="Acemic is offering EV Charging solutions for users"/>
+
+        <StackLayout Style="{StaticResource lblline}" Margin="0" Padding="0">
+            <Button Style="{StaticResource lblPrebtn}" Text="Previous" CornerRadius="12" BorderColor="#00BF81" BorderWidth="1" Clicked="PreBtn2_Clicked"/>
+            <Button Style="{StaticResource lblbtn2}" Text="Next" CornerRadius="12" Clicked="NextBtn2_Clicked" WidthRequest="165"></Button>
+        </StackLayout>
+
+        <StackLayout>
+            <Button Style="{StaticResource lblSkipbtn}" Text="Skip" CornerRadius="12" Clicked="SkipBtn2_Clicked" Margin="0" BackgroundColor="White" TextColor="Gray"></Button>
+        </StackLayout>
+    </StackLayout>
+    
+</ContentPage>

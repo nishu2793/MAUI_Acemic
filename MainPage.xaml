@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AceMicEV.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="v1_car.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Acemic Charging Station for EV's"
+                SemanticProperties.HeadingLevel="Level1"
+                FontFamily="Bold"
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Our new electric vehicle(EV) charging points has arrived"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Next"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="Next_Clicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="SkipBtn"
+                Text="Skip"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnSkipClicked"
+                HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

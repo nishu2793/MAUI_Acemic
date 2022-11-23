@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AceMicEV.Views.UserType"
+             Title="UserType"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout Style="{StaticResource lblScr}">
+
+        <Image Style="{StaticResource lblimage}"  Source="usertypeimg.png"/>
+
+        <Label Style="{StaticResource lbluser}" Text="Select the type of user you are"/>
+
+        <Button Style="{StaticResource lblbtn3}" Text="Provide / Partner" CornerRadius="10" HorizontalOptions="Center" VerticalOptions="Center"></Button>
+
+        <Button Style="{StaticResource lblbtn4}" Text="User" CornerRadius="10" HorizontalOptions="Center" VerticalOptions="Center"
+                Clicked="UserBtn_Clicked"></Button>
+
+    </StackLayout>
+</ContentPage>

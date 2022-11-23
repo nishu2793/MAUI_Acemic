@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AceMicEV.Views.VerifiyOtpPage"
+             Title="VerifiyOtpPage"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout Style="{StaticResource lblScr}">
+        <StackLayout Style="{StaticResource lblline3}">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="VERIFY DETAILS" Margin="20" HeightRequest="150" FontAttributes="Bold" FontSize="22"/>
+                <Image Style="{StaticResource lblImage3}" Source="v1_132.png"></Image>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout>
+            <Label Style="{StaticResource lblDes1}" Text="Enter the verification code we just sent on your email address."/>
+            <StackLayout>
+                <Label Style="{StaticResource lbllineSpace}" Text="Enter OTP"/>
+            </StackLayout>
+
+            <StackLayout Style="{StaticResource lblOtpline}">
+                
+                <Entry Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1"/>
+                <Entry Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1"/>
+                <Entry Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1"/>
+                <Entry Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Style="{StaticResource lbltext}" Text="Didn't receive OTP? Retry in 00.15 "/>
+            </StackLayout>
+
+            <StackLayout>
+                <Button Style="{StaticResource lblbtn2}" Text="Verify" CornerRadius="12" Clicked="VerifyBtn_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
