@@ -5,6 +5,51 @@
              Title="ProfilePage"
               NavigationPage.HasNavigationBar="False">
     <StackLayout Style="{StaticResource lblScr}">
-        <StackLayout Style="{StaticResource lblProScr}"/>
+        <Frame Style="{StaticResource lblProScr}">
+            <ImageButton x:Name="ImgBtn" Source="imagebox.png" Clicked="Image_Clicked" Margin="0,50,0,0" 
+                             HeightRequest="150" WidthRequest="150">
+            </ImageButton>
+        </Frame>
+        <StackLayout Style="{StaticResource lblScr2}" Spacing="10">
+            <StackLayout Style="{StaticResource lblFnln}">
+                <Label Style="{StaticResource LblFnLnName}" Text="First Name" Margin="0,100,100,0" VerticalOptions="Start"/>
+                <Label Style="{StaticResource LblFnLnName}" Text="Last Name" Margin="0,100,50,0" VerticalOptions="Start"/>
+            </StackLayout>
+            <StackLayout>
+                <StackLayout Style="{StaticResource lblFnln}" Spacing="10">
+                    <Entry x:Name="FName"  Style="{StaticResource lblFn2}"/>
+                    <Entry x:Name="LName"  Style="{StaticResource lblFn2}"/>
+                </StackLayout>
+                <StackLayout>
+                    <StackLayout Style="{StaticResource lblFnln2}">
+                        <Label Style="{StaticResource lblGender}"/>
+                        <StackLayout Margin="35,0,0,0">
+                            <RadioButton Content="Male" Margin="62,16,0,0" FontSize="18"/>
+                        </StackLayout>
+                        <StackLayout Margin="27,0,0,0">
+                            <RadioButton Content="Female" Margin="0,16,0,0" FontSize="18" 
+                                         IsChecked="True"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label Text="Phone Number" Margin="0,0,0,10" FontSize="18"/>
+                        <StackLayout>
+                            <Entry x:Name="txtPhone" Style="{StaticResource lblPhoneNo}" Keyboard="Numeric"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="E-mail" Margin="0,10,0,10" FontSize="18"/>
+                        <StackLayout>
+                            <Entry x:Name="txtEmail" Style="{StaticResource lblemail2}"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout>
+                        <Button Style="{StaticResource lblbtn2}" Text="Done" CornerRadius="12" Margin="60" Clicked="ProClicked_Clicked"/>
+                    </StackLayout>
+                    
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
     </StackLayout>
 </ContentPage>

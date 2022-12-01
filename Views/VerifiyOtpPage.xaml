@@ -19,19 +19,20 @@
             </StackLayout>
 
             <StackLayout Style="{StaticResource lblOtpline}">
-                
-                <Entry Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1"/>
-                <Entry Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1"/>
-                <Entry Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1"/>
-                <Entry Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1"/>
+
+                <Entry x:Name="entry1" Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1" TextChanged="textChangeentry1" />
+                <Entry x:Name="entry2" Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1" TextChanged="textChangeentry2"/>
+                <Entry x:Name="entry3" Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1" TextChanged="textChangeentry3"/>
+                <Entry x:Name="entry4" Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1" TextChanged="textChangeentry4"/>
             </StackLayout>
+                
 
             <StackLayout>
                 <Label Style="{StaticResource lbltext}" Text="Didn't receive OTP? Retry in 00.15 "/>
             </StackLayout>
 
             <StackLayout>
-                <Button Style="{StaticResource lblbtn2}" Text="Verify" CornerRadius="12" Clicked="VerifyBtn_Clicked"/>
+                <Button x:Name="Verify1" Style="{StaticResource lblbtn2}" Text="Verify" CornerRadius="12" Clicked="VerifyBtn_Clicked"/>
             </StackLayout>
         </StackLayout>
     </StackLayout>

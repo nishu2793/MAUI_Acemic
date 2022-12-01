@@ -7,8 +7,28 @@ public partial class PassWordPage : ContentPage
 		InitializeComponent();
 	}
 
+
+
     private void PassSubmit_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new ProfilePage());
+
+        if (txtPassword.Text != txtConfirmPassword.Text)
+        {
+            lblerror.Text = "Password not Matched";
+            lblerror.IsVisible = true;
+        }
+        else
+        {
+
+            string password = txtPassword.Text;
+            Preferences.Set("PasswordKey", txtPassword.Text);
+
+            
+            Navigation.PushAsync(new ProfilePage());
+        }
+
+
     }
+
+   
 }

@@ -52,6 +52,7 @@
 	  <None Remove="Resources\Fonts\poppins.ttf" />
 	  <None Remove="Resources\Images\facebook.png" />
 	  <None Remove="Resources\Images\google.png" />
+	  <None Remove="Resources\Images\imagebox.png" />
 	  <None Remove="Resources\Images\line1.png" />
 	  <None Remove="Resources\Images\line2.png" />
 	  <None Remove="Resources\Images\line3.png" />
@@ -67,20 +68,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="MongoDB.Bson" Version="2.18.0" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
 	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="HomePage.xaml">
+	  <MauiXaml Update="Pages\AboutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ForgotPass.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ProfilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\VerifiyOtpPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\FirstScreenView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\PassWordPage.xaml">

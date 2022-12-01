@@ -1,39 +1,51 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AceMicEV.Views.SignUpPage"
-             Title="SignUpPage"
+             x:Class="AceMicEV.Views.SignUpPage"   
+             Title="SignUpPage"         
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False">
     <StackLayout Style="{StaticResource lblScr}" VerticalOptions="Start">
         <Image Style="{StaticResource lblimage2}"  Source="v1_136.png"/>
         <StackLayout Margin="10">
-        <Label Style="{StaticResource lblHeader2}" Text=" Create an Account"/>
+            <Label Style="{StaticResource lblHeader2}" Text=" Create an Account"/>
+
+            <StackLayout Style="{StaticResource lblline}">
+                <Entry x:Name="txtFirstName" Style="{StaticResource lblFn}" Placeholder= "   FirstName" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Start" />
+                <Entry x:Name="txtLastName" Style="{StaticResource lblLn}" Placeholder= "   LastName" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Start" />
+            </StackLayout>
+
+            <StackLayout Style="{StaticResource lblline2}">
+                <Entry x:Name="txtEmail" Style="{StaticResource lblemail}" Placeholder="   Email / Phone Number"/>
+            </StackLayout>
+
+            <Label Style="{StaticResource lblDes}"  Text="By continuing, you agree to our Terms of Service and our Privacy Policy."/>
+            <StackLayout>
+                <Button Style="{StaticResource lblbtn3}" Text="Sign up" CornerRadius="10" HorizontalOptions="Center" VerticalOptions="Center" Clicked="SignUp_Clicked"></Button>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Line X2="110" Stroke="black" StrokeThickness="1" Margin="0,15,0,0"></Line>
+                <Label Style="{StaticResource lbllin1}" Text="Or Continue With" TextColor="Black"/>
+                <Line X2="115" Stroke="black" StrokeThickness="1" Margin="0,15,0,0"></Line>
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,75,0,0">
+                <Image Source="google.png" Margin="10,0,40,0"></Image>
+                <Image Source="facebook.png" Margin="0,0,40,0"></Image>
+                <Image Source="twitter.png" Margin="0,0,10,0"></Image>
+            </StackLayout>
+
+            <StackLayout Style="{StaticResource lblSkipLine}" Spacing="5" Margin="50,50,0,0">
+                <Label Text="Alreday have an account?" FontSize="18"></Label>
+                <StackLayout>
+                    <Label x:Name="LogInbtn" Text="Log In" FontSize="18" TextColor="#007AFF">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SkipCommand}"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
         
-        <StackLayout Style="{StaticResource lblline}">
-            <Entry x:Name="FirstName" Style="{StaticResource lblFn}" Placeholder= "   FirstName" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Start"    />
-            <Entry x:Name="LastName" Style="{StaticResource lblLn}" Placeholder= "   LastName" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Start" />
-        </StackLayout>
-
-        <StackLayout Style="{StaticResource lblline2}">
-            <Entry x:Name="Email" Style="{StaticResource lblemail}" Placeholder="   Email / Phone Number"/>
-        </StackLayout>
-
-        <Label Style="{StaticResource lblDes}"  Text="By continuing, you agree to our Terms of Service and our Privacy Policy."/>
-
-        <Button Style="{StaticResource lblbtn3}" Text="Sign up" CornerRadius="10" HorizontalOptions="Center" VerticalOptions="Center" Clicked="SignUp_Clicked"></Button>
-        <StackLayout Orientation="Horizontal">
-            <Line X2="110" Stroke="black" StrokeThickness="1" Margin="0,15,0,0"></Line>
-            <Label Style="{StaticResource lbllin1}" Text="Or Continue With" TextColor="Black"/>
-            <Line X2="115" Stroke="black" StrokeThickness="1" Margin="0,15,0,0"></Line>
-
-        </StackLayout>
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,75,0,0">
-            <Image Source="google.png" Margin="10,0,40,0"></Image>
-            <Image Source="facebook.png" Margin="0,0,40,0"></Image>
-            <Image Source="twitter.png" Margin="0,0,10,0"></Image>
-        </StackLayout>
-        </StackLayout>
     </StackLayout>
-
 </ContentPage>

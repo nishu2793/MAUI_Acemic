@@ -4,10 +4,37 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:AceMicEV.Views"
-    Shell.FlyoutBehavior="Disabled">
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="false"
+    NavigationPage.HasNavigationBar="False">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:FirstScreenView}"
+        Title="WelCome"
+        ContentTemplate="{DataTemplate local:WelcomeScreen}"
         Route="MainPage" />
+
+    <ShellContent
+        Title="SignUpPage"
+        ContentTemplate="{DataTemplate local:SignUpPage}"
+        Route="SignUpPage" />
+    <ShellContent
+        Title="Verify"
+        ContentTemplate="{DataTemplate local:VerifiyOtpPage}"
+        Route="VerifiyOtpPage" />
+
+    <ShellContent
+        Title="Password"
+        ContentTemplate="{DataTemplate local:PassWordPage}"
+        Route="PassWordPage" />
+
+    <ShellContent
+        Title="Profile"
+        ContentTemplate="{DataTemplate local:ProfilePage}"
+        Route="ProfilePage" />
+
+    <ShellContent
+        Title="LoginPage"
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="LoginPage" />
+
 </Shell>

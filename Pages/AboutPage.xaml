@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AceMicEV.Pages.AboutPage"
+             Title="AboutPage"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout>
+        <Label 
+            Text="Welcome to About Page!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label x:Name="Label1" Text="Hi" FontSize="Large" TextColor="Red"/>
+        <Label x:Name="User" Text="UserName" FontSize="Large" TextColor="Green"/>
+        <Label x:Name="Token" Text="Token2"/>
+        <Label x:Name="First"/>
+        <Label x:Name="Last"/>
+        <Button x:Name="btnRemovekey" Text="Log out" Clicked="userLogOut" BackgroundColor="#00BF81"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+    </StackLayout>
+</ContentPage>
