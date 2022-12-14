@@ -24,7 +24,11 @@
         <StackLayout>
             <Button Style="{StaticResource lblSkipbtn}" Text="Skip" CornerRadius="12" Clicked="SkipBtn_Clicked" TextColor="Grey" BackgroundColor="White"></Button>
         </StackLayout>
-       
+
+        <StackLayout>
+            <Button Text="Skip" CornerRadius="12" Clicked="SkipBt_Clicked" TextColor="Gray" WidthRequest="60" HeightRequest="40"/>
+        </StackLayout>
+
 
 
     </StackLayout>

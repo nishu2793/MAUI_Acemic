@@ -44,11 +44,11 @@ namespace AceMicEV;
 
 public class LoginService : IUserRepository
 {
-    public async Task<bool> Login(string username, string password)
+    public async Task<bool>login(string username, string password)
     {
         var login = new UserInfo()
         {
-            emailAddress = username,
+            emailId = username,
             Password = password,
             
         };

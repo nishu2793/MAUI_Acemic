@@ -32,4 +32,9 @@ public partial class WelcomeScreen : ContentPage
     {
         Navigation.PushAsync(new UserType());
     }
+
+    private void SkipBt_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new LoginPage());
+    }
 }

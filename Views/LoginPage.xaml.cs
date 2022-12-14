@@ -35,7 +35,7 @@ public partial class LoginPage : ContentPage
             await DisplayAlert("Warning", "Please Input Username & Password", "Ok");
             return;
         }
-        var userinfo = await _loginRepository.Login(userName, password);
+        var userinfo = await _loginRepository.login(userName, password);
         if (userinfo)
         {
             await Navigation.PushAsync(new DashBoardPage());

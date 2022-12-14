@@ -6,4 +6,9 @@ public partial class DashBoardPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+	private void ScanClicked(object sender, EventArgs e)
+	{
+		Navigation.PushAsync(new MainPage());
+	}
 }

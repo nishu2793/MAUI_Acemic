@@ -8,6 +8,6 @@ namespace AceMicEV.Services
 {
     public interface IUserRepository
     {
-        Task<bool> Login(string userName, string password);
+        Task<bool>login(string userName, string password);
     }
 }
