@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace AceMicEV.Services
 {
-    public interface ISignUpRepository
+    public interface IPasswordRepository
     {
-        Task<bool> SignUp(string firstName, string lastName, string email);
+        Task<bool>Passmatch(string password, string did);
+
+        Task<bool> getall(string did);
     }
 }

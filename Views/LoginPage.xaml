@@ -27,8 +27,35 @@
         <StackLayout>
             <Entry x:Name="txtPassword" Style="{StaticResource lblPass3}"/>
         </StackLayout>
+        
+        <StackLayout Style="{StaticResource lblline}" HorizontalOptions="Start">
+            <CheckBox x:Name="checkBox" HorizontalOptions="Start" Margin="3" CheckedChanged="Check_Btn"/>
+            <Label Style="{StaticResource lblRemember}"></Label>
+            <Label Text="Forgot Password?" Margin="95,8,0,0" FontSize="16" TextColor="#007AFF"/>
+        </StackLayout>
+        
         <StackLayout>
             <Button Style="{StaticResource lblbtn3}" Text="Login" CornerRadius="10" HorizontalOptions="Center" VerticalOptions="Center" Clicked="LogIn_Clicked"></Button>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+            <Line X2="115" Stroke="black" StrokeThickness="1" Margin="0,15,0,0"></Line>
+            <Label Style="{StaticResource lbllin2}" Text="Or Continue With" TextColor="Black"/>
+            <Line X2="100" Stroke="black" StrokeThickness="1" Margin="0,15,0,0"></Line>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
+            <Image Source="google.png" Margin="10,0,40,0"></Image>
+            <Image Source="facebook.png" Margin="0,0,40,0"></Image>
+            <Image Source="twitter.png" Margin="0,0,10,0"></Image>
+        </StackLayout>
+        <StackLayout Style="{StaticResource lblSkipLine}" Spacing="5" Margin="50,50,0,0">
+            <Label Text="Don't have an account?" FontSize="18"></Label>
+            <StackLayout>
+                <Label x:Name="SignupBtn" Text="Sign up" FontSize="18" TextColor="#007AFF">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SignUpCommand}"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
         </StackLayout>
     </StackLayout>
 </ContentPage> 

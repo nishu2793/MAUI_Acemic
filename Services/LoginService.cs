@@ -48,8 +48,9 @@ public class LoginService : IUserRepository
     {
         var login = new UserInfo()
         {
-            EmailId = username,
-            Password = password
+            emailAddress = username,
+            Password = password,
+            
         };
         var httpClient = new HttpClient();
         var json = JsonConvert.SerializeObject(login);
@@ -58,7 +59,8 @@ public class LoginService : IUserRepository
         if (response.StatusCode == System.Net.HttpStatusCode.OK)
         {
             var jsonResponse = await response.Content.ReadAsStringAsync();
-            var details = JsonConvert.SerializeObject(JObject.Parse(jsonResponse)["Data"]);
+             var details = JsonConvert.SerializeObject(JObject.Parse(jsonResponse)["Data"]);
+            //var details = JsonConvert.SerializeObject(JObject.Parse(jsonResponse));
 
             var data = JsonConvert.DeserializeObject<AuthResponse>(details);
 

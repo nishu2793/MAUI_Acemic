@@ -1,4 +1,6 @@
-﻿namespace AceMicEV;
+﻿using AceMicEV.Views;
+
+namespace AceMicEV;
 
 public partial class AppShell : Shell
 {

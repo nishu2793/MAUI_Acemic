@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace AceMicEV.Services
 {
-    public interface ISignUpRepository
+    public interface IOtpRepository
     {
-        Task<bool> SignUp(string firstName, string lastName, string email);
+        Task<bool> VerOtp(string did, string otp, string mobileno, string email);
     }
 }

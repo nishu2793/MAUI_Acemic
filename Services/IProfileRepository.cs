@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace AceMicEV.Services
 {
-    public interface ISignUpRepository
+    public interface IProfileRepository
     {
-        Task<bool> SignUp(string firstName, string lastName, string email);
+        Task<bool>Prodata(string did, string firstName, string lastName, string email, string mobileNo, string gender);
     }
 }

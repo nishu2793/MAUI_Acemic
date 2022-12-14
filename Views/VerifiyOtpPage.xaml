@@ -34,6 +34,9 @@
             <StackLayout>
                 <Button x:Name="Verify1" Style="{StaticResource lblbtn2}" Text="Verify" CornerRadius="12" Clicked="VerifyBtn_Clicked"/>
             </StackLayout>
+            <StackLayout>
+                <Label x:Name="OtpShow" HorizontalOptions="Center"/>
+            </StackLayout>
         </StackLayout>
     </StackLayout>
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AceMicEV.Views.ResetPassPage"
+             Title="ResetPassPage">
+    <StackLayout Style="{StaticResource lblScr}">
+
+        <StackLayout>
+            <Label Style="{StaticResource lblRestPass}"/>
+        </StackLayout>
+        <StackLayout>
+            <Entry Style="{StaticResource lblnewPass}"/>
+            <Entry Style="{StaticResource lblConNewPass}"/>
+        </StackLayout>
+        <StackLayout>
+            <Button Style="{StaticResource lblUpdatePass}" Clicked="ResPassBtn_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

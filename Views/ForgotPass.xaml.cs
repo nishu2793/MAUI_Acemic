@@ -8,4 +8,9 @@ public partial class ForgotPass : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void ForgotSubmit_Clicked(object sender, EventArgs e)
+    {
+		Navigation.PushAsync(new ForgotVeriOtp());
+    }
 }

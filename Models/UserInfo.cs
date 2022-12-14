@@ -8,13 +8,22 @@ namespace AceMicEV.Models
 {
     public class UserInfo
     {
-        public string? EmailId { get; set; }
+        public string Did { get; set; }
+        public string? emailAddress { get; set; }
 
         public string? Password { get; set; }
 
         public string? FirstName { get; set; }
+
         public string? LastName { get; set; }
-        public int? PhoneNumber { get; set; }
+
+        public string? MobileNo { get; set; }
+
+        public string? OTP { get; set; }
+
+        public string Gender { get; set;}
+
+        //public string? Email { get; set; }
 
     }
 }

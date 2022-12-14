@@ -12,8 +12,6 @@
         <Label x:Name="Label1" Text="Hi" FontSize="Large" TextColor="Red"/>
         <Label x:Name="User" Text="UserName" FontSize="Large" TextColor="Green"/>
         <Label x:Name="Token" Text="Token2"/>
-        <Label x:Name="First"/>
-        <Label x:Name="Last"/>
         <Button x:Name="btnRemovekey" Text="Log out" Clicked="userLogOut" BackgroundColor="#00BF81"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"/>

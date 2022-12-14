@@ -12,8 +12,8 @@
         </Frame>
         <StackLayout Style="{StaticResource lblScr2}" Spacing="10">
             <StackLayout Style="{StaticResource lblFnln}">
-                <Label Style="{StaticResource LblFnLnName}" Text="First Name" Margin="0,100,100,0" VerticalOptions="Start"/>
-                <Label Style="{StaticResource LblFnLnName}" Text="Last Name" Margin="0,100,50,0" VerticalOptions="Start"/>
+                <Label Style="{StaticResource LblFnLnName}" Text="First Name" Margin="0,100,100,0" VerticalOptions="Start" />
+                <Label Style="{StaticResource LblFnLnName}" Text="Last Name" Margin="0,100,50,0" VerticalOptions="Start" />
             </StackLayout>
             <StackLayout>
                 <StackLayout Style="{StaticResource lblFnln}" Spacing="10">
@@ -23,14 +23,14 @@
                 <StackLayout>
                     <StackLayout Style="{StaticResource lblFnln2}">
                         <Label Style="{StaticResource lblGender}"/>
+                        
                         <StackLayout Margin="35,0,0,0">
-                            <RadioButton Content="Male" Margin="62,16,0,0" FontSize="18"/>
-                        </StackLayout>
-                        <StackLayout Margin="27,0,0,0">
-                            <RadioButton Content="Female" Margin="0,16,0,0" FontSize="18" 
-                                         IsChecked="True"/>
-                        </StackLayout>
-                    </StackLayout>
+                                <RadioButton Content="Male" Margin="62,16,0,0" FontSize="18" GroupName="Gendergroup" CheckedChanged="RadioButton_CheckedChanged" />
+                         </StackLayout>
+                                 <StackLayout Margin="27,0,0,0">
+                            <RadioButton Content="Female" Margin="0,16,0,0" FontSize="18" IsChecked="True" GroupName="Gendergroup" CheckedChanged="RadioButton_CheckedChanged" />
+                                 </StackLayout>
+                     </StackLayout>
 
                     <StackLayout>
                         <Label Text="Phone Number" Margin="0,0,0,10" FontSize="18"/>

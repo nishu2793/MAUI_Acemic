@@ -2,10 +2,22 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AceMicEV.Views.ForgotPass">
-    <StackLayout>
-        <Label
-            Text="Welcome to Home Page!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"></Label>
+    <StackLayout Style="{StaticResource lblScr}">
+        <StackLayout>
+            <Image Style="{StaticResource lblForgotimage}"  Source="forgot.png" />
+            <Label  Style="{StaticResource lblForgot}"/>
+        </StackLayout>
+        <StackLayout Style="{StaticResource lblline4}">
+            <StackLayout>
+            <Label Text=" Enter E-mail / Phone Number" FontSize="18"/>
+        </StackLayout>
+            <StackLayout>
+                <Entry x:Name="txtUserID" Style="{StaticResource lblemail3}"/>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout>
+            <Button Style="{StaticResource lblForgotbtn}" Clicked="ForgotSubmit_Clicked"/>
+        </StackLayout>
+
     </StackLayout>
 </ContentPage>

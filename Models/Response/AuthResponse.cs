@@ -7,16 +7,13 @@ using System.Threading.Tasks;
 namespace AceMicEV.Models.Response
 {
     public class AuthResponse
-    {
+    {  
         public string jwtToken { get; set; }
 
         public string emailId { get; set; }
 
         public string password { get; set; }
 
-        public string firstname { get; set; }
-
-        public string lastname { get; set; }
-
+     
     }
 }
