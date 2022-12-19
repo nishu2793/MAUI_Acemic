@@ -72,6 +72,8 @@ public class LoginService : IUserRepository
             var usertext = data.emailId;
             Preferences.Set("EmailKey", usertext);
 
+            var UserDid = data.userId;
+            Preferences.Set("DidKey", UserDid);
 
             return true;
         }

@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:AceMicEV.Views"
+    xmlns:localMain="clr-namespace:AceMicEV"
     Shell.FlyoutBehavior="Disabled"
     Shell.NavBarIsVisible="false"
     NavigationPage.HasNavigationBar="False">
@@ -36,5 +37,20 @@
         Title="LoginPage"
         ContentTemplate="{DataTemplate local:LoginPage}"
         Route="LoginPage" />
+
+    <ShellContent
+        Title="DashBoard"
+        ContentTemplate="{DataTemplate local:DashBoardPage}"
+        Route="DashBoard" />
     
+    <ShellContent
+        Title="MyMainPage"
+        ContentTemplate="{DataTemplate localMain:MainPage}"
+        Route="MyMainPage" />
+
+    <ShellContent
+        Title="ScanPage"
+        ContentTemplate="{DataTemplate localMain:ScanPage}"
+        Route="ScanPage" />
+
 </Shell>

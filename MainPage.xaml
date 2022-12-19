@@ -12,8 +12,9 @@
 
             <Frame x:Name="barcodeframe" IsVisible="false">
                 <zxing:CameraBarcodeReaderView x:Name="barcodeReader" 
-                                           WidthRequest="300" HeightRequest="300" 
-                IsDetecting="True" IsTorchOn="False" BarcodesDetected="CameraBarcodeReaderView_BarcodesDetected" IsVisible="false" />
+                                               WidthRequest="300" HeightRequest="300" 
+                                               IsDetecting="True" IsTorchOn="False"
+                                               BarcodesDetected="CameraBarcodeReaderView_BarcodesDetected" IsVisible="false" />
             </Frame>
 
             <Label

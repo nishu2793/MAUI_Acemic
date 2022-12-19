@@ -14,6 +14,8 @@ namespace AceMicEV.Models.Response
 
         public string password { get; set; }
 
+        public string userId { get; set; }
+
      
     }
 }

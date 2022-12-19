@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AceMicEV.ScanPage"
+             Title="ScanPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <StackLayout>
+            <Button Text="Skip" CornerRadius="12" Clicked="Scan_Clicked" TextColor="Gray" WidthRequest="60" HeightRequest="40"/>
+        </StackLayout>
+
+        <StackLayout>
+            <Button Text="Pay" CornerRadius="12" Clicked="Pay_Clicked" TextColor="Gray" WidthRequest="60" HeightRequest="40" Margin="500" BackgroundColor="LightGreen"/>
+        </StackLayout>
+        
+    </VerticalStackLayout>
+</ContentPage>

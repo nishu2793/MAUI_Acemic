@@ -25,5 +25,7 @@ namespace AceMicEV.Models
 
         public string? emailId { get; set; }
 
+       
+
     }
 }

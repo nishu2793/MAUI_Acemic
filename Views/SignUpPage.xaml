@@ -36,15 +36,20 @@
                 <Image Source="twitter.png" Margin="0,0,10,0"></Image>
             </StackLayout>
 
-            <StackLayout Style="{StaticResource lblSkipLine}" Spacing="5" Margin="50,50,0,0">
-                <Label Text="Alreday have an account?" FontSize="18"></Label>
+            <StackLayout Style="{StaticResource lblSkipLine}" Spacing="0" Margin="50,50,0,0">
+                <Label Text="Alreday have an account?" FontSize="18" Margin="10"></Label>
+
                 <StackLayout>
+                    <Button Text="Log In" FontSize="18" TextColor="#007AFF" Clicked="LogClicked" BackgroundColor="White"/>
+                </StackLayout>
+                <!--<StackLayout>
                     <Label x:Name="Logcommand" Text="Log In" FontSize="18" TextColor="#007AFF">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding Logincommand}"></TapGestureRecognizer>
                         </Label.GestureRecognizers>
                     </Label>
-                </StackLayout>
+                </StackLayout>-->
+                
             </StackLayout>
         </StackLayout>
         

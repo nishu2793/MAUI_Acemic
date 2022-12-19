@@ -50,11 +50,11 @@ public partial class LoginPage : ContentPage
     {
         if(e.Value==true)
         {
-            DisplayAlert("ohk", "Yes Ofcourse", "Cancel");
+            //DisplayAlert("ohk", "Yes Ofcourse", "Cancel");
         }
         else
         {
-            DisplayAlert("No","No Never", "Ok");
+            //DisplayAlert("No","No Never", "Ok");
         }
     }
     public ICommand SignUpCommand => new Command(async () =>

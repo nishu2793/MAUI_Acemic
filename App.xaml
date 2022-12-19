@@ -509,6 +509,14 @@
             <Setter Property="TextColor" Value="Black"/>
         </Style>
 
+        <Style x:Key="lblUserProfile" TargetType="Entry">
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="WidthRequest" Value="330"/>
+            <Setter Property="BackgroundColor" Value="#eef0f2"/>
+            <Setter Property="Margin" Value="0,3,25,0"/>
+        </Style>
+
+
     </Application.Resources>
    
 

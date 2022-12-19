@@ -5,7 +5,7 @@ namespace AceMicEV.Views;
 
 public partial class ProfilePage : ContentPage
 {
-     IProfileRepository _profileRepository = new ProfileServices();
+    IProfileRepository _profileRepository = new ProfileServices();
     string Gender;
 
     public ProfilePage()

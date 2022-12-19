@@ -25,6 +25,7 @@ public static class MauiProgram
             });
         #endregion;
 
+             
         return builder.Build();
     }
 }

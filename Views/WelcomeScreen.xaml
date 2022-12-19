@@ -4,9 +4,8 @@
              x:Class="AceMicEV.Views.WelcomeScreen"
              Shell.NavBarIsVisible="False"
              Title="WelcomeScreen"
-             NavigationPage.HasNavigationBar="False"
-             >
-    
+             NavigationPage.HasNavigationBar="False">
+
     <StackLayout Style="{StaticResource lblScr}">
         <Image Style="{StaticResource lblimage}"  Source="v1_120.png"/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
@@ -26,7 +25,7 @@
         </StackLayout>
 
         <StackLayout>
-            <Button Text="Skip" CornerRadius="12" Clicked="SkipBt_Clicked" TextColor="Gray" WidthRequest="60" HeightRequest="40"/>
+            <Button Text="Go To Login" CornerRadius="12" Clicked="SkipBt_Clicked" WidthRequest="100" HeightRequest="40" BackgroundColor="White" TextColor="Gray"/>
         </StackLayout>
 
 
