@@ -9,14 +9,13 @@ public partial class DashBoardPage : ContentPage
         UserName.Text = LoginName;
     }
 
-    private void BarcodClicked(object sender, EventArgs e)
+    private async void BarcodeClicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new ScanPage());
-    }
-
-    private void Pay_Clicked(object sender, EventArgs e)
-    {
-        Navigation.PushAsync(new PaymentPage());
+        bool allowed = false;
+        allowed = await BarcodeScanner.Mobile.Maui.Methods.AskForRequiredPermission();
+        if (allowed)
+            Navigation.PushModalAsync(new NavigationPage(new ScanPage()));
+        else DisplayAlert("Alert", "You have to provide Camera permission", "Ok");
     }
 
     private void ScanClicked(object sender, EventArgs e)

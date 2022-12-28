@@ -7,33 +7,58 @@
              NavigationPage.HasNavigationBar="False">
     <StackLayout Style="{StaticResource lblScr}" VerticalOptions="Start">
      
-        <StackLayout>
+        <StackLayout> 
             <Image Source="hello.png" HorizontalOptions="Start" Margin="15,10,0,0"/>
         </StackLayout>
         <StackLayout>
             <Label x:Name="UserProfileName" Text="User" HorizontalOptions="Start" Margin="15,0,0,20" FontSize="20" FontAttributes="Bold"></Label>
         </StackLayout>
 
+        <!--BookDetails-->
+
         <StackLayout>
-            <Label Text="Machine ID" FontSize="16" Margin="12,0,0,0"/>
-        </StackLayout>
-        <StackLayout>
-            <Entry x:Name="txtMachine" Style="{StaticResource lblUserProfile}" Placeholder="  Machine ID"/>
+            <Label x:Name="BookDetails" Text="Booking Details" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" FontAttributes="Bold" />
         </StackLayout>
 
-        <!--<StackLayout>
-            <Label Text="Customer Name" FontSize="16" Margin="12,0,0,0"/>
+        <StackLayout Orientation="Horizontal" Margin="12,20,0,0" Spacing="160">
+            <Label x:Name="Date" Text="Date" FontSize="18"/>
+            <Label x:Name="date" HeightRequest="30" WidthRequest="200" TextColor="Black" FontAttributes="Bold"/>
         </StackLayout>
-        <StackLayout>
-            <Entry x:Name="txtEmail" Style="{StaticResource lblUserProfile}" Placeholder="  Customer Name"/>
-        </StackLayout>-->
 
-        <!--<StackLayout>
-            <Label Text="Email ID" FontSize="16" Margin="12,0,0,0"/>
+
+        <StackLayout Orientation="Horizontal" Margin="12,3,0,0" Spacing="168">
+            <Label x:Name="txtCity" Text="City" FontSize="18"/>
+            <Label x:Name="cityWise" HeightRequest="30" WidthRequest="200" TextColor="Black" FontAttributes="Bold"/>
+        </StackLayout>
+
+
+        <StackLayout Orientation="Horizontal" Margin="12,3,0,0" Spacing="135">
+            <Label x:Name="txtZip" Text="ZipCode" FontSize="18"/>
+            <Label x:Name="zipCode" HeightRequest="30" WidthRequest="200" TextColor="Black" FontAttributes="Bold"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Margin="12,3,0,0" Spacing="128">
+            <Label x:Name="Labeladdress" Text="Address1" FontSize="18"/>
+            <Label x:Name="resultaddress" HeightRequest="30" WidthRequest="200" TextColor="Black" FontAttributes="Bold"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Margin="12,3,0,0" Spacing="128">
+            <Label x:Name="Labeladdress1" Text="Address2" FontSize="18"/>
+            <Label x:Name="resultaddress2" HeightRequest="30" WidthRequest="200" TextColor="Black" FontAttributes="Bold"/>
+        </StackLayout>
+        
+        <!--order Form-->
+
+        <StackLayout>
+            <Label x:Name="txtOrder" Text="Order Form" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="Black" Margin="10"/>
+        </StackLayout>
+        
+        <StackLayout>
+            <Label Text="Machine ID" FontSize="16" Margin="12,10,0,0"/>
         </StackLayout>
         <StackLayout>
-            <Entry x:Name="EmailID" Style="{StaticResource lblUserProfile}" Placeholder="  E-Mail ID"/>
-        </StackLayout>-->
+            <Entry x:Name="txtMachine" Style="{StaticResource lblUserProfile}" Placeholder="  Machine ID" IsEnabled="False"/>
+        </StackLayout>
 
         <StackLayout>
             <Label Text="Amount (INR)" FontSize="16" Margin="12,0,0,0"/>
@@ -42,12 +67,6 @@
             <Entry x:Name="txtAmount" Style="{StaticResource lblUserProfile}" Placeholder="  ₹"/>
         </StackLayout>
 
-        <!--<StackLayout>
-            <Label Text="Contact" FontSize="16" Margin="12,0,0,0"/>
-        </StackLayout>
-        <StackLayout>
-            <Entry x:Name="Contact" Style="{StaticResource lblUserProfile}" Placeholder="  Phone Number"/>
-        </StackLayout>-->
 
         <StackLayout>
             <Label Text="Order Type" FontSize="16" Margin="12,10,0,0"/>
@@ -61,7 +80,7 @@
         </Picker>
 
         <StackLayout>
-            <Button Text="Submit" CornerRadius="12" Clicked="SubmitPage_Clicked"  WidthRequest="100" HeightRequest="50" Margin="30" BackgroundColor="#00BF81"/>
+            <Button Text="Order Now" CornerRadius="12" Clicked="SubmitPage_Clicked"  WidthRequest="100" HeightRequest="50" Margin="30" BackgroundColor="#00BF81"/>
         </StackLayout>
 
 

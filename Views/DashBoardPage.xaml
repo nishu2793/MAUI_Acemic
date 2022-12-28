@@ -16,12 +16,10 @@
 
         <StackLayout Orientation="Horizontal" Margin="30,100,0,0" Spacing="30">
             <StackLayout>
-                <ImageButton Source="scan.png" CornerRadius="12" Clicked="BarcodClicked" WidthRequest="140" HeightRequest="140" BorderWidth="3" BorderColor="#00BF81"/>
+                <ImageButton Source="scan.png" CornerRadius="12" Clicked="BarcodeClicked" WidthRequest="140" HeightRequest="140" BorderWidth="3" BorderColor="#00BF81"/>
             </StackLayout>
 
-            <StackLayout>
-                <ImageButton Source="card2.png" CornerRadius="12" Clicked="Pay_Clicked" WidthRequest="140" HeightRequest="140" BorderWidth="3" BorderColor="#00BF81"/>
-            </StackLayout>
+           
         </StackLayout>
 
         <StackLayout Orientation="Horizontal" Margin="30,100,0,0" Spacing="30">

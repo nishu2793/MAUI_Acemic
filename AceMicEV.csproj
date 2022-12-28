@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
+		<TargetFrameworks>net6.0-android</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
@@ -82,6 +81,7 @@
 	  <PackageReference Include="MongoDB.Bson" Version="2.18.0" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
 	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+	  <PackageReference Include="Xamarin.Firebase.iOS.Core" Version="8.10.0.3" />
 	  <PackageReference Include="ZXing.Net.Maui" Version="0.1.0-preview.5" />
 	</ItemGroup>
 
@@ -93,6 +93,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ConfiPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MachinePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ScanPage.xaml">
@@ -108,9 +111,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\LoginPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\PaymentPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ProfilePage.xaml">
@@ -156,6 +156,23 @@
 	  <Compile Update="Views\OrderPage.xaml.cs">
 	    <DependentUpon>OrderPage.xaml</DependentUpon>
 	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-android'">
+	  <PackageReference Include="BarcodeScanner.Mobile.Maui">
+	    <Version>6.3.0.23-pre</Version>
+	  </PackageReference>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-ios'">
+	  <PackageReference Include="BarcodeScanner.Mobile.Maui">
+	    <Version>6.3.0.23-pre</Version>
+	  </PackageReference>
+	</ItemGroup>
+	
+	<ItemGroup Condition="$(TargetFramework.StartsWith('net6.0-maccatalyst')) != true">
+		<Compile Remove="**\**\*.MacCatalyst.cs" />
+		<None Include="**\**\*.MacCatalyst.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
 	</ItemGroup>
 
 	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionAceMicEVHideInfoBar="True" /></VisualStudio></ProjectExtensions>
