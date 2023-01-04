@@ -10,5 +10,13 @@ namespace AceMicEV.Models.Response
     {
         public string orderId { get; set; }
 
+        public string firstname { get; set; }
+
+        public string lastname { get; set; }
+
+        public string emailAddress { get; set; }
+
+        public string amount { get; set; }
+
     }
 }

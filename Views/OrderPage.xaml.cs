@@ -32,11 +32,10 @@ public partial class OrderPage : ContentPage
         string UserDid = Preferences.Get("DidKey", "Null");
 
         var userinfo = await _confiRepository.Condata(MachineId, Amount, Selecttype, UserDid);
-        if (userinfo)
+        if (userinfo != null)
         {
-            await Navigation.PushAsync(new ConfiPage());
+            await Navigation.PushAsync(new ConfiPage(userinfo.firstname,userinfo.lastname, userinfo.emailAddress, userinfo.amount, userinfo.orderId));
         }
-
 
     }
 }

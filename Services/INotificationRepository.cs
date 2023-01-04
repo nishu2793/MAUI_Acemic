@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace AceMicEV.Services
 {
-    public interface IConfiRepository
+     public interface INotificationRepository
     {
-        Task<ConfiResponse>Condata(string machineId, string amount, string orderType, string userId);
+        Task<NotificationResponse> NotiData(string userid, string Type);
     }
 }
+

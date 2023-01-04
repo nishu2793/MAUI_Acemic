@@ -9,5 +9,7 @@
         <gv:CameraView HorizontalOptions="Center" VerticalOptions="Center" OnDetected="CameraView_OnDetected" Grid.Row="1"  HeightRequest="300" WidthRequest="300" Margin="0,10,0,0"
                            TorchOn="False" VibrationOnDetected="False" ScanInterval="50" x:Name="Camera"/>
 
+        <Button Text="Next" Clicked="Butn1_Clicked" Margin="80"></Button>
+
     </VerticalStackLayout>
 </ContentPage>

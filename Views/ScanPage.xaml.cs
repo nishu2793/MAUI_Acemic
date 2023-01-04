@@ -52,4 +52,9 @@ public partial class ScanPage : ContentPage
             //Camera.IsScanning = true;
         });
     }
+
+    private void Butn1_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new NotificationPage());
+    }
 }

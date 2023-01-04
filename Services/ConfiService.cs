@@ -4,16 +4,17 @@ using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AceMicEV.Views;
+using Android.Gms.Common.Apis;
 
 namespace AceMicEV.Services
 {
    public class ConfiService : IConfiRepository
     {
-        public async Task<bool>Condata(string machineId, string amount, string orderType, string userId)
+        public async Task<ConfiResponse> Condata(string machineId, string amount, string orderType, string userId)
         {
             var Condata = new OrderInfo
             {
@@ -21,8 +22,9 @@ namespace AceMicEV.Services
                 Amount = amount,
                 OrderType = orderType,
                 UserID = userId,
-            }; 
+            };
 
+            var retnResponse = new ConfiResponse();
             var httpClient = new HttpClient();
             var json = JsonConvert.SerializeObject(Condata);
             var postData = new StringContent(json, Encoding.UTF8, "application/json");
@@ -32,11 +34,16 @@ namespace AceMicEV.Services
                 var jsonResponse = await response.Content.ReadAsStringAsync();
                 var details = JsonConvert.SerializeObject(JObject.Parse(jsonResponse)["Data"]);
 
-                var data = JsonConvert.DeserializeObject(details).ToString();
+                retnResponse = JsonConvert.DeserializeObject<List<ConfiResponse>>(details).FirstOrDefault();
 
-                return true;
+                return retnResponse;
+
+
+
+
+
             }
-            return false;
+            return null;
 
         }
     }

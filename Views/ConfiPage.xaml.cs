@@ -1,20 +1,25 @@
 using AceMicEV.Services;
 using Android.Views;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
-
 namespace AceMicEV.Views;
 
 public partial class ConfiPage : ContentPage
 {
     readonly IConfiRepository _confiRepository = new ConfiService();
-    public ConfiPage()
-	{
-		InitializeComponent();
+    readonly INotificationRepository _notificationRepository = new NotificationServices();
+    readonly IForgroundService _forground = new ForegroundService();
 
-        var name = "Disha";
-        var email = "dishas.dcs@gmail.com";
-        webView.Source = "https://paymentdemo.azurewebsites.net?Name=" + name + "&Email=" + email + "&Amount=1&Orderid=3FA85F64-5717-4562-B3FC-2C963F66AFA6";
-        //webView.Source = "https://paymentdemo.azurewebsites.net?Name=Disha&Email=dishas.dcs@gmail.com&Amount=1&Orderid=1837150D-9231-4C00-C38F-08DAE33CAEE6";
+    public ConfiPage(string firstname,string lastname, string emailAddress, string amount, string orderId)
+    {
+        InitializeComponent();
+       _forground.StartMyForegroundService();
+
+        var Reqname = firstname+lastname;
+        var Reqemail = emailAddress; // Email Key
+        var ReqAmount = amount;
+        var ReqOrderId = orderId;
+        webView.Source = "https://paymentdemo.azurewebsites.net?Name="+Reqname+"&Email="+Reqemail+"&Amount="+ReqAmount+"&Orderid="+ReqOrderId;
+        webView.Source = "https://paymentdemo.azurewebsites.net?Name=Disha&Email=dishas.dcs@gmail.com&Amount=1&Orderid=1837150D-9231-4C00-C38F-08DAE33CAEE6";
 
     }
 
@@ -22,4 +27,10 @@ public partial class ConfiPage : ContentPage
     {
         Navigation.PushAsync(new WelcomeScreen());
     }
+
+    private void deleteClicked(object sender, EventArgs e)
+    {
+        btnexit.IsVisible = true;
+    }
 }
+
