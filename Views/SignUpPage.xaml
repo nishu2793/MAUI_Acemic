@@ -37,18 +37,15 @@
             </StackLayout>
 
             <StackLayout Style="{StaticResource lblSkipLine}" Spacing="0" Margin="50,50,0,0">
-                <Label Text="Alreday have an account?" FontSize="18" Margin="10"></Label>
+                <Label Text="Alreday have an account?" FontSize="18"  Margin="5"></Label>
 
                 <StackLayout>
-                    <Button Text="Log In" FontSize="18" TextColor="#007AFF" Clicked="LogClicked" BackgroundColor="White"/>
-                </StackLayout>
-                <!--<StackLayout>
-                    <Label x:Name="Logcommand" Text="Log In" FontSize="18" TextColor="#007AFF">
+                    <Label x:Name="Logcommand" Text="Log In" FontSize="18" TextColor="#007AFF" Margin="0,4,0,0">
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding Logincommand}"></TapGestureRecognizer>
+                            <TapGestureRecognizer Command="{Binding Logincommand}" Tapped="LoginTapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
                         </Label.GestureRecognizers>
                     </Label>
-                </StackLayout>-->
+                </StackLayout>
                 
             </StackLayout>
         </StackLayout>

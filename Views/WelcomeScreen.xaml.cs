@@ -1,3 +1,5 @@
+using AceMicEV.Tab;
+
 namespace AceMicEV.Views;
 
 public partial class WelcomeScreen : ContentPage
@@ -5,14 +7,15 @@ public partial class WelcomeScreen : ContentPage
     public WelcomeScreen()
     {
         InitializeComponent();
-        BindingContext = this; 
-        
+        BindingContext = this;
+
     }
 
     protected override bool OnBackButtonPressed()
     {
 
-        Device.BeginInvokeOnMainThread(new Action(async () => {
+        Device.BeginInvokeOnMainThread(new Action(async () =>
+        {
             var result = await this.DisplayAlert("Alert!", "Do you really want to exit?", "Yes", "No");
 
             if (result)
@@ -33,8 +36,4 @@ public partial class WelcomeScreen : ContentPage
         Navigation.PushAsync(new UserType());
     }
 
-    private void SkipBt_Clicked(object sender, EventArgs e)
-    {
-        Navigation.PushAsync(new LoginPage());
-    }
 }

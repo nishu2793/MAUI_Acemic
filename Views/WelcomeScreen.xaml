@@ -24,12 +24,6 @@
             <Button Style="{StaticResource lblSkipbtn}" Text="Skip" CornerRadius="12" Clicked="SkipBtn_Clicked" TextColor="Grey" BackgroundColor="White"></Button>
         </StackLayout>
 
-        <StackLayout>
-            <Button Text="Go To Login" CornerRadius="12" Clicked="SkipBt_Clicked" WidthRequest="100" HeightRequest="40" BackgroundColor="White" TextColor="Gray"/>
-        </StackLayout>
-
-
-
     </StackLayout>
     
 </ContentPage>

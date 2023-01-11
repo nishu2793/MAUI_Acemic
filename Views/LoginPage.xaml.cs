@@ -57,11 +57,9 @@ public partial class LoginPage : ContentPage
             //DisplayAlert("No","No Never", "Ok");
         }
     }
-    public ICommand SignUpCommand => new Command(async () =>
-    {
-       
-      await AppShell.Current.GoToAsync($"//{nameof(SignUpPage)}");
-        
 
-    });
+    private void SignTapped(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new SignUpPage());
+    }
 }

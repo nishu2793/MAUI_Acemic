@@ -40,15 +40,13 @@ public partial class SignUpPage : ContentPage
 
 
     }
-    //public ICommand Logincommand => new Command(async() =>
+    //public ICommand Logincommand => new Command(async () =>
     //{
-
     //    await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
-
 
     //});
 
-    private void LogClicked(object sender, EventArgs e)
+    private void LoginTapped(object sender, EventArgs e)
     {
         Navigation.PushAsync(new LoginPage());
     }
