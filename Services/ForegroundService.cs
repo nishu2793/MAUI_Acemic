@@ -22,6 +22,7 @@ namespace AceMicEV.Services
     public class ForegroundService : Service, IForgroundService
     {
         readonly INotificationRepository _notificationRepository = new NotificationServices();
+        //ConfiPage _confiPage = new ConfiPage(); 
         public override IBinder OnBind(Intent intent)
         {
             throw new NotImplementedException();
@@ -32,18 +33,21 @@ namespace AceMicEV.Services
         {
             string UserDid = Preferences.Get("DidKey", "Null");
             string Notitype = "payment";
-            Task.Run(() =>
+            Task.Run(async () =>
             {
-                while(true)
+                var NotificationInfo = _notificationRepository.NotiData(UserDid, Notitype);
+
+                while (NotificationInfo != null)
                 {
-                    var NotificationInfo =  _notificationRepository.NotiData(UserDid, Notitype);
+                    //var NotificationInfo =  _notificationRepository.NotiData(UserDid, Notitype);
 
                     System.Diagnostics.Debug.WriteLine("get data from API");
 
+                    //string s = await _confiPage.callfun();
+
                     if (NotificationInfo != null) 
                     {
-
-                        AppShell.Current.DisplayAlert("Hello", "Hiii", "Cancel");
+//                        _confiPage.callfun();
              //           System.Diagnostics.Debug.WriteLine("get data from API");
 
                         //  Shell.Current.GoToAsync($"../{nameof(WelcomeScreen)}");
@@ -72,11 +76,13 @@ namespace AceMicEV.Services
             return base.OnStartCommand(intent, flags, startId);
         }
 
-        public void StartMyForegroundService()
+        public async Task<string> StartMyForegroundService()
         {
 
             var intent = new Intent(Android.App.Application.Context, typeof(ForegroundService));
             Android.App.Application.Context.StartForegroundService(intent);
+
+            return "True";
                 
         }
 

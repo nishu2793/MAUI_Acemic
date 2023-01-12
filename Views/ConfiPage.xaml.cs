@@ -1,6 +1,9 @@
 using AceMicEV.Services;
 using Android.Views;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
+using Java.Lang;
+using System.Runtime.CompilerServices;
+
 namespace AceMicEV.Views;
 
 public partial class ConfiPage : ContentPage
@@ -12,7 +15,7 @@ public partial class ConfiPage : ContentPage
     public ConfiPage(string firstname,string lastname, string emailAddress, string amount, string orderId)
     {
         InitializeComponent();
-       _forground.StartMyForegroundService();
+    //    string s =  _forground.StartMyForegroundService();
 
         var Reqname = firstname+lastname;
         var Reqemail = emailAddress; // Email Key
@@ -31,6 +34,13 @@ public partial class ConfiPage : ContentPage
     private void deleteClicked(object sender, EventArgs e)
     {
         btnexit.IsVisible = true;
+    }
+    public async Task<string> callfun()
+    {
+        NotificationServices notificationServices = new NotificationServices();
+        DisplayAlert("hello", "heee", "heelee");
+        string v = "dfvgfg";
+        return v;
     }
 }
 

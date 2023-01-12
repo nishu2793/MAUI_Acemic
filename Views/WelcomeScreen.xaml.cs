@@ -25,15 +25,18 @@ public partial class WelcomeScreen : ContentPage
         }));
         return true;
     }
+
     private void NextBtn_Clicked(object sender, EventArgs e)
     {
-        statusBar.StatusBarColor = Colors.LightSeaGreen;
+        statusBar.StatusBarColor = Colors.MediumSeaGreen;
         statusBar.StatusBarStyle = CommunityToolkit.Maui.Core.StatusBarStyle.LightContent;
         Navigation.PushAsync(new WelcomeScreen2());
     }
 
     private void SkipBtn_Clicked(object sender, EventArgs e)
     {
+        statusBar.StatusBarColor = Colors.MediumSeaGreen;
+        statusBar.StatusBarStyle = CommunityToolkit.Maui.Core.StatusBarStyle.LightContent;
         Navigation.PushAsync(new UserType());
     }
 

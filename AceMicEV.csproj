@@ -55,6 +55,8 @@
 	  <None Remove="Resources\AppIcon\aacemic.png" />
 	  <None Remove="Resources\Fonts\poppins.ttf" />
 	  <None Remove="Resources\Images\asddd.png" />
+	  <None Remove="Resources\Images\booking.png" />
+	  <None Remove="Resources\Images\bookslot.png" />
 	  <None Remove="Resources\Images\card2.png" />
 	  <None Remove="Resources\Images\charging.png" />
 	  <None Remove="Resources\Images\facebook.png" />
@@ -67,6 +69,8 @@
 	  <None Remove="Resources\Images\line1.png" />
 	  <None Remove="Resources\Images\line2.png" />
 	  <None Remove="Resources\Images\line3.png" />
+	  <None Remove="Resources\Images\myprofile.png" />
+	  <None Remove="Resources\Images\nearbydevices.png" />
 	  <None Remove="Resources\Images\payment.png" />
 	  <None Remove="Resources\Images\scan.png" />
 	  <None Remove="Resources\Images\twitter.png" />
