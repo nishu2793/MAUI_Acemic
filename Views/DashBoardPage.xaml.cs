@@ -2,10 +2,12 @@ namespace AceMicEV.Views;
 
 public partial class DashBoardPage : ContentPage
 {
-	public DashBoardPage()
-	{
-		InitializeComponent();
-        var LoginName= Preferences.Get("EmailKey", "Null");
+    public DashBoardPage()
+    {
+        InitializeComponent();
+        BindingContext = this;
+
+        var LoginName = Preferences.Get("EmailKey", "Null");
         UserName.Text = LoginName;
     }
 

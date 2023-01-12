@@ -34,48 +34,7 @@
             </StackLayout>
         </StackLayout>
 
-         <!--<StackLayout>
-             
-              <TabbedPage>
 
-                   <Shell>
-
-                        <TabBar x:Name="MyTabs">
-                            <Tab Title="HomePage" Icon="home.png">
-                                <ShellContent ContentTemplate="{DataTemplate local:HomePage}"/>
-                            </Tab>
-
-                            <Tab Title="AboutPage" Icon="home.png">
-                                <ShellContent ContentTemplate="{DataTemplate local:AboutPage}"/>
-                            </Tab>
-
-                            <Tab Title="SettingPage" Icon="home.png">
-                                <ShellContent ContentTemplate="{DataTemplate local:SettingPage}"/>
-                            </Tab>
-                        </TabBar>
-
-                   </Shell>
-                  
-            </TabbedPage>
-             
-        </StackLayout>-->
-
-        <Shell FlyoutBehavior="Flyout" FlyoutHeaderBehavior="Fixed" FlyoutVerticalScrollMode="Auto">
-            
-            <FlyoutItem Title="Home" Icon="asddd.png">
-                <ShellContent ContentTemplate="{DataTemplate local:HomePage}"/>
-            </FlyoutItem>
-            
-            <FlyoutItem Title="Setting" Icon="asddd.png">
-                <ShellContent ContentTemplate="{DataTemplate local:SettingPage}"/>
-            </FlyoutItem>
-            
-            <FlyoutItem Title="about" Icon="asddd.png">
-                <ShellContent ContentTemplate="{DataTemplate local:AboutPage}"/>
-            </FlyoutItem>
-            
-        </Shell>
-            
     </StackLayout>
     
 </ContentPage>

@@ -4,26 +4,31 @@
              x:Class="AceMicEV.Views.WelcomeScreen"
              Shell.NavBarIsVisible="False"
              Title="WelcomeScreen"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui">
+    <Page.Behaviors>
+        <mct:StatusBarBehavior   x:Name="statusBar"/>
+    </Page.Behaviors>
 
-    <StackLayout Style="{StaticResource lblScr}">
-        <Image Style="{StaticResource lblimage}"  Source="v1_120.png"/>
+    <StackLayout>
+        <StackLayout Style="{StaticResource lblScr}">
+            <Image Style="{StaticResource lblimage}"  Source="v1_120.png"/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                 <Image Source="line1.png" Margin="0,0,10,0"></Image>
                 <Image Source="line2.png" Margin="0,0,10,0"></Image>
                 <Image Source="line3.png" Margin="0,0,10,0"></Image>
             </StackLayout>
-        <Label Style="{StaticResource lblHeader}" Text="Acemic Charging Station for EV's"/>
+            <Label Style="{StaticResource lblHeader}" Text="Acemic Charging Station for EV's"/>
 
-        <Label Style="{StaticResource lbldescription}"  Text="Our new electric vehicle (EV) charging points has arrived"/>
+            <Label Style="{StaticResource lbldescription}"  Text="Our new electric vehicle (EV) charging points has arrived"/>
 
-        <StackLayout Style="{StaticResource lblbtn1}">
-            <Button Style="{StaticResource lblbtn2}" Text="Next" CornerRadius="12" Clicked="NextBtn_Clicked"></Button>
+            <StackLayout Style="{StaticResource lblbtn1}">
+                <Button Style="{StaticResource lblbtn2}" Text="Next" CornerRadius="12" Clicked="NextBtn_Clicked"></Button>
+            </StackLayout>
+            <StackLayout>
+                <Button Style="{StaticResource lblSkipbtn}" Text="Skip" CornerRadius="12" Clicked="SkipBtn_Clicked" TextColor="Grey" BackgroundColor="White"></Button>
+            </StackLayout>
         </StackLayout>
-        <StackLayout>
-            <Button Style="{StaticResource lblSkipbtn}" Text="Skip" CornerRadius="12" Clicked="SkipBtn_Clicked" TextColor="Grey" BackgroundColor="White"></Button>
-        </StackLayout>
-
     </StackLayout>
     
 </ContentPage>

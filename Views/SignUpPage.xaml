@@ -15,12 +15,14 @@
                 <Entry x:Name="txtLastName" Style="{StaticResource lblLn}" Placeholder= "   LastName"  />
             </StackLayout>
 
-            <StackLayout Style="{StaticResource lblline2}">
+            <StackLayout Style="{StaticResource lblline2}" Margin="0,0,20,0">
                 <Entry x:Name="txtEmail" Style="{StaticResource lblemail}" Placeholder="   Email / Phone Number"/>
             </StackLayout>
 
             <Label Style="{StaticResource lblDes}"  Text="By continuing, you agree to our Terms of Service and our Privacy Policy."/>
+
             <StackLayout>
+                <ActivityIndicator x:Name="activityIndicator" VerticalOptions="Center" HorizontalOptions="Center" Color="#00BF81" IsRunning="False" WidthRequest="50" HeightRequest="50"/>
                 <Button Style="{StaticResource lblbtn3}" Clicked="SignUp_Clicked"></Button>
             </StackLayout>
             
@@ -30,7 +32,7 @@
                 <Line X2="115" Stroke="black" StrokeThickness="1" Margin="0,15,0,0"></Line>
             </StackLayout>
             
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,75,0,0">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
                 <Image Source="google.png" Margin="10,0,40,0"></Image>
                 <Image Source="facebook.png" Margin="0,0,40,0"></Image>
                 <Image Source="twitter.png" Margin="0,0,10,0"></Image>

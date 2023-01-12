@@ -15,6 +15,21 @@
         Route="MainPage" />
 
     <ShellContent
+        Title="WelCome"
+        ContentTemplate="{DataTemplate local:WelcomeScreen2}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="WelCome"
+        ContentTemplate="{DataTemplate local:WelcomeScreen3}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="WelCome"
+        ContentTemplate="{DataTemplate local:UserType}"
+        Route="MainPage" />
+
+    <ShellContent
         Title="SignUpPage"
         ContentTemplate="{DataTemplate local:SignUpPage}"
         Route="SignUpPage" />
@@ -41,7 +56,7 @@
     <ShellContent
         Title="DashBoard"
         ContentTemplate="{DataTemplate local:DashBoardPage}"
-        Route="DashBoard" />
+        Route="DashBoardPage" />
     
     <ShellContent
         Title="MyMainPage"

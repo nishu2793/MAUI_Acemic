@@ -10,7 +10,6 @@ public partial class WelcomeScreen : ContentPage
         BindingContext = this;
 
     }
-
     protected override bool OnBackButtonPressed()
     {
 
@@ -28,6 +27,8 @@ public partial class WelcomeScreen : ContentPage
     }
     private void NextBtn_Clicked(object sender, EventArgs e)
     {
+        statusBar.StatusBarColor = Colors.LightSeaGreen;
+        statusBar.StatusBarStyle = CommunityToolkit.Maui.Core.StatusBarStyle.LightContent;
         Navigation.PushAsync(new WelcomeScreen2());
     }
 

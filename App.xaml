@@ -67,10 +67,11 @@
 
         <Style x:Key="lblFn" TargetType="Entry" >
             <Setter Property="HeightRequest" Value="50"/>
-            <Setter Property="WidthRequest" Value="165"/>
+            <Setter Property="WidthRequest" Value="160"/>
             <Setter Property="BackgroundColor" Value="#eef0f2"/>
             <Setter Property="Opacity" Value="5"/>
             <Setter Property="Margin" Value="0"/>
+            <Setter Property="FontSize" Value="16"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
             <Setter Property="VerticalOptions" Value="Center"/>
             <Setter Property="HorizontalTextAlignment" Value="Start"/>
@@ -78,9 +79,10 @@
 
         <Style x:Key="lblLn" TargetType="Entry">
             <Setter Property="HeightRequest" Value="50"/>
-            <Setter Property="WidthRequest" Value="165"/>
+            <Setter Property="WidthRequest" Value="160"/>
             <Setter Property="BackgroundColor" Value="#eef0f2"/>
             <Setter Property="Opacity" Value="5"/>
+            <Setter Property="FontSize" Value="16"/>
             <Setter Property="Margin" Value="10,0,20,0"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
             <Setter Property="VerticalOptions" Value="Center"/>
@@ -95,22 +97,22 @@
 
         <Style x:Key="lblemail" TargetType="Entry">
             <Setter Property="HeightRequest" Value="50"/>
-            <Setter Property="WidthRequest" Value="355"/>
+            <Setter Property="WidthRequest" Value="330"/>
             <Setter Property="BackgroundColor" Value="#eef0f2"/>
             <Setter Property="Opacity" Value="5"/>
-            <Setter Property="Margin" Value="0"/>
+            <Setter Property="FontSize" Value="16"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
             <Setter Property="VerticalOptions" Value="Center"/>
             <Setter Property="Margin" Value="3"/>
         </Style>
 
         <Style x:Key="lblDes" TargetType="Label">
-            <Setter Property="WidthRequest" Value="340"/>
+            <Setter Property="WidthRequest" Value="330"/>
             <Setter Property="Opacity" Value="1"/>
             <Setter Property="FontSize" Value="15"/>
             <Setter Property="HorizontalOptions" Value="Start"/>
             <Setter Property="HorizontalTextAlignment" Value="Start"/>
-            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Margin" Value="6,3,0,0"/>
         </Style>
 
         <Style x:Key="lblbtn3" TargetType="Button">
@@ -272,15 +274,16 @@
             <Setter Property="HorizontalOptions" Value="Start"/>
             <Setter Property="VerticalOptions" Value="Center"/>
             <Setter Property="HorizontalTextAlignment" Value="Start"/>
-            <Setter Property="Margin" Value="7"/>
+            <Setter Property="Margin" Value="10,0,0,8"/>
         </Style>
 
         <Style x:Key="lblPass" TargetType="Entry">
             <Setter Property="HeightRequest" Value="50"/>
-            <Setter Property="WidthRequest" Value="350"/>
+            <Setter Property="WidthRequest" Value="335"/>
             <Setter Property="BackgroundColor" Value="#eef0f2"/>
             <Setter Property="Opacity" Value="5"/>
-            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="12,0,0,12"/>
             <Setter Property="HorizontalOptions" Value="Start"/>
             <Setter Property="VerticalOptions" Value="Center"/>
         </Style>
@@ -303,8 +306,7 @@
         <Style x:Key="LblFnLnName" TargetType="Label">
             <Setter Property="HeightRequest" Value="20"/>
             <Setter Property="WidthRequest" Value="80"/>
-            <Setter Property="Opacity" Value="5"/>
-            <Setter Property="Margin" Value="3"/>
+            <Setter Property="Opacity" Value="3"/>
             <Setter Property="FontSize" Value="16"/>
             <Setter Property="HorizontalOptions" Value="Start"/>
             <Setter Property="VerticalOptions" Value="Center"/>
@@ -312,11 +314,13 @@
 
         <Style x:Key="lblFnln" TargetType="StackLayout">
             <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="Margin" Value="5,0,0,0"/>
         </Style>
 
         <Style x:Key="lblFnln2" TargetType="StackLayout">
             <Setter Property="Orientation" Value="Horizontal"/>
             <Setter Property="HeightRequest" Value="60"/>
+            <Setter Property="Margin" Value="5,0,0,0"/>
         </Style>
 
 
@@ -324,8 +328,9 @@
             <Setter Property="HeightRequest" Value="50"/>
             <Setter Property="WidthRequest" Value="165"/>
             <Setter Property="BackgroundColor" Value="#eef0f2"/>
+            <Setter Property="FontSize" Value="16"/>
             <Setter Property="Opacity" Value="5"/>
-            <Setter Property="Margin" Value="3"/>
+            <Setter Property="Margin" Value="0,0,0,0"/>
             <Setter Property="HorizontalOptions" Value="Start"/>
             <Setter Property="VerticalOptions" Value="Center"/>
         </Style>
@@ -337,18 +342,22 @@
         </Style>
         <Style x:Key="lblPhoneNo" TargetType="Entry" >
             <Setter Property="HeightRequest" Value="50"/>
-            <Setter Property="WidthRequest" Value="340"/>
+            <Setter Property="WidthRequest" Value="335"/>
             <Setter Property="BackgroundColor" Value="#eef0f2"/>
             <Setter Property="Opacity" Value="5"/>
+            <Setter Property="Margin" Value="5,0,0,0"/>
+            <Setter Property="FontSize" Value="16"/>
             <Setter Property="HorizontalOptions" Value="Start"/>
             <Setter Property="VerticalOptions" Value="Center"/>
         </Style>
         
         <Style x:Key="lblemail2" TargetType="Entry" >
             <Setter Property="HeightRequest" Value="50"/>
-            <Setter Property="WidthRequest" Value="340"/>
+            <Setter Property="WidthRequest" Value="335"/>
             <Setter Property="BackgroundColor" Value="#eef0f2"/>
             <Setter Property="Opacity" Value="5"/>
+            <Setter Property="Margin" Value="5,0,0,0"/>
+            <Setter Property="FontSize" Value="16"/>
             <Setter Property="HorizontalOptions" Value="Start"/>
             <Setter Property="VerticalOptions" Value="Center"/>
         </Style>

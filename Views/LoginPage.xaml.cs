@@ -1,6 +1,7 @@
 using AceMicEV.Pages;
 using AceMicEV.Services;
 using System.Windows.Input;
+using AceMicEV.Views;
 
 namespace AceMicEV.Views;
 
@@ -11,23 +12,12 @@ public partial class LoginPage : ContentPage
     {
         InitializeComponent();
     }
-    //protected override bool OnBackButtonPressed()
-    //{
-
-    //    Device.BeginInvokeOnMainThread(new Action(async () => {
-    //        var result = await this.DisplayAlert("Alert!", "Do you really want to exit?", "Yes", "No");
-
-    //        if (result)
-    //        {
-    //            if (Device.RuntimePlatform == Device.Android)
-    //                DependencyService.Get<IAndroidMethods>().CloseApp();
-    //        }
-    //    }));
-    //    return true;
-    //}
 
     private async void LogIn_Clicked(object sender, EventArgs e)
     {
+        LoginIndicator.IsRunning = true;
+        await Task.Delay(2000);
+
         string userName = txtUserID.Text;
         string password = txtPassword.Text;
         if (userName == null || password == null)
@@ -38,10 +28,12 @@ public partial class LoginPage : ContentPage
         var userinfo = await _loginRepository.login(userName, password);
         if (userinfo)
         {
+            LoginIndicator.IsRunning = false;
             await Navigation.PushAsync(new DashBoardPage());
         }
         else
         {
+            LoginIndicator.IsRunning = false;
             await DisplayAlert("Invalid User", " Username or Password incorrect", "Ok");
         }
 
@@ -50,11 +42,11 @@ public partial class LoginPage : ContentPage
     {
         if(e.Value==true)
         {
-            //DisplayAlert("ohk", "Yes Ofcourse", "Cancel");
+            
         }
         else
         {
-            //DisplayAlert("No","No Never", "Ok");
+
         }
     }
 

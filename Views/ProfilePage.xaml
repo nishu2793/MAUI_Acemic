@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AceMicEV.Views.ProfilePage"
              Title="ProfilePage"
-              NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False">
     <StackLayout Style="{StaticResource lblScr}">
         <Frame Style="{StaticResource lblProScr}">
             <ImageButton x:Name="ImgBtn" Source="imagebox.png" Clicked="Image_Clicked" Margin="0,50,0,0" 
@@ -13,15 +13,15 @@
         <StackLayout Style="{StaticResource lblScr2}" Spacing="10">
             <StackLayout Style="{StaticResource lblFnln}">
                 <Label Style="{StaticResource LblFnLnName}" Text="First Name" Margin="0,100,100,0" VerticalOptions="Start" />
-                <Label Style="{StaticResource LblFnLnName}" Text="Last Name" Margin="0,100,50,0" VerticalOptions="Start" />
+                <Label Style="{StaticResource LblFnLnName}" Text="Last Name" Margin="0,100,0,0" VerticalOptions="Start" />
             </StackLayout>
             <StackLayout>
-                <StackLayout Style="{StaticResource lblFnln}" Spacing="10">
+                <StackLayout Style="{StaticResource lblFnln}" Spacing="5">
                     <Entry x:Name="FName"  Style="{StaticResource lblFn2}"/>
                     <Entry x:Name="LName"  Style="{StaticResource lblFn2}"/>
                 </StackLayout>
                 <StackLayout>
-                    <StackLayout Style="{StaticResource lblFnln2}">
+                    <StackLayout Style="{StaticResource lblFnln2}" Spacing="3">
                         <Label Style="{StaticResource lblGender}"/>
                         
                         <StackLayout Margin="35,0,0,0">
@@ -33,13 +33,13 @@
                      </StackLayout>
 
                     <StackLayout>
-                        <Label Text="Phone Number" Margin="0,0,0,10" FontSize="18"/>
+                        <Label Text="Phone Number" Margin="5,0,0,10" FontSize="18"/>
                         <StackLayout>
                             <Entry x:Name="txtPhone" Style="{StaticResource lblPhoneNo}" Keyboard="Numeric"/>
                         </StackLayout>
                     </StackLayout>
                     <StackLayout>
-                        <Label Text="E-mail" Margin="0,10,0,10" FontSize="18"/>
+                        <Label Text="E-mail" Margin="5,10,0,10" FontSize="18"/>
                         <StackLayout>
                             <Entry x:Name="txtEmail" Style="{StaticResource lblemail2}"/>
                         </StackLayout>

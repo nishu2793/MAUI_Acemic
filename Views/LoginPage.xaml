@@ -34,20 +34,24 @@
             <Label Text="Forgot Password?" Margin="95,8,0,0" FontSize="16" TextColor="#007AFF"/>
         </StackLayout>
         
+        
         <StackLayout>
+            <ActivityIndicator x:Name="LoginIndicator" VerticalOptions="Center" HorizontalOptions="Center" Color="#00BF81" IsRunning="False" WidthRequest="40" HeightRequest="40"/>
             <Button Style="{StaticResource lblbtn3}" Text="Login" CornerRadius="10" HorizontalOptions="Center" VerticalOptions="Center" Clicked="LogIn_Clicked"></Button>
         </StackLayout>
+        
+        
         <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
             <Line X2="115" Stroke="black" StrokeThickness="1" Margin="0,15,0,0"></Line>
             <Label Style="{StaticResource lbllin2}" Text="Or Continue With" TextColor="Black"/>
             <Line X2="100" Stroke="black" StrokeThickness="1" Margin="0,15,0,0"></Line>
         </StackLayout>
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
             <Image Source="google.png" Margin="10,0,40,0"></Image>
             <Image Source="facebook.png" Margin="0,0,40,0"></Image>
             <Image Source="twitter.png" Margin="0,0,10,0"></Image>
         </StackLayout>
-        <StackLayout Style="{StaticResource lblSkipLine}" Spacing="5" Margin="60,50,0,0">
+        <StackLayout Style="{StaticResource lblSkipLine}" Spacing="5" Margin="65,30,0,0">
             <Label Text="Don't have an account?" FontSize="18"></Label>
             
             <StackLayout>

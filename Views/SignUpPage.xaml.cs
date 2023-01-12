@@ -1,6 +1,9 @@
 using AceMicEV.Services;
+using AndroidX.Loader.Content;
 using DocumentFormat.OpenXml.Spreadsheet;
 using System.Windows.Input;
+using Color = Microsoft.Maui.Graphics.Color;
+using Colors = Microsoft.Maui.Graphics.Colors;
 
 namespace AceMicEV.Views;
 
@@ -14,11 +17,12 @@ public partial class SignUpPage : ContentPage
         //txtFirstName.Text = Preferences.Get("FirstKey", "Not Valid");
         //txtLastName.Text = Preferences.Get("LastKey", "Empty");
         //txtEmail.Text = Preferences.Get("EmailKey", "Empty");
-           
     }
-
     private async void SignUp_Clicked(object sender, EventArgs e)
     {
+        activityIndicator.IsRunning = true;
+        await Task.Delay(2000);
+
         string firstName = txtFirstName.Text;
         string lastName = txtLastName.Text;
         string email = txtEmail.Text;
@@ -31,23 +35,18 @@ public partial class SignUpPage : ContentPage
         var userinfo = await _signUpRepository.SignUp(firstName, lastName, email);
         if (userinfo)
         {
+            activityIndicator.IsRunning = false;
             await Navigation.PushAsync(new VerifiyOtpPage());
         }
         else
         {
+            activityIndicator.IsRunning = false;
             await DisplayAlert("Invalid User", " Username or Password incorrect", "Ok");
         }
-
-
     }
-    //public ICommand Logincommand => new Command(async () =>
-    //{
-    //    await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
-
-    //});
-
     private void LoginTapped(object sender, EventArgs e)
     {
         Navigation.PushAsync(new LoginPage());
+        
     }
 }
