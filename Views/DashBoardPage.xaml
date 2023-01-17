@@ -18,10 +18,14 @@
 
         <SearchBar x:Name="searchBar"
                    Placeholder="Search..." 
+<<<<<<< HEAD
                    Text="{Binding SearchText, Mode= TwoWay }" Margin="0,10,0,0" BackgroundColor="#F7F8F9" WidthRequest="320" HeightRequest="40">
         </SearchBar>
 
 
+=======
+                   Text="{Binding SearchText, Mode= TwoWay }" Margin="0,10,0,0" BackgroundColor="#F7F8F9" WidthRequest="320" HeightRequest="40"/>
+>>>>>>> bb15536990754e0058760dc2fa1a2d10f7712e38
         <StackLayout>
             <Label Text="Book Now!" HorizontalOptions="Start" Margin="20,20,0,0" FontSize="18" FontAttributes="Bold"/>
         </StackLayout>
@@ -31,6 +35,7 @@
 
         <StackLayout Orientation="Horizontal" Margin="25,30,0,0" Spacing="30">
             <StackLayout>
+<<<<<<< HEAD
                 <ImageButton Source="qrcode.png" CornerRadius="12" Clicked="BarcodeClicked" WidthRequest="140" HeightRequest="150" BorderWidth="3" BorderColor="#00BF81"/>
             </StackLayout>
             <StackLayout>
@@ -45,6 +50,22 @@
 
             <StackLayout>
                 <ImageButton Source="myprofile.png" CornerRadius="12" Clicked="PayClicked" WidthRequest="140" HeightRequest="150" BorderWidth="3" BorderColor="#00BF81"/>
+=======
+                <ImageButton Source="scan.png" CornerRadius="12" Clicked="BarcodeClicked" WidthRequest="140" HeightRequest="160" BorderWidth="3" BorderColor="#00BF81"/>
+            </StackLayout>
+            <StackLayout>
+                <ImageButton Source="booking.png" CornerRadius="12" Clicked="ScanClicked" WidthRequest="140" HeightRequest="160" BorderWidth="3" BorderColor="#00BF81"/>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Margin="25,60,0,0" Spacing="30">
+            <StackLayout>
+                <ImageButton Source="nearbydevices.png" CornerRadius="12" Clicked="ScanClicked" WidthRequest="140" HeightRequest="160" BorderWidth="3" BorderColor="#00BF81"/>
+            </StackLayout>
+
+            <StackLayout>
+                <ImageButton Source="myprofile.png" CornerRadius="12" Clicked="PayClicked" WidthRequest="140" HeightRequest="160" BorderWidth="3" BorderColor="#00BF81"/>
+>>>>>>> bb15536990754e0058760dc2fa1a2d10f7712e38
             </StackLayout>
         </StackLayout>
 

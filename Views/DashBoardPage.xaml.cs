@@ -34,4 +34,9 @@ public partial class DashBoardPage : ContentPage
     {
 
     }
+
+    private void slotClicked(object sender, EventArgs e)
+    {
+
+    }
 }

@@ -25,6 +25,7 @@ public partial class WelcomeScreen : ContentPage
         }));
         return true;
     }
+
     private void NextBtn_Clicked(object sender, EventArgs e)
     {
         statusBar.StatusBarColor = Colors.MediumSeaGreen;

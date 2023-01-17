@@ -4,10 +4,13 @@ using DocumentFormat.OpenXml.Drawing.Diagrams;
 using Java.Lang;
 using System.Runtime.CompilerServices;
 
+<<<<<<< HEAD
 using Microsoft.AspNetCore.SignalR.Client;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
+=======
+>>>>>>> bb15536990754e0058760dc2fa1a2d10f7712e38
 namespace AceMicEV.Views;
 
 public partial class ConfiPage : ContentPage
@@ -77,6 +80,9 @@ public partial class ConfiPage : ContentPage
         string v = "dfvgfg";
         return v;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> bb15536990754e0058760dc2fa1a2d10f7712e38
 }
 
