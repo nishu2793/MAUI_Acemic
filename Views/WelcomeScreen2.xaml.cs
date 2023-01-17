@@ -21,4 +21,5 @@ public partial class WelcomeScreen2 : ContentPage
     {
         Navigation.PushAsync(new UserType());
     }
+    
 }

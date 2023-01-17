@@ -14,6 +14,13 @@
 
         <Button x:Name="btnexit"  Margin="20" Text="Exit" Clicked="WebClicked" WidthRequest="60" HeightRequest="35" BackgroundColor="#00BF81" IsVisible="False"/>
 
+        <Label
+                x:Name="lblChat"
+                Text="Ashish"
+                FontSize="18"
+                HorizontalOptions="StartAndExpand"
+                TextType="Html"></Label>
+
         <Button Text="Delete" x:Name="btndele" Clicked="deleteClicked" WidthRequest="70" HeightRequest="35" BackgroundColor="#00BF81"/>
 
     </StackLayout>

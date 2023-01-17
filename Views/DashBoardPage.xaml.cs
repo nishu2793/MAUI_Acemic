@@ -27,6 +27,11 @@ public partial class DashBoardPage : ContentPage
 
     private void PayClicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new ScanPage());
+      
+    }
+
+    private void slotClicked(object sender, EventArgs e)
+    {
+
     }
 }

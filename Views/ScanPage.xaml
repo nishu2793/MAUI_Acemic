@@ -3,13 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:gv="clr-namespace:BarcodeScanner.Mobile.Maui;assembly=BarcodeScanner.Mobile.Maui"
              x:Class="AceMicEV.ScanPage"
-             Title="ScanPage">
+             Title="ScanPage"
+             NavigationPage.HasNavigationBar="False">
     <VerticalStackLayout>
       
-        <gv:CameraView HorizontalOptions="Center" VerticalOptions="Center" OnDetected="CameraView_OnDetected" Grid.Row="1"  HeightRequest="300" WidthRequest="300" Margin="0,10,0,0"
+        <gv:CameraView HorizontalOptions="Center" VerticalOptions="Center" OnDetected="CameraView_OnDetected" Grid.Row="1"  HeightRequest="300" WidthRequest="300" Margin="0,150,0,0"
                            TorchOn="False" VibrationOnDetected="False" ScanInterval="50" x:Name="Camera"/>
-
-        <Button Text="Next" Clicked="Butn1_Clicked" Margin="80"></Button>
 
     </VerticalStackLayout>
 </ContentPage>

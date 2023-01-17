@@ -7,7 +7,7 @@
              NavigationPage.HasNavigationBar="False"
              xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui">
     <Page.Behaviors>
-        <mct:StatusBarBehavior   x:Name="statusBar"/>
+        <mct:StatusBarBehavior  x:Name="statusBar"/>
     </Page.Behaviors>
 
     <StackLayout>

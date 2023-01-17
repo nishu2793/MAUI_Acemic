@@ -1,7 +1,6 @@
 ﻿using BarcodeScanner.Mobile.Maui;
 using CommunityToolkit.Maui;
 using Microsoft.Maui.Controls.Compatibility.Hosting;
-
 namespace AceMicEV;
 
 public static class MauiProgram
@@ -22,8 +21,6 @@ public static class MauiProgram
             {
                 handlers.AddBarcodeScannerHandler();
             });
-
-
 
         return builder.Build();
     }

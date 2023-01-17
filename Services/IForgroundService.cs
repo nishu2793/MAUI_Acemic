@@ -8,7 +8,9 @@ namespace AceMicEV.Services
 {
     public interface IForgroundService
     {
-        void StartMyForegroundService(); 
+        //void StartMyForegroundService(); 
+
+        Task<string> StartMyForegroundService();
         void StopMyForegroundService();
 
     }

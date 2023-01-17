@@ -39,9 +39,6 @@ namespace AceMicEV.Services
                 return retnResponse;
 
 
-
-
-
             }
             return null;
 
