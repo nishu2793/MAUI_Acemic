@@ -4,12 +4,13 @@ namespace AceMicEV.Views;
 
 public partial class WelcomeScreen : ContentPage
 {
+
     public WelcomeScreen()
     {
         InitializeComponent();
         BindingContext = this;
-
     }
+
     protected override bool OnBackButtonPressed()
     {
 

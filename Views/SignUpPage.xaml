@@ -11,8 +11,8 @@
             <Label Style="{StaticResource lblHeader2}" Text=" Create an Account"/>
 
             <StackLayout Style="{StaticResource lblline}">
-                <Entry x:Name="txtFirstName" Style="{StaticResource lblFn}" Placeholder= "   FirstName" />
-                <Entry x:Name="txtLastName" Style="{StaticResource lblLn}" Placeholder= "   LastName"  />
+                <Entry x:Name="txtFirstName" Style="{StaticResource lblFn}" Placeholder= "   First Name" />
+                <Entry x:Name="txtLastName" Style="{StaticResource lblLn}" Placeholder= "   Last Name"  />
             </StackLayout>
 
             <StackLayout Style="{StaticResource lblline2}" Margin="0,0,20,0">
@@ -27,9 +27,9 @@
             </StackLayout>
             
             <StackLayout Orientation="Horizontal">
-                <Line X2="110" Stroke="black" StrokeThickness="1" Margin="0,15,0,0"></Line>
-                <Label Style="{StaticResource lbllin1}" Text="Or Continue With" TextColor="Black"/>
-                <Line X2="115" Stroke="black" StrokeThickness="1" Margin="0,15,0,0"></Line>
+                <Line X2="105" Stroke="black" StrokeThickness="1" Margin="0,35,0,0"></Line>
+                <Label Style="{StaticResource lbllin1}" Text="Or Continue With" TextColor="Black" />
+                <Line X2="95" Stroke="black" StrokeThickness="1" Margin="0,35,0,0"></Line>
             </StackLayout>
             
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
@@ -39,10 +39,10 @@
             </StackLayout>
 
             <StackLayout Style="{StaticResource lblSkipLine}" Spacing="0" Margin="50,50,0,0">
-                <Label Text="Alreday have an account?" FontSize="18"  Margin="5"></Label>
+                <Label Text="Already have an account?" FontSize="18"  Margin="5"></Label>
 
                 <StackLayout>
-                    <Label x:Name="Logcommand" Text="Log In" FontSize="18" TextColor="#007AFF" Margin="0,4,0,0">
+                    <Label x:Name="Logcommand" Text="Log In" FontSize="18" TextColor="#007AFF" Margin="0,4,0,0" FontFamily="poppins">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding Logincommand}" Tapped="LoginTapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
                         </Label.GestureRecognizers>

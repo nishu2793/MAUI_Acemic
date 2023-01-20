@@ -34,7 +34,17 @@
             <Label Text="Forgot Password?" Margin="95,8,0,0" FontSize="16" TextColor="#007AFF"/>
         </StackLayout>
         
-        
+
+        <Label  Text="hELLO" Margin="10,0,0,0"
+                         x:Name="lblconnectionid"
+                         FontSize="22"></Label>
+       
+        <Label
+                     x:Name="lblChat"
+                     FontSize="18"
+                     HorizontalOptions="StartAndExpand"
+                     TextType="Html"></Label>
+
         <StackLayout>
             <ActivityIndicator x:Name="LoginIndicator" VerticalOptions="Center" HorizontalOptions="Center" Color="#00BF81" IsRunning="False" WidthRequest="40" HeightRequest="40"/>
             <Button Style="{StaticResource lblbtn3}" Text="Login" CornerRadius="10" HorizontalOptions="Center" VerticalOptions="Center" Clicked="LogIn_Clicked"></Button>
@@ -61,7 +71,15 @@
                     </Label.GestureRecognizers>
                 </Label>
             </StackLayout>
+
+
+
             
+
+            
+
+
+
         </StackLayout>
     </StackLayout>
 </ContentPage> 

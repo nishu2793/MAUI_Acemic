@@ -11,10 +11,11 @@
 
         <Label Style="{StaticResource lbluser}" Text="Select the type of user you are"/>
 
-        <Button Style="{StaticResource lblbtn3}" Text="Provide / Partner" CornerRadius="10" HorizontalOptions="Center" VerticalOptions="Center"></Button>
 
         <Button Style="{StaticResource lblbtn4}" x:Name="txtUser" Text="User" CornerRadius="10" HorizontalOptions="Center" VerticalOptions="Center"
                 Clicked="UserBtn_Clicked"></Button>
+
+        <Button Style="{StaticResource lblbtn3}" Text="Provide / Partner" CornerRadius="10" HorizontalOptions="Center" VerticalOptions="Center"></Button>
 
     </StackLayout>
 </ContentPage>

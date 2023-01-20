@@ -1,7 +1,9 @@
 namespace AceMicEV.Views;
 
+
 public partial class DashBoardPage : ContentPage
 {
+
     public DashBoardPage()
     {
         InitializeComponent();
@@ -10,7 +12,6 @@ public partial class DashBoardPage : ContentPage
         var LoginName = Preferences.Get("EmailKey", "Null");
         UserName.Text = LoginName;
     }
-
     private async void BarcodeClicked(object sender, EventArgs e)
     {
         bool allowed = false;
@@ -35,8 +36,6 @@ public partial class DashBoardPage : ContentPage
 
     }
 
-    private void slotClicked(object sender, EventArgs e)
-    {
+  
 
-    }
 }

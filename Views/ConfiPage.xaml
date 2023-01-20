@@ -16,7 +16,7 @@
 
         <Label
                 x:Name="lblChat"
-                Text="Ashish"
+               
                 FontSize="18"
                 HorizontalOptions="StartAndExpand"
                 TextType="Html"></Label>

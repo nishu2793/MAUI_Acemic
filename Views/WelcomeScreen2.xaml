@@ -14,17 +14,17 @@
                 <Image Source="line3.png" Margin="0,0,10,0"></Image>
             </StackLayout>
 
-            <Label Style="{StaticResource lblHeader}" Text="Looking for Charging Station for your electric vehicle ?"/>
+            <Label Style="{StaticResource lblHeade2}" Text="Looking for Charging Station for your electric vehicle ?"/>
 
         <Label Style="{StaticResource lbldescription}"  Text="Acemic is offering EV Charging solutions for users"/>
 
-        <StackLayout Style="{StaticResource lblline}" Margin="0" Padding="0">
+        <StackLayout Style="{StaticResource lblline}" Margin="0,0,20,0" Padding="0" Spacing="15">
             <Button Style="{StaticResource lblPrebtn}" Text="Previous" CornerRadius="12" BorderColor="#00BF81" BorderWidth="1" Clicked="PreBtn2_Clicked"/>
-            <Button Style="{StaticResource lblbtn2}" Text="Next" CornerRadius="12" Clicked="NextBtn2_Clicked" WidthRequest="165"></Button>
+            <Button Style="{StaticResource lblbtn5}" Text="Next" CornerRadius="12" Clicked="NextBtn2_Clicked"></Button>
         </StackLayout>
 
         <StackLayout>
-            <Button Style="{StaticResource lblSkipbtn}" Text="Skip" CornerRadius="12" Clicked="SkipBtn2_Clicked" Margin="0" BackgroundColor="White" TextColor="Gray"></Button>
+            <Button Style="{StaticResource lblSkipbtn1}" Text="Skip" CornerRadius="12" Clicked="SkipBtn2_Clicked" BackgroundColor="White" TextColor="Gray"></Button>
         </StackLayout>
 
        

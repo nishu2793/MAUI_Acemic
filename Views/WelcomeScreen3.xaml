@@ -19,13 +19,13 @@
 
             <Label Style="{StaticResource lbldescription}"  Text=" "/>
 
-            <StackLayout Style="{StaticResource lblline}" Margin="0" Padding="15">
-                <Button Style="{StaticResource lblPrebtn}" Text="Previous" CornerRadius="12" BorderColor="#00BF81" BorderWidth="1" Clicked="PrevBtn3_Clicked"/>
-                <Button Style="{StaticResource lblbtn2}" Text="Next" CornerRadius="12" WidthRequest="165" Clicked="NextBtn3_Clicked"/>
+        <StackLayout Style="{StaticResource lblline}" Margin="0,0,20,0" Padding="0" Spacing="15">
+            <Button Style="{StaticResource lblPrebtn1}" Text="Previous" CornerRadius="12" BorderColor="#00BF81" BorderWidth="1" Clicked="PrevBtn3_Clicked"/>
+                <Button Style="{StaticResource lblbtn5}" Text="Next" CornerRadius="12" Clicked="NextBtn3_Clicked"/>
             </StackLayout>
 
             <StackLayout>
-                <Button Style="{StaticResource lblSkipbtn}" Text="Skip" CornerRadius="12" Clicked="SkipBtn3_Clicked" Margin="0" TextColor="Grey" BackgroundColor="White" />
+                <Button Style="{StaticResource lblSkipbtn}" Text="Skip" CornerRadius="12" Clicked="SkipBtn3_Clicked" Margin="0,20,0,0" TextColor="Grey" BackgroundColor="White" />
             </StackLayout>
         </StackLayout>
     

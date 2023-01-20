@@ -8,19 +8,19 @@
     <StackLayout Style="{StaticResource lblScr}">
         <StackLayout Style="{StaticResource lblline3}">
             <StackLayout Orientation="Horizontal">
-                <Label Text="VERIFY DETAILS" Margin="20" HeightRequest="150" FontAttributes="Bold" FontSize="22"/>
+                <Label Text="VERIFY DETAILS" Margin="30" HeightRequest="200" FontAttributes="Bold" FontSize="22" FontFamily="poppins" TextColor="Black"/>
                 <Image Style="{StaticResource lblImage3}" Source="v1_132.png"></Image>
             </StackLayout>
         </StackLayout>
         <StackLayout>
             <Label Style="{StaticResource lblDes1}" Text="Enter the verification code we just sent on your email address."/>
             <StackLayout>
-                <Label Style="{StaticResource lbllineSpace}" Text="Enter OTP"/>
+                <Label Style="{StaticResource lbllineSpace}" Text="Enter OTP" Margin="5,20,0,0"/>
             </StackLayout>
 
-            <StackLayout Style="{StaticResource lblOtpline}">
+            <StackLayout Style="{StaticResource lblOtpline}" Margin="5,0,0,0">
 
-                <Entry x:Name="entry1" Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1" TextChanged="textChangeentry1" />
+                <Entry x:Name="entry1" Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1" TextChanged="textChangeentry1"/>
                 <Entry x:Name="entry2" Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1" TextChanged="textChangeentry2"/>
                 <Entry x:Name="entry3" Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1" TextChanged="textChangeentry3"/>
                 <Entry x:Name="entry4" Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1" TextChanged="textChangeentry4"/>
@@ -34,9 +34,11 @@
             <StackLayout>
                 <Button x:Name="Verify1" Style="{StaticResource lblbtn2}" Text="Verify" CornerRadius="12" Clicked="VerifyBtn_Clicked"/>
             </StackLayout>
+            
             <StackLayout>
-                <Label x:Name="OtpShow" HorizontalOptions="Center"/>
+                <Label x:Name="OtpShow" HorizontalOptions="Center" Margin="0,20,0,0"/>
             </StackLayout>
+            
         </StackLayout>
     </StackLayout>
 

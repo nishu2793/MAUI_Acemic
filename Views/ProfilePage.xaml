@@ -12,13 +12,13 @@
         </Frame>
         <StackLayout Style="{StaticResource lblScr2}" Spacing="10">
             <StackLayout Style="{StaticResource lblFnln}">
-                <Label Style="{StaticResource LblFnLnName}" Text="First Name" Margin="0,100,100,0" VerticalOptions="Start" />
+                <Label Style="{StaticResource LblFnLnName}" Text="First Name" Margin="8,100,100,0" VerticalOptions="Start" />
                 <Label Style="{StaticResource LblFnLnName}" Text="Last Name" Margin="0,100,0,0" VerticalOptions="Start" />
             </StackLayout>
             <StackLayout>
-                <StackLayout Style="{StaticResource lblFnln}" Spacing="5">
-                    <Entry x:Name="FName"  Style="{StaticResource lblFn2}"/>
-                    <Entry x:Name="LName"  Style="{StaticResource lblFn2}"/>
+                <StackLayout Style="{StaticResource lblFnln}" Spacing="10">
+                    <Entry x:Name="FName"  Style="{StaticResource lblFnln3}"/>
+                    <Entry x:Name="LName"  Style="{StaticResource lblFnln3}"/>
                 </StackLayout>
                 <StackLayout>
                     <StackLayout Style="{StaticResource lblFnln2}" Spacing="3">
