@@ -40,6 +40,22 @@ public partial class LoginPage : ContentPage
         });
     }
 
+
+    private double width = 0;
+    private double height = 0;
+    protected override void OnSizeAllocated(double width, double height)
+    {
+        base.OnSizeAllocated(width, height);
+        if (width != this.width || height != this.height)
+        {
+            this.width = width;
+            this.height = height;
+            outerStack1.WidthRequest = width;
+            outerStack1.HeightRequest = height;
+        }
+    }
+
+
     private async void LogIn_Clicked(object sender, EventArgs e)
     {
         LoginIndicator.IsRunning = true;

@@ -5,7 +5,8 @@
              Title="SignUpPage"         
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False">
-    <StackLayout Style="{StaticResource lblScr}" VerticalOptions="Start">
+    <StackLayout x:Name="outerStack1">
+        <StackLayout Style="{StaticResource lblScr}" VerticalOptions="Start">
         <Image Style="{StaticResource lblimage2}"  Source="v1_136.png"/>
         <StackLayout Margin="10">
             <Label Style="{StaticResource lblHeader2}" Text=" Create an Account"/>
@@ -25,32 +26,34 @@
                 <ActivityIndicator x:Name="activityIndicator" VerticalOptions="Center" HorizontalOptions="Center" Color="#00BF81" IsRunning="False" WidthRequest="50" HeightRequest="50"/>
                 <Button Style="{StaticResource lblbtn3}" Clicked="SignUp_Clicked"></Button>
             </StackLayout>
-            
+
             <StackLayout Orientation="Horizontal">
                 <Line X2="105" Stroke="black" StrokeThickness="1" Margin="0,35,0,0"></Line>
                 <Label Style="{StaticResource lbllin1}" Text="Or Continue With" TextColor="Black" />
                 <Line X2="95" Stroke="black" StrokeThickness="1" Margin="0,35,0,0"></Line>
             </StackLayout>
-            
+
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
                 <Image Source="google.png" Margin="10,0,40,0"></Image>
                 <Image Source="facebook.png" Margin="0,0,40,0"></Image>
                 <Image Source="twitter.png" Margin="0,0,10,0"></Image>
             </StackLayout>
 
-            <StackLayout Style="{StaticResource lblSkipLine}" Spacing="0" Margin="50,50,0,0">
+            <StackLayout Style="{StaticResource lblSkipLine}" Spacing="0" Margin="45,45,0,0">
                 <Label Text="Already have an account?" FontSize="18"  Margin="5"></Label>
 
                 <StackLayout>
-                    <Label x:Name="Logcommand" Text="Log In" FontSize="18" TextColor="#007AFF" Margin="0,4,0,0" FontFamily="poppins">
+                    <Label x:Name="Logcommand" Text="Log In" FontSize="18" TextColor="#007AFF" Margin="0,4,0,0" >
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding Logincommand}" Tapped="LoginTapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
                         </Label.GestureRecognizers>
                     </Label>
                 </StackLayout>
-                
+
             </StackLayout>
         </StackLayout>
-        
+
+    </StackLayout>
+
     </StackLayout>
 </ContentPage>

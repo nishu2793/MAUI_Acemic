@@ -8,7 +8,7 @@
     <StackLayout Style="{StaticResource lblScr}">
         <StackLayout Style="{StaticResource lblline3}">
             <StackLayout Orientation="Horizontal">
-                <Label Text="VERIFY DETAILS" Margin="30" HeightRequest="200" FontAttributes="Bold" FontSize="22" FontFamily="poppins" TextColor="Black"/>
+                <Label Text="VERIFY DETAILS" Margin="30" HeightRequest="200" FontAttributes="Bold" FontSize="22"  TextColor="Black"/>
                 <Image Style="{StaticResource lblImage3}" Source="v1_132.png"></Image>
             </StackLayout>
         </StackLayout>

@@ -18,6 +18,21 @@ public partial class SignUpPage : ContentPage
         //txtLastName.Text = Preferences.Get("LastKey", "Empty");
         //txtEmail.Text = Preferences.Get("EmailKey", "Empty");
     }
+
+    private double width = 0;
+    private double height = 0;
+    protected override void OnSizeAllocated(double width, double height)
+    {
+        base.OnSizeAllocated(width, height);
+        if (width != this.width || height != this.height)
+        {
+            this.width = width;
+            this.height = height;
+            outerStack1.WidthRequest = width;
+            outerStack1.HeightRequest = height;
+        }
+    }
+
     private async void SignUp_Clicked(object sender, EventArgs e)
     {
         activityIndicator.IsRunning = true;

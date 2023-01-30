@@ -23,8 +23,10 @@
                 <Label Style="{StaticResource lbldescription}"  Text="Our new electric vehicle (EV) charging points has arrived"/>
 
                 <StackLayout Style="{StaticResource lblbtn1}">
-                    <Button Style="{StaticResource lblbtn2}" Text="Next" CornerRadius="12" Clicked="NextBtn_Clicked"></Button>
-                </StackLayout>
+                     <!--<Button Style="{StaticResource lblBtnFs}" Text="Next" CornerRadius="12" Clicked="NextBtn_Clicked"></Button>-->
+                  <Button Style="{StaticResource lblBtnFs}" Text="Next" CornerRadius="12" Clicked="NextBtn_Clicked"></Button>
+
+            </StackLayout>
                 <StackLayout>
                      <Button Style="{StaticResource lblSkipbtn2}" Text="Skip" CornerRadius="12" Clicked="SkipBtn_Clicked" TextColor="Grey" BackgroundColor="White"></Button>
                 </StackLayout>
