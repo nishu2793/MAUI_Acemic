@@ -8,36 +8,36 @@ namespace AceMicEV.Views;
 
 public partial class LoginPage : ContentPage
 {
-    private readonly HubConnection hubConnection;
+    readonly HubConnection hubConnection;
     readonly ISignalRepository _signalRepository = new SIgnalRServices();
     readonly IUserRepository _loginRepository = new LoginService();
     public LoginPage()
     {
         InitializeComponent();
 
-        var baseUrl = "";
+        //var baseUrl = "";
 
-        if (DeviceInfo.Current.Platform == DevicePlatform.Android)
-        {
-            baseUrl = "https://acemicapi.azurewebsites.net/";
-        }
+        //if (DeviceInfo.Current.Platform == DevicePlatform.Android)
+        //{
+        //    baseUrl = "https://acemicapi.azurewebsites.net/";
+        //}
 
-        hubConnection = new HubConnectionBuilder()
-        .WithUrl($"{baseUrl}/chatHub")
-        .Build();
+        //hubConnection = new HubConnectionBuilder()
+        //.WithUrl($"{baseUrl}/chatHub")
+        //.Build();
 
-        hubConnection.On<string, string>("ReceiveMessageconectionid", (connectionid, message) =>
-        {
-            lblChat.Text += $"<b>: {connectionid}</b>: {message}<br/>";
-        });
+        //hubConnection.On<string, string>("ReceiveMessageconectionid", (connectionid, message) =>
+        //{
+        //    lblChat.Text += $"<b>: {connectionid}</b>: {message}<br/>";
+        //});
 
-        Task.Run(() =>
-        {
-            Dispatcher.Dispatch(async () =>
-            {
-                await hubConnection.StartAsync();
-            });
-        });
+        //Task.Run(() =>
+        //{
+        //    Dispatcher.Dispatch(async () =>
+        //    {
+        //        await hubConnection.StartAsync();
+        //    });
+        //});
     }
 
 
@@ -74,10 +74,11 @@ public partial class LoginPage : ContentPage
         if (userinfo)
         {
             LoginIndicator.IsRunning = false;
-            var hubConnectionID = hubConnection.ConnectionId;
-            var SignalInfo = await _signalRepository.Signaldata(hubConnectionID, userid);
+            await SignalRHubServices.OpenConnectionAsync(_signalRepository);
+            //var hubConnectionID = hubConnection.ConnectionId;
+            //var SignalInfo = await _signalRepository.Signaldata(hubConnectionID, userid);
 
-            Preferences.Set("ConnectionKey", hubConnectionID);
+            //Preferences.Set("ConnectionKey", hubConnectionID);
 
             await Navigation.PushAsync(new DashBoardPage());
         }

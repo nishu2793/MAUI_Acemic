@@ -1,4 +1,4 @@
-namespace AceMicEV.Tab;
+namespace AceMicEV.Views;
 
 public partial class SettingPage : ContentPage
 {

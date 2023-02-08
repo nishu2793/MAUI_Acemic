@@ -5,67 +5,94 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:AceMicEV.Views"
     xmlns:localMain="clr-namespace:AceMicEV"
-    Shell.FlyoutBehavior="Disabled"
     Shell.NavBarIsVisible="false"
-    NavigationPage.HasNavigationBar="False">
+    NavigationPage.HasNavigationBar="False"
+    Shell.TabBarIsVisible="False">
 
-    <ShellContent
+        <ShellContent
         Title="WelCome"
         ContentTemplate="{DataTemplate local:WelcomeScreen}"
         Route="MainPage" />
 
-    <ShellContent
-        Title="WelCome"
+        <ShellContent
+        Title="WelCome2"
         ContentTemplate="{DataTemplate local:WelcomeScreen2}"
         Route="MainPage" />
 
-    <ShellContent
-        Title="WelCome"
+        <ShellContent
+        Title="WelCome3"
         ContentTemplate="{DataTemplate local:WelcomeScreen3}"
         Route="MainPage" />
 
-    <ShellContent
-        Title="WelCome"
+        <ShellContent
+        Title="UserType"
         ContentTemplate="{DataTemplate local:UserType}"
         Route="MainPage" />
 
-    <ShellContent
+        <ShellContent
         Title="SignUpPage"
         ContentTemplate="{DataTemplate local:SignUpPage}"
         Route="SignUpPage" />
-    <ShellContent
+
+        <ShellContent
         Title="Verify"
         ContentTemplate="{DataTemplate local:VerifiyOtpPage}"
         Route="VerifiyOtpPage" />
 
-    <ShellContent
+        <ShellContent
         Title="Password"
         ContentTemplate="{DataTemplate local:PassWordPage}"
         Route="PassWordPage" />
 
-    <ShellContent
+        <ShellContent
         Title="Profile"
         ContentTemplate="{DataTemplate local:ProfilePage}"
         Route="ProfilePage" />
 
-    <ShellContent
+        <ShellContent
         Title="LoginPage"
         ContentTemplate="{DataTemplate local:LoginPage}"
         Route="LoginPage" />
 
+    <FlyoutItem Title="Home1">
+        <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:HomePage}"
+        Route="HomePage" />
+    </FlyoutItem>
+
+    <FlyoutItem>
+        <ShellContent
+            Title="About"
+            ContentTemplate="{DataTemplate local:AboutPage}"
+            Route="AboutPage" />
+    </FlyoutItem>
+
+    <FlyoutItem>
+        <ShellContent
+            Title="Setting"
+            ContentTemplate="{DataTemplate local:SettingPage}"
+            Route="SettingPage" />
+    </FlyoutItem>
+
     <ShellContent
-        Title="DashBoard"
-        ContentTemplate="{DataTemplate local:DashBoardPage}"
-        Route="DashBoardPage" />
-    
-    <ShellContent
+          Title="DashBoard"
+          ContentTemplate="{DataTemplate local:DashBoardPage}"
+          Route="DashBoardPage" />
+
+        <ShellContent
         Title="MyMainPage"
         ContentTemplate="{DataTemplate localMain:MainPage}"
         Route="MyMainPage" />
 
-    <ShellContent
+        <ShellContent
         Title="ScanPage"
         ContentTemplate="{DataTemplate localMain:ScanPage}"
         Route="ScanPage" />
+
+    <ShellContent
+        Title="MyPopup"
+        ContentTemplate="{DataTemplate localMain:MyPopupPage}"
+        Route="MyPopup" />
 
 </Shell>

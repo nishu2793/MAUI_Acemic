@@ -2,10 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AceMicEV.Views.DashBoardPage"
-             xmlns:local ="clr-namespace:AceMicEV.Tab"
+             xmlns:local="clr-namespace:AceMicEV.Views"
              Title="DashBoardPage"
+             Shell.FlyoutBehavior="Flyout"
              Shell.NavBarIsVisible="False"
-             Shell.FlyoutBehavior="Disabled"  
              NavigationPage.HasNavigationBar="False">
     <StackLayout>
         
@@ -26,7 +26,7 @@
         </StackLayout>
         <StackLayout>
             <ImageButton Source="bookslot.png" HeightRequest="60" WidthRequest="180" BackgroundColor="#D4F5FE" Margin="0,10,135,0" Clicked="slotClicked" CornerRadius="12" BorderWidth="3"/>
-        </StackLayout>
+        </StackLayout>      
 
         <StackLayout Orientation="Horizontal" Margin="25,30,0,0" Spacing="30">
             <StackLayout>

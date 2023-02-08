@@ -1,3 +1,5 @@
+using AceMicEV.ViewModels;
+
 namespace AceMicEV.Views;
 
 
@@ -26,16 +28,13 @@ public partial class DashBoardPage : ContentPage
         Navigation.PushAsync(new ScanPage());
     }
 
-    private void PayClicked(object sender, EventArgs e)
-    {
-      
-    }
-
     private void slotClicked(object sender, EventArgs e)
     {
 
     }
 
-  
+    private void PayClicked(object sender, EventArgs e)
+    {
 
+    }
 }

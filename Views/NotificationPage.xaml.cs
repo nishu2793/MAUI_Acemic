@@ -4,7 +4,7 @@ namespace AceMicEV.Views;
 
 public partial class NotificationPage : ContentPage
 {
-    readonly IForgroundService _forground = new ForegroundService();
+   // readonly IForgroundService _forground = new ForegroundService();
 
     public NotificationPage()
 	{
@@ -15,7 +15,7 @@ public partial class NotificationPage : ContentPage
     {
       
 
-       _forground.StartMyForegroundService();
+      // _forground.StartMyForegroundService();
 
        
     }
