@@ -45,16 +45,7 @@ public partial class ConfiPage : ContentPage
         await this.SendMessage();
     }
 
-    private void deleteClicked(object sender, EventArgs e)
-    {
-       // string userid = Preferences.Get("DidKey", null);
-        //var hubConnectionID = hubConnection.ConnectionId;
-        //var SignalInfo = _signalRepository.Signaldata(hubConnectionID, userid).Result;
 
-        //Preferences.Set("ConnectionKey", hubConnectionID);
-
-        btnexit.IsVisible = true;
-    }
     public async Task<string> callfun()
     {
         NotificationServices notificationServices = new NotificationServices();
@@ -77,7 +68,7 @@ public partial class ConfiPage : ContentPage
 
             if(paymentNotifiction != null)
             {
-                MopupService.Instance.PushAsync(new MyPopupPage(paymentNotifiction.Status, paymentNotifiction.OrderId, paymentNotifiction.PaymentId, paymentNotifiction.Amount, paymentNotifiction.Email,
+                Navigation.PushAsync(new PaymentStutes(paymentNotifiction.Status, paymentNotifiction.OrderId, paymentNotifiction.PaymentId, paymentNotifiction.Amount, paymentNotifiction.Email,
                                                paymentNotifiction.Paymentorderid));
             }
 

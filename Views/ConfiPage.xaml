@@ -22,7 +22,6 @@
                 HorizontalOptions="StartAndExpand"
                 TextType="Html"></Label>
 
-        <Button Text="Delete" x:Name="btndele" Clicked="deleteClicked" WidthRequest="70" HeightRequest="35" BackgroundColor="#00BF81"/>
 
     </StackLayout>
 </ContentPage>

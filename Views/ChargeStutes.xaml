@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AceMicEV.Views.ChargeStutes"
+             NavigationPage.HasNavigationBar="False"
+             Title="ChargeStutes">
+    <StackLayout>
+        <Label Style="{StaticResource lblcharge}" Text="Coming Soon" FontSize="20"/>
+
+        <StackLayout Style="{StaticResource lblline}" Margin="0,0,20,0" Padding="0" Spacing="15">
+
+            <Button Style="{StaticResource lblPrebtn}" Text="Home" CornerRadius="12" BorderColor="#00BF81" BorderWidth="1" Clicked="homeClicked"/>
+            <Button Style="{StaticResource lblbtn5}" Text="Re-Book Slot" CornerRadius="12"/>
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

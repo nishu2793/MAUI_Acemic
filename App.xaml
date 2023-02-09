@@ -629,6 +629,16 @@
             <Setter Property="Margin" Value="0,3,25,0"/>
         </Style>
 
+        <Style x:Key="lblcharge"  TargetType="Label">
+            <Setter Property="Text" Value="Select a Charging Station"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Margin" Value="50"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+
 
     </Application.Resources>
 

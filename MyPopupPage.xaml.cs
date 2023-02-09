@@ -3,7 +3,7 @@ using Mopups.Services;
 
 namespace AceMicEV;
 
-public partial class MyPopupPage
+public partial class MyPopupPage 
 {
 	public MyPopupPage(string Status, string OrderId, string PaymentId, string Amount, string Email, string Paymentorderid)
 	{
@@ -18,6 +18,6 @@ public partial class MyPopupPage
 
     private void SuccesFull_Clicked(object sender, EventArgs e)
     {
-		Navigation.PushAsync(new WelcomeScreen());
+
     }
 }

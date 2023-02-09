@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AceMicEV.Views.PaymentStutes"
+             NavigationPage.HasNavigationBar="False"
+             Title="PaymentStutes">
+    <StackLayout x:Name="outerStack2">
+    <StackLayout Style="{StaticResource lblScr}">
+
+            <Image x:Name="imgtag" Source="" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="80" WidthRequest="80" Margin="0,50,0,20"/>
+                
+        <Label x:Name="lblStatues" Text="" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="22"/>
+
+        <StackLayout Orientation="Horizontal" Margin="12,50,0,0" Spacing="125">
+            <Label x:Name="txtStatus" Text="Status" FontSize="18"/>
+            <Label x:Name="lblStatus" HeightRequest="30" WidthRequest="200" TextColor="Black" FontAttributes="Bold"/>
+        </StackLayout>
+
+
+        <StackLayout Orientation="Horizontal" Margin="12,5,0,0" Spacing="115">
+            <Label x:Name="txtOrderId" Text="OrderId" FontSize="18" Margin="0,0,0,10"/>
+            <Label x:Name="lblOrderId" HeightRequest="40" WidthRequest="150" TextColor="Black" FontAttributes="Bold"/>
+        </StackLayout>
+
+
+        <StackLayout Orientation="Horizontal" Margin="12,3,0,0" Spacing="90">
+            <Label x:Name="txtPaymentId" Text="PaymentId" FontSize="18"/>
+            <Label x:Name="lblPaymentId" HeightRequest="30" WidthRequest="200" TextColor="Black" FontAttributes="Bold"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Margin="12,3,0,0" Spacing="113">
+            <Label x:Name="txtAmount" Text="Amount" FontSize="18"/>
+            <Label x:Name="lblAmount" HeightRequest="30" WidthRequest="200" TextColor="Black" FontAttributes="Bold"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Margin="12,3,0,0" Spacing="133">
+            <Label x:Name="txtEmail" Text="Email" FontSize="18"/>
+            <Label x:Name="lblEmail" HeightRequest="30" WidthRequest="200" TextColor="Black" FontAttributes="Bold"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Margin="12,3,0,0" Spacing="50">
+            <Label x:Name="txtPaymentorderid" Text="Paymentorderid" FontSize="18"/>
+            <Label x:Name="lblPaymentorderid" HeightRequest="30" WidthRequest="200" TextColor="Black" FontAttributes="Bold"/>
+        </StackLayout>
+
+            <StackLayout>
+                <Button Style="{StaticResource lbluserbtn}" x:Name="lblPay" Text="Successfull" Clicked="successlicked" Margin="70" WidthRequest="150"/>
+            </StackLayout>
+        
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

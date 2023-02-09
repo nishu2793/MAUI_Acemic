@@ -93,6 +93,17 @@
     <ShellContent
         Title="MyPopup"
         ContentTemplate="{DataTemplate localMain:MyPopupPage}"
-        Route="MyPopup" />
+        Route="MyPopupPage" />
+
+    <ShellContent
+        Title="Charge"
+        ContentTemplate="{DataTemplate local:ChargeStutes}"
+        Route="ChargeStutes" />
+
+    <ShellContent
+        Title="Payment"
+        ContentTemplate="{DataTemplate local:PaymentStutes}"
+        Route="PaymentStutes" />
+
 
 </Shell>
