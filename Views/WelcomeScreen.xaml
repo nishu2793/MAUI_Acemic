@@ -5,7 +5,9 @@
              Shell.NavBarIsVisible="False"
              Title="WelcomeScreen"
              NavigationPage.HasNavigationBar="False"
-             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui">
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
+             Shell.FlyoutBehavior="Disabled"
+             >
     <Page.Behaviors>
         <mct:StatusBarBehavior  x:Name="statusBar"/>
     </Page.Behaviors>
@@ -20,12 +22,10 @@
                 </StackLayout>
                 <Label Style="{StaticResource lblHeader}" Text="Acemic Charging Station for EV's"/>
 
-                <Label Style="{StaticResource lbldescription}"  Text="Our new electric vehicle (EV) charging points has arrived"/>
+                <Label Style="{StaticResource lbldescription1}"  Text="Our new electric vehicle (EV) charging points has arrived"/>
 
                 <StackLayout Style="{StaticResource lblbtn1}">
-                     <!--<Button Style="{StaticResource lblBtnFs}" Text="Next" CornerRadius="12" Clicked="NextBtn_Clicked"></Button>-->
-                  <Button Style="{StaticResource lblBtnFs}" Text="Next" CornerRadius="12" Clicked="NextBtn_Clicked"></Button>
-
+                     <Button Style="{StaticResource lblBtnFs}" Text="Next" CornerRadius="12" Clicked="NextBtn_Clicked"></Button>
             </StackLayout>
                 <StackLayout>
                      <Button Style="{StaticResource lblSkipbtn2}" Text="Skip" CornerRadius="12" Clicked="SkipBtn_Clicked" TextColor="Grey" BackgroundColor="White"></Button>

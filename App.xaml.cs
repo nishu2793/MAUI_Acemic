@@ -1,4 +1,4 @@
-﻿using AceMicEV.Views;
+﻿ using AceMicEV.Views;
 
 namespace AceMicEV;
 
@@ -8,9 +8,9 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-        MainPage = new NavigationPage(new WelcomeScreen());
+        //MainPage = new NavigationPage(new WelcomeScreen());
+        MainPage = new AppShell();
 
-        //MainPage = new AppShell();
 
     }
 

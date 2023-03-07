@@ -5,7 +5,7 @@
              Title="LoginPage"       
              Shell.NavBarIsVisible="false"
             NavigationPage.HasNavigationBar="False">
-    <StackLayout x:Name="outerStack1">
+    <StackLayout x:Name="outerStack1" >
         <StackLayout  Style="{StaticResource lblScr}">
             <Frame Style="{StaticResource lblProScr}">
                 <Label Style="{StaticResource lblWel}" Text="Welcome Back!"></Label>
@@ -17,16 +17,22 @@
                 <StackLayout>
                     <Label Text="E-mail / Phone Number" FontSize="18"/>
                 </StackLayout>
-                <StackLayout>
-                    <Entry x:Name="txtUserID" Style="{StaticResource lblemail3}"/>
+                
+                <StackLayout Margin="0,10,0,0">
+                    <Border StrokeShape="RoundRectangle 12,12,12,12">
+                        <Entry x:Name="txtUserID" Style="{StaticResource lblemail3}" />
+                    </Border>
                 </StackLayout>
             </StackLayout>
 
             <StackLayout>
-                <Label Text="Password" FontSize="18" Margin="10" />
+                <Label Text="Password" FontSize="18" Margin="10,10,0,10" />
             </StackLayout>
+
             <StackLayout>
-                <Entry x:Name="txtPassword" Style="{StaticResource lblPass3}"/>
+                <Border StrokeShape="RoundRectangle 12,12,12,12" WidthRequest="345" Margin="0,0,18,0">
+                    <Entry x:Name="txtPassword" Style="{StaticResource lblPass3}"/>
+                </Border>
             </StackLayout>
 
             <StackLayout>
@@ -46,11 +52,12 @@
                      TextType="Html"></Label>
 
             <StackLayout>
-                <ActivityIndicator x:Name="LoginIndicator" VerticalOptions="Center" HorizontalOptions="Center" Color="#00BF81" IsRunning="False" WidthRequest="40" HeightRequest="40"/>
-                <Button Style="{StaticResource lblbtn3}" Text="Login" CornerRadius="10" HorizontalOptions="Center" VerticalOptions="Center" Clicked="LogIn_Clicked"></Button>
+                <ActivityIndicator x:Name="LoginIndicator" VerticalOptions="Center" HorizontalOptions="Center" Color="#00BF81" IsRunning="False" />
+
+                <Button Style="{StaticResource lblLoginbtn}" Text="Login" CornerRadius="10" HorizontalOptions="Center" VerticalOptions="Center" Clicked="LogIn_Clicked"></Button>
             </StackLayout>
 
-
+            
             <StackLayout Orientation="Horizontal" Margin="0,0,0,0">
                 <Line X2="115" Stroke="black" StrokeThickness="1" Margin="0,15,0,0"></Line>
                 <Label Style="{StaticResource lbllin2}" Text="Or Continue With" TextColor="Black"/>

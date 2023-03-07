@@ -7,9 +7,9 @@
     <StackLayout x:Name="outerStack2">
     <StackLayout Style="{StaticResource lblScr}">
 
-            <Image x:Name="imgtag" Source="" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="80" WidthRequest="80" Margin="0,50,0,20"/>
+            <Image x:Name="imgtag" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="80" WidthRequest="80" Margin="0,50,0,20"/>
                 
-        <Label x:Name="lblStatues" Text="" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="22"/>
+        <Label x:Name="lblStatues" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="22"/>
 
         <StackLayout Orientation="Horizontal" Margin="12,50,0,0" Spacing="125">
             <Label x:Name="txtStatus" Text="Status" FontSize="18"/>

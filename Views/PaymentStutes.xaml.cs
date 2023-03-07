@@ -1,5 +1,5 @@
+using AceMicEV.Views;
 namespace AceMicEV.Views;
-
 public partial class PaymentStutes : ContentPage
 {
     public PaymentStutes(string Status, string OrderId, string PaymentId, string Amount, string Email, string Paymentorderid)
@@ -41,6 +41,6 @@ public partial class PaymentStutes : ContentPage
 
     private void successlicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new ChargeStutes());
+        Navigation.PushAsync(new MapPage());
     }
 }

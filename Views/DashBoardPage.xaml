@@ -4,54 +4,59 @@
              x:Class="AceMicEV.Views.DashBoardPage"
              xmlns:local="clr-namespace:AceMicEV.Views"
              Title="DashBoardPage"
-             Shell.FlyoutBehavior="Flyout"
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False">
-    <StackLayout>
+
+    <StackLayout x:Name="outerStack2">
+
         
-        <StackLayout>
-            <Image Source="hello.png" HorizontalOptions="Start" Margin="20,20,0,0"/>
-        </StackLayout>
-        <StackLayout>
-            <Label x:Name="UserName" Text="User" HorizontalOptions="Start" Margin="20,0,0,0" FontSize="20" FontAttributes="Bold"></Label>
-        </StackLayout>
 
-        <SearchBar x:Name="searchBar"
-                   Placeholder="Search..." 
-                   Text="{Binding SearchText, Mode= TwoWay }" Margin="0,10,0,0" BackgroundColor="#F7F8F9" WidthRequest="320" HeightRequest="40">
-        </SearchBar>
+            <StackLayout>
+                <Image Source="hello.png" HorizontalOptions="Start" Margin="20,10,0,0"/>
+            </StackLayout>
+            <StackLayout>
+                <Label x:Name="UserName" Text="User" HorizontalOptions="Start" Margin="20,0,0,0" FontSize="20" FontAttributes="Bold"></Label>
+            </StackLayout>
 
-        <StackLayout>
-            <Label Text="Book Now!" HorizontalOptions="Start" Margin="20,20,0,0" FontSize="18" FontAttributes="Bold"/>
-        </StackLayout>
-        <StackLayout>
-            <ImageButton Source="bookslot.png" HeightRequest="60" WidthRequest="180" BackgroundColor="#D4F5FE" Margin="0,10,135,0" Clicked="slotClicked" CornerRadius="12" BorderWidth="3"/>
-        </StackLayout>      
+            <SearchBar x:Name="searchBar"
+                       Placeholder="Search..." 
+                       Text="{Binding SearchText}" Margin="0,5,0,0" BackgroundColor="#F7F8F9" WidthRequest="320" HeightRequest="40">
+            </SearchBar>
 
-        <StackLayout Orientation="Horizontal" Margin="25,30,0,0" Spacing="30">
             <StackLayout>
-                <ImageButton Source="qrcode.png" CornerRadius="12" Clicked="BarcodeClicked" WidthRequest="140" HeightRequest="150" BorderWidth="3" BorderColor="#00BF81"/>
+                <Label Text="Book Now!" HorizontalOptions="Start" Margin="20,5,0,0" FontSize="18" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout>
-                <ImageButton Source="booking.png" CornerRadius="12" Clicked="ScanClicked" WidthRequest="140" HeightRequest="150" BorderWidth="3" BorderColor="#00BF81"/>
+                <ImageButton Source="bookslot.png" HeightRequest="60" WidthRequest="180" BackgroundColor="#D4F5FE" Margin="0,10,135,0" Clicked="slotClicked" CornerRadius="12" BorderWidth="3"/>
             </StackLayout>
-        </StackLayout>      
 
-        <StackLayout Orientation="Horizontal" Margin="25,60,0,0" Spacing="30">
-            <StackLayout>
-                <ImageButton Source="nearbydevices.png" CornerRadius="12" Clicked="ScanClicked" WidthRequest="140" HeightRequest="150" BorderWidth="3" BorderColor="#00BF81"/>
+            <StackLayout Orientation="Horizontal" Margin="25,20,0,0" Spacing="30">
+                <StackLayout>
+                    <ImageButton Source="qrcode.png" CornerRadius="12" Clicked="BarcodeClicked" WidthRequest="140" HeightRequest="150" BorderWidth="3" BorderColor="#00BF81"/>
+                </StackLayout>
+                <StackLayout>
+                    <ImageButton Source="booking.png" CornerRadius="12" Clicked="ScanClicked" WidthRequest="140" HeightRequest="150" BorderWidth="3" BorderColor="#00BF81"/>
+                </StackLayout>
             </StackLayout>
-            <StackLayout>
-                <ImageButton Source="myprofile.png" CornerRadius="12" Clicked="PayClicked" WidthRequest="140" HeightRequest="150" BorderWidth="3" BorderColor="#00BF81"/>
+
+            <StackLayout Orientation="Horizontal" Margin="25,55,0,40" Spacing="30">
+                <StackLayout>
+                    <ImageButton Source="nearbydevices.png" CornerRadius="12" Clicked="ScanClicked" WidthRequest="140" HeightRequest="150" BorderWidth="3" BorderColor="#00BF81"/>
+                </StackLayout>
+                <StackLayout>
+                    <ImageButton Source="myprofile.png" CornerRadius="12" Clicked="PayClicked" WidthRequest="140" HeightRequest="150" BorderWidth="3" BorderColor="#00BF81"/>
+                </StackLayout>
+                <StackLayout>
+                    <ImageButton Source="booking.png" CornerRadius="12" Clicked="ScanClicked" WidthRequest="140" HeightRequest="160" BorderWidth="3" BorderColor="#00BF81"/>
+                </StackLayout>
             </StackLayout>
-            <StackLayout>
-                <ImageButton Source="booking.png" CornerRadius="12" Clicked="ScanClicked" WidthRequest="140" HeightRequest="160" BorderWidth="3" BorderColor="#00BF81"/>
-            </StackLayout>
-        </StackLayout>
+
+       
+
 
     </StackLayout>
-    
-</ContentPage>
 
+
+</ContentPage>  
 
 

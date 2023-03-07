@@ -3,8 +3,7 @@ using AceMicEV.Views;
 using BarcodeScanner.Mobile.Maui;
 using CommunityToolkit.Maui;
 using Microsoft.Maui.Controls.Compatibility.Hosting;
-using Mopups.Hosting;
-using SkiaSharp.Views.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 
 namespace AceMicEV;
 
@@ -15,27 +14,27 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
-            .UseSkiaSharp()
             .UseMauiCommunityToolkit()
-            .ConfigureMopups()
+            .UseMauiMaps()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 
             })
-            //Views
-            //builder.Services.AddSingleton<DashBoardPage>();
 
-            // //View Models
-            // builder.Services.AddSingleton<DashPageViewModel>();
+             .ConfigureMauiHandlers(handlers =>
+             {
+                 handlers.AddBarcodeScannerHandler();
+             });
 
-            //.ConfigureBarcodeScanner();
-            .ConfigureMauiHandlers(handlers =>
-            {
-                handlers.AddBarcodeScannerHandler();
-            });
+
+        Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("NoUnderline", (A, V) =>
+        {
+            A.PlatformView.BackgroundTintList =
+            Android.Content.Res.ColorStateList.ValueOf(Colors.AliceBlue.ToAndroid());
+        });
 
         return builder.Build();
     }
-}
+}  

@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:AceMicEV"
              x:Class="AceMicEV.App">
     <Application.Resources>
+
         <Style x:Key="lblScr" TargetType="StackLayout">
             <Setter Property="WidthRequest" Value ="380"/>
             <Setter Property="HeightRequest" Value="800"/>
@@ -47,6 +48,15 @@
             <Setter Property="FontSize" Value="18"/>
         </Style>
 
+        <Style x:Key="lbldescription1"  TargetType="Label">
+            <Setter Property="WidthRequest" Value="328"/>
+            <Setter Property="TextColor" Value="#7d7d7d"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="Margin" Value="0,0,0,50"/>
+            <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+
         <Style x:Key="lblimage2" TargetType="Image">
             <Setter Property="Margin" Value="5"/>
             <Setter Property="WidthRequest" Value="300"/>
@@ -70,7 +80,7 @@
 
         <Style x:Key="lblline" TargetType="StackLayout">
             <Setter Property="Orientation" Value="Horizontal"/>
-            <Setter Property="Margin" Value="0,4,0,0"/>
+            <Setter Property="Margin" Value="0,4,20,0"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
         </Style>
 
@@ -89,16 +99,15 @@
 
         <Style x:Key="lblline5" TargetType="StackLayout">
             <Setter Property="Orientation" Value="Horizontal"/>
-            <Setter Property="Margin" Value="95,3,0,0"/>
+            <Setter Property="Margin" Value="0,3,0,0"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
         </Style>
 
         <Style x:Key="lblFn" TargetType="Entry" >
             <Setter Property="HeightRequest" Value="50"/>
-            <Setter Property="WidthRequest" Value="160"/>
+            <Setter Property="WidthRequest" Value="165"/>
             <Setter Property="BackgroundColor" Value="#eef0f2"/>
             <Setter Property="Opacity" Value="5"/>
-            <Setter Property="Margin" Value="0"/>
             <Setter Property="FontSize" Value="16"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
             <Setter Property="VerticalOptions" Value="Center"/>
@@ -107,11 +116,10 @@
 
         <Style x:Key="lblLn" TargetType="Entry">
             <Setter Property="HeightRequest" Value="50"/>
-            <Setter Property="WidthRequest" Value="160"/>
+            <Setter Property="WidthRequest" Value="165"/>
             <Setter Property="BackgroundColor" Value="#eef0f2"/>
             <Setter Property="Opacity" Value="5"/>
             <Setter Property="FontSize" Value="16"/>
-            <Setter Property="Margin" Value="10,0,20,0"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
             <Setter Property="VerticalOptions" Value="Center"/>
             <Setter Property="HorizontalTextAlignment" Value="Start"/>
@@ -153,6 +161,18 @@
             <Setter Property="Margin" Value="0,0,0,8"/>
             <Setter Property="BackgroundColor" Value="#00BF81"/>
             <Setter Property="Padding" Value="0"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+        </Style>
+
+        <Style x:Key="lblLoginbtn" TargetType="Button">
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="WidthRequest" Value="190"/>
+            <Setter Property="HeightRequest" Value="55"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="BackgroundColor" Value="#00BF81"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
             <Setter Property="VerticalOptions" Value="Center"/>
         </Style>
@@ -199,10 +219,8 @@
             <Setter Property="HeightRequest" Value="60"/>
             <Setter Property="BackgroundColor" Value="#00bf81"/>
             <Setter Property="FontSize" Value="18"/>
-            <Setter Property="Margin" Value="0,40,0,0"/>
             <Setter Property="FontAttributes" Value="Bold"/>
         </Style>
-
 
         <Style x:Key="lblSub"  TargetType="Button">
             <Setter Property="WidthRequest" Value="200"/>
@@ -235,7 +253,7 @@
             <Setter Property="WidthRequest" Value="180"/>
             <Setter Property="HeightRequest" Value="60"/>
             <Setter Property="FontSize" Value="18"/>
-            <Setter Property="Margin" Value="50"/>
+            <Setter Property="Margin" Value="15"/>
             <Setter Property="FontAttributes" Value="Bold"/>
         </Style>
 
@@ -480,7 +498,7 @@
             <Setter Property="BackgroundColor" Value="#eef0f2"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
             <Setter Property="VerticalOptions" Value="Center"/>
-            <Setter Property="Margin" Value="17,5,20,0"/>
+            <Setter Property="FontSize" Value="17"/>
             <Setter Property="Placeholder" Value="  Enter E-mail or Phone Number"/>
         </Style>
 
@@ -490,7 +508,7 @@
             <Setter Property="BackgroundColor" Value="#eef0f2"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
             <Setter Property="VerticalOptions" Value="Center"/>
-            <Setter Property="Margin" Value="3,0,20,0"/>
+            <Setter Property="FontSize" Value="17"/>
             <Setter Property="Placeholder" Value="  Enter Password"/>
         </Style>
 
@@ -639,6 +657,14 @@
             <Setter Property="FontSize" Value="24"/>
         </Style>
 
+        <Style TargetType="TabBar">
+            <Setter Property="Shell.TabBarBackgroundColor"
+            Value="White" />
+            <Setter Property="Shell.TabBarTitleColor"
+            Value="#00BF81" />
+            <Setter Property="Shell.TabBarUnselectedColor"
+            Value="Gray" />
+        </Style>
 
     </Application.Resources>
 

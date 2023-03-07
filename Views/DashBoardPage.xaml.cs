@@ -13,6 +13,25 @@ public partial class DashBoardPage : ContentPage
 
         var LoginName = Preferences.Get("EmailKey", "Null");
         UserName.Text = LoginName;
+
+
+    }
+
+   
+
+    private double width = 0;
+    private double height = 0;
+    protected override void OnSizeAllocated(double width, double height)
+    {
+        base.OnSizeAllocated(width, height);
+        if (width != this.width || height != this.height)
+        {
+            this.width = width;
+            this.height = height;
+            outerStack2.WidthRequest = width;
+            outerStack2.HeightRequest = height;
+           
+        }
     }
     private async void BarcodeClicked(object sender, EventArgs e)
     {

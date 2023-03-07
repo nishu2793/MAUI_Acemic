@@ -5,105 +5,111 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:AceMicEV.Views"
     xmlns:localMain="clr-namespace:AceMicEV"
-    Shell.NavBarIsVisible="false"
-    NavigationPage.HasNavigationBar="False"
-    Shell.TabBarIsVisible="False">
+    xmlns:Control="clr-namespace:AceMicEV.Controls"
+    Shell.NavBarIsVisible="True"
+    Shell.FlyoutBehavior="Flyout">
 
-        <ShellContent
+    <ShellContent
         Title="WelCome"
         ContentTemplate="{DataTemplate local:WelcomeScreen}"
-        Route="MainPage" />
+        Route="Welcome"
+        Shell.FlyoutBehavior="Disabled"
+        Shell.FlyoutItemIsVisible="False"/>
 
-        <ShellContent
+    <ShellContent
         Title="WelCome2"
         ContentTemplate="{DataTemplate local:WelcomeScreen2}"
-        Route="MainPage" />
-
-        <ShellContent
+        Route="Welcome2"
+        Shell.FlyoutBehavior="Disabled"
+        Shell.FlyoutItemIsVisible="False"/>
+    
+    <ShellContent
         Title="WelCome3"
         ContentTemplate="{DataTemplate local:WelcomeScreen3}"
-        Route="MainPage" />
+        Route="Welcome3"
+        Shell.FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"/>
 
-        <ShellContent
+    <ShellContent
         Title="UserType"
         ContentTemplate="{DataTemplate local:UserType}"
-        Route="MainPage" />
+        Route="UserType" 
+        Shell.FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"/>
 
-        <ShellContent
+    <ShellContent
         Title="SignUpPage"
         ContentTemplate="{DataTemplate local:SignUpPage}"
-        Route="SignUpPage" />
+        Route="SignUpPage"
+        Shell.FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"/>
 
-        <ShellContent
+    <ShellContent
         Title="Verify"
         ContentTemplate="{DataTemplate local:VerifiyOtpPage}"
-        Route="VerifiyOtpPage" />
+        Route="VerifiyOtpPage"
+        Shell.FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"/>
 
-        <ShellContent
+    <ShellContent
         Title="Password"
         ContentTemplate="{DataTemplate local:PassWordPage}"
-        Route="PassWordPage" />
+        Route="PassWordPage" 
+        Shell.FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"/>
 
-        <ShellContent
+    <ShellContent
         Title="Profile"
         ContentTemplate="{DataTemplate local:ProfilePage}"
-        Route="ProfilePage" />
+        Route="ProfilePage" 
+        Shell.FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"/>
 
-        <ShellContent
+    <ShellContent
         Title="LoginPage"
         ContentTemplate="{DataTemplate local:LoginPage}"
-        Route="LoginPage" />
-
-    <FlyoutItem Title="Home1">
-        <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:HomePage}"
-        Route="HomePage" />
-    </FlyoutItem>
-
-    <FlyoutItem>
-        <ShellContent
-            Title="About"
-            ContentTemplate="{DataTemplate local:AboutPage}"
-            Route="AboutPage" />
-    </FlyoutItem>
-
-    <FlyoutItem>
-        <ShellContent
-            Title="Setting"
-            ContentTemplate="{DataTemplate local:SettingPage}"
-            Route="SettingPage" />
-    </FlyoutItem>
+        Route="LoginPage" 
+        Shell.FlyoutBehavior="Disabled"/>
+    <ShellContent
+          Title="TabbarPage"
+          ContentTemplate="{DataTemplate local:TabbarPage}"
+          Route="TabbarPage"/>
 
     <ShellContent
-          Title="DashBoard"
+          Title="DashBoard Page"
           ContentTemplate="{DataTemplate local:DashBoardPage}"
-          Route="DashBoardPage" />
+          Route="DashBoardPage"
+          Shell.FlyoutBehavior="Flyout"/>
 
-        <ShellContent
+    <ShellContent
         Title="MyMainPage"
         ContentTemplate="{DataTemplate localMain:MainPage}"
-        Route="MyMainPage" />
+        Route="MyMainPage" 
+        Shell.FlyoutItemIsVisible="False"/>
 
-        <ShellContent
+    <ShellContent
         Title="ScanPage"
         ContentTemplate="{DataTemplate localMain:ScanPage}"
-        Route="ScanPage" />
-
-    <ShellContent
-        Title="MyPopup"
-        ContentTemplate="{DataTemplate localMain:MyPopupPage}"
-        Route="MyPopupPage" />
-
-    <ShellContent
-        Title="Charge"
-        ContentTemplate="{DataTemplate local:ChargeStutes}"
-        Route="ChargeStutes" />
+        Route="ScanPage" 
+        Shell.FlyoutItemIsVisible="False"/>
 
     <ShellContent
         Title="Payment"
         ContentTemplate="{DataTemplate local:PaymentStutes}"
-        Route="PaymentStutes" />
+        Route="PaymentStutes" 
+        Shell.FlyoutItemIsVisible="False"/>
+    
+    <ShellContent
+        Title="Charge"
+        ContentTemplate="{DataTemplate local:ChargeStatus}" 
+        Route="ChargeStatus"
+        Shell.FlyoutItemIsVisible="False"/>
 
+    <ShellContent
+        Title="FlyoutHeader"
+        ContentTemplate="{DataTemplate Control:FlyoutHeaderControl}"
+        Route="FlyoutHeaderControl" 
+        Shell.FlyoutItemIsVisible="False"/>
 
 </Shell>
+   
