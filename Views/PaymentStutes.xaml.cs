@@ -41,6 +41,6 @@ public partial class PaymentStutes : ContentPage
 
     private void successlicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new MapPage());
+        Navigation.PushAsync(new DashBoardPage());
     }
 }

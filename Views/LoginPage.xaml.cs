@@ -69,7 +69,7 @@ public partial class LoginPage : ContentPage
 
 
             await DisplayAlert("Invalid User", " Username or Password incorrect", "Ok");
-            LoginIndicator.IsRunning = false;
+            //LoginIndicator.IsRunning = false;
 
 
         }

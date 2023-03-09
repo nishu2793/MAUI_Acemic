@@ -4,23 +4,25 @@
              x:Class="AceMicEV.Views.TabbarPage"
              xmlns:local="clr-namespace:AceMicEV.Views"
              Shell.NavBarIsVisible="False"
-             Title="TabbarPage">
+            Shell.FlyoutBehavior="Flyout"
+            Shell.FlyoutItemIsVisible="True"
+             Title="TabbarPage"
+            >
+    
+    <TabBar FlyoutItemIsVisible="False">
 
-                <TabBar FlyoutItemIsVisible="False">
-                   
-                    <Tab Title="Home" Icon="homeicon.png">
-                        <ShellContent ContentTemplate="{DataTemplate local:DashBoardPage}"></ShellContent>
-                    </Tab>
-                    <Tab Title="Map" Icon="mapicon.png">
-                        <ShellContent ContentTemplate="{DataTemplate local:MapPage}"></ShellContent>
-                    </Tab>
-                    <Tab Title="Booking" Icon="book.png">
-                         <ShellContent ContentTemplate="{DataTemplate local:AboutPage}"></ShellContent>
-                    </Tab>
-                     <Tab Title="About" Icon="about.png">
-                         <ShellContent ContentTemplate="{DataTemplate local:SettingPage}"></ShellContent>
-                    </Tab>
-                    
-                </TabBar>
-
+        <Tab Title="Home" Icon="homeicon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:DashBoardPage}"></ShellContent>
+        </Tab>
+        <Tab Title="Map" Icon="mapicon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MapPage}"></ShellContent>
+        </Tab>
+        <Tab Title="About" Icon="about.png">
+            <ShellContent ContentTemplate="{DataTemplate local:AboutPage}"></ShellContent>
+        </Tab>
+        <Tab Title="Booking" Icon="book.png">
+            <ShellContent ContentTemplate="{DataTemplate local:SettingPage}"></ShellContent>
+        </Tab>
+    </TabBar>
 </Shell>
+    

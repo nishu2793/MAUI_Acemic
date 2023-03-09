@@ -67,7 +67,7 @@
         </Style>
 
         <Style x:Key="lblHeader2" TargetType="Label">
-            <Setter Property="WidthRequest" Value="230"/>
+            <Setter Property="WidthRequest" Value="300"/>
             <Setter Property="FontSize" Value="24"/>
             <Setter Property="Opacity" Value="1"/>
             <Setter Property="TextColor" Value="#211e1f"/>
@@ -80,20 +80,19 @@
 
         <Style x:Key="lblline" TargetType="StackLayout">
             <Setter Property="Orientation" Value="Horizontal"/>
-            <Setter Property="Margin" Value="0,4,20,0"/>
+            <Setter Property="Margin" Value="0,4,37,0"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
         </Style>
 
         <Style x:Key="lbllineCheck" TargetType="StackLayout">
             <Setter Property="Orientation" Value="Horizontal"/>
-            <Setter Property="Margin" Value="10,4,300,0"/>
+            <Setter Property="Margin" Value="10,4,0,0"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
         </Style>
 
         <Style x:Key="lblline7" TargetType="StackLayout">
             <Setter Property="Orientation" Value="Horizontal"/>
             <Setter Property="Margin" Value="0,4,0,0"/>
-            <Setter Property="Spacing" Value="0"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
         </Style>
 
@@ -139,7 +138,7 @@
             <Setter Property="FontSize" Value="16"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
             <Setter Property="VerticalOptions" Value="Center"/>
-            <Setter Property="Margin" Value="3"/>
+            <Setter Property="Margin" Value="0,4,0,0"/>
         </Style>
 
         <Style x:Key="lblDes" TargetType="Label">
@@ -158,7 +157,7 @@
             <Setter Property="HeightRequest" Value="55"/>
             <Setter Property="FontSize" Value="16"/>
             <Setter Property="Opacity" Value="1"/>
-            <Setter Property="Margin" Value="0,0,0,8"/>
+            <Setter Property="Margin" Value="0,0,0,0"/>
             <Setter Property="BackgroundColor" Value="#00BF81"/>
             <Setter Property="Padding" Value="0"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
@@ -290,7 +289,7 @@
         <Style x:Key="lbluser" TargetType="Label">
             <Setter Property="WidthRequest" Value="328"/>
             <Setter Property="HeightRequest" Value="50"/>
-            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontSize" Value="20"/>
             <Setter Property="Opacity" Value="1"/>
             <Setter Property="Margin" Value="0,20,18,0"/>
             <Setter Property="HorizontalTextAlignment" Value="Center"/>
@@ -509,6 +508,7 @@
             <Setter Property="HorizontalOptions" Value="Center"/>
             <Setter Property="VerticalOptions" Value="Center"/>
             <Setter Property="FontSize" Value="17"/>
+            <Setter Property="IsPassword" Value="True"/>
             <Setter Property="Placeholder" Value="  Enter Password"/>
         </Style>
 
@@ -523,7 +523,7 @@
             <Setter Property="VerticalOptions" Value="Start"/>
             <Setter Property="HorizontalOptions" Value="Start"/>
             <Setter Property="FontSize" Value="17"/>
-            <Setter Property="Margin" Value="0,4,70,0"/>
+            <Setter Property="Margin" Value="0,4,20,0"/>
         </Style>
         
         <Style x:Key="lblCheckBox" TargetType="Label">
@@ -664,6 +664,21 @@
             Value="#00BF81" />
             <Setter Property="Shell.TabBarUnselectedColor"
             Value="Gray" />
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="FontFamily"
+                    Value="Poppins-Regular"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="FontFamily"
+                    Value="Poppins-Regular"/>
+        </Style>
+
+        <Style TargetType="Entry">
+            <Setter Property="FontFamily"
+                    Value="Poppins-Regular"/>
         </Style>
 
     </Application.Resources>

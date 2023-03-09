@@ -8,7 +8,7 @@
              Title="MapPage">
 
     <Grid>
-        <maps:Map x:Name="mappy" IsShowingUser="True" IsTrafficEnabled="True" MapType="Hybrid">
+        <maps:Map x:Name="mappy" IsShowingUser="True" IsTrafficEnabled="True" MapType="Hybrid" >
                     </maps:Map>
     </Grid>
 

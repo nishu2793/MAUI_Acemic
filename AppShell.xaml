@@ -6,6 +6,7 @@
     xmlns:local="clr-namespace:AceMicEV.Views"
     xmlns:localMain="clr-namespace:AceMicEV"
     xmlns:Control="clr-namespace:AceMicEV.Controls"
+    xmlns:Page ="clr-namespace:AceMicEV.Pages"
     Shell.NavBarIsVisible="True"
     Shell.FlyoutBehavior="Flyout">
 
@@ -22,7 +23,7 @@
         Route="Welcome2"
         Shell.FlyoutBehavior="Disabled"
         Shell.FlyoutItemIsVisible="False"/>
-    
+
     <ShellContent
         Title="WelCome3"
         ContentTemplate="{DataTemplate local:WelcomeScreen3}"
@@ -63,24 +64,47 @@
         ContentTemplate="{DataTemplate local:ProfilePage}"
         Route="ProfilePage" 
         Shell.FlyoutItemIsVisible="False"
-        Shell.FlyoutBehavior="Disabled"/>
+        Shell.FlyoutBehavior="Disabled"
+        />
 
     <ShellContent
         Title="LoginPage"
         ContentTemplate="{DataTemplate local:LoginPage}"
         Route="LoginPage" 
         Shell.FlyoutBehavior="Disabled"/>
-    <ShellContent
+
+
+    <FlyoutItem FlyoutDisplayOptions="AsSingleItem">
+
+        <ShellContent
           Title="TabbarPage"
           ContentTemplate="{DataTemplate local:TabbarPage}"
-          Route="TabbarPage"/>
+          Route="TabbarPage"           
+            />
 
-    <ShellContent
+
+        <ShellContent
           Title="DashBoard Page"
           ContentTemplate="{DataTemplate local:DashBoardPage}"
           Route="DashBoardPage"
-          Shell.FlyoutBehavior="Flyout"/>
+         
+            />
 
+
+        <ShellContent
+        Title="Setting Page"
+        ContentTemplate="{DataTemplate Page:SettingPage}"
+        Route="SettingPage" 
+        
+            />
+
+    </FlyoutItem>
+
+    <ShellContent
+        Title="About Page"
+        ContentTemplate="{DataTemplate Page:AboutPage}"
+        Route="AboutPage" 
+        Shell.FlyoutItemIsVisible="False"/>
     <ShellContent
         Title="MyMainPage"
         ContentTemplate="{DataTemplate localMain:MainPage}"
@@ -98,7 +122,7 @@
         ContentTemplate="{DataTemplate local:PaymentStutes}"
         Route="PaymentStutes" 
         Shell.FlyoutItemIsVisible="False"/>
-    
+
     <ShellContent
         Title="Charge"
         ContentTemplate="{DataTemplate local:ChargeStatus}" 
@@ -110,6 +134,13 @@
         ContentTemplate="{DataTemplate Control:FlyoutHeaderControl}"
         Route="FlyoutHeaderControl" 
         Shell.FlyoutItemIsVisible="False"/>
+
+    <ShellContent
+        Title="Home Page"
+        ContentTemplate="{DataTemplate Page:HomePage}"
+        Route="HomePage" 
+        Shell.FlyoutItemIsVisible="False"/>
+
 
 </Shell>
    

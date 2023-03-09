@@ -20,7 +20,7 @@
                     <Image Source="line2.png" Margin="0,0,10,0"></Image>
                     <Image Source="line3.png" Margin="0,0,10,0"></Image>
                 </StackLayout>
-                <Label Style="{StaticResource lblHeader}" Text="Acemic Charging Station for EV's"/>
+                <Label Style="{StaticResource lblHeader}" Text="Acemic Charging Station for EV's" />
 
                 <Label Style="{StaticResource lbldescription1}"  Text="Our new electric vehicle (EV) charging points has arrived"/>
 

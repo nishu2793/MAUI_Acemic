@@ -23,10 +23,10 @@
                     
                 </StackLayout>
 
-                <StackLayout Style="{StaticResource lblline2}" Margin="0,0,20,0">
+                <StackLayout Style="{StaticResource lblline2}">
                     
-                    <Border StrokeShape="RoundRectangle 12,12,12,12">
-                        <Entry x:Name="txtEmail" Style="{StaticResource lblemail}" Placeholder="   Email / Phone Number"/>
+                   <Border StrokeShape="RoundRectangle 12,12,12,12" HeightRequest="50" WidthRequest="335" Margin="0,0,30,0">
+                        <Entry x:Name="txtEmail" Style="{StaticResource lblemail}" Placeholder="  Email / Phone Number"/>
                     </Border>
                     
                 </StackLayout>
@@ -38,10 +38,10 @@
                     <Button Style="{StaticResource lblbtn3}" Clicked="SignUp_Clicked"></Button>
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal">
-                    <Line X2="105" Stroke="black" StrokeThickness="1" Margin="0,35,0,0"></Line>
+                <StackLayout Orientation="Horizontal" Margin="0,30,0,0">
+                    <Line X2="105" Stroke="black" StrokeThickness="1" Margin="0,37,0,0"></Line>
                     <Label Style="{StaticResource lbllin1}" Text="Or Continue With" TextColor="Black" />
-                    <Line X2="95" Stroke="black" StrokeThickness="1" Margin="0,35,0,0"></Line>
+                    <Line X2="95" Stroke="black" StrokeThickness="1" Margin="0,37,0,0"></Line>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
@@ -50,11 +50,11 @@
                     <Image Source="twitter.png" Margin="0,0,10,0"></Image>
                 </StackLayout>
 
-                <StackLayout Style="{StaticResource lblSkipLine}" Spacing="0" Margin="45,45,0,0">
-                    <Label Text="Already have an account?" FontSize="18"  Margin="5"></Label>
+                <StackLayout Style="{StaticResource lblSkipLine}" Spacing="0" Margin="45,30,0,0">
+                    <Label Text="Already have an account?" FontSize="16"  Margin="5"></Label>
 
                     <StackLayout>
-                        <Label x:Name="Logcommand" Text="Log In" FontSize="18" TextColor="#007AFF" Margin="0,4,0,0" >
+                        <Label x:Name="Logcommand" Text="Log In" FontSize="16" TextColor="#007AFF" Margin="0,4,0,0" >
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding Logincommand}" Tapped="LoginTapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
                             </Label.GestureRecognizers>

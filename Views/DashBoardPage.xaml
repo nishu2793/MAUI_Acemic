@@ -5,14 +5,18 @@
              xmlns:local="clr-namespace:AceMicEV.Views"
              Title="DashBoardPage"
              Shell.NavBarIsVisible="False"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             Shell.FlyoutItemIsVisible="True"
+             Shell.FlyoutBehavior="Flyout">
 
     <StackLayout x:Name="outerStack2">
 
-        
-
+        <StackLayout>
+            <ImageButton Source="menubar.png"  HeightRequest="50" WidthRequest="30" Margin="0,0,20,0" HorizontalOptions="End" />
+        </StackLayout>
+            
             <StackLayout>
-                <Image Source="hello.png" HorizontalOptions="Start" Margin="20,10,0,0"/>
+                <Image Source="hello.png" HorizontalOptions="Start" Margin="20,0,0,0" VerticalOptions="Start"/>
             </StackLayout>
             <StackLayout>
                 <Label x:Name="UserName" Text="User" HorizontalOptions="Start" Margin="20,0,0,0" FontSize="20" FontAttributes="Bold"></Label>
@@ -51,11 +55,7 @@
                 </StackLayout>
             </StackLayout>
 
-       
-
-
     </StackLayout>
-
 
 </ContentPage>  
 
