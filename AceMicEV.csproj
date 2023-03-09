@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-android</TargetFrameworks>
+		<TargetFrameworks>net7.0-android</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
 		<RootNamespace>AceMicEV</RootNamespace>
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
-		<ImplicitUsings>enable</ImplicitUsings>
+		<ImplicitUsings>enable</ImplicitUsings>		
 
 		<!-- Display name -->
 		<ApplicationTitle>AceMicEV</ApplicationTitle>
@@ -21,12 +21,13 @@
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
 
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+		<!--<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>-->
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
-		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+		<Platforms>AnyCPU;ARM32;ARM64;x64;x86</Platforms>
+		<!--<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>-->
+		<!--<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>-->
+		<!--<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>-->
 	</PropertyGroup>
   <PropertyGroup Condition="$(TargetFramework.Contains('-android')) and '$(Configuration)' == 'Release'">
     <AndroidKeyStore>True</AndroidKeyStore>
@@ -36,6 +37,31 @@
     <AndroidSigningKeyPass>123456</AndroidSigningKeyPass>
   </PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|AnyCPU'">
+	  <RunAOTCompilation>False</RunAOTCompilation>
+	</PropertyGroup>
+
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|ARM32'">
+	  <RunAOTCompilation>False</RunAOTCompilation>
+	</PropertyGroup>
+
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|ARM64'">
+	  <RunAOTCompilation>False</RunAOTCompilation>
+	</PropertyGroup>
+
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|x64'">
+	  <RunAOTCompilation>False</RunAOTCompilation>
+	</PropertyGroup>
+
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|x86'">
+	  <RunAOTCompilation>False</RunAOTCompilation>
+	</PropertyGroup>
+
+	
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\aacemic.png" Color="#FF000000" />
@@ -60,9 +86,13 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\AppIcon\aacemic.png" />
+	  <None Remove="Resources\Images\about.png" />
+	  <None Remove="Resources\Images\acemiclogo.png" />
 	  <None Remove="Resources\Images\asddd.png" />
+	  <None Remove="Resources\Images\Book.png" />
 	  <None Remove="Resources\Images\booking.png" />
 	  <None Remove="Resources\Images\bookslot.png" />
+	  <None Remove="Resources\Images\car.gif" />
 	  <None Remove="Resources\Images\card2.png" />
 	  <None Remove="Resources\Images\charging.png" />
 	  <None Remove="Resources\Images\checkcorrect.gif" />
@@ -72,16 +102,19 @@
 	  <None Remove="Resources\Images\google.png" />
 	  <None Remove="Resources\Images\Hello.png" />
 	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\homeicon.png" />
 	  <None Remove="Resources\Images\icon.png" />
 	  <None Remove="Resources\Images\imagebox.png" />
 	  <None Remove="Resources\Images\line1.png" />
 	  <None Remove="Resources\Images\line2.png" />
 	  <None Remove="Resources\Images\line3.png" />
+	  <None Remove="Resources\Images\mapicon.png" />
 	  <None Remove="Resources\Images\myprofile.png" />
 	  <None Remove="Resources\Images\nearbydevices.png" />
 	  <None Remove="Resources\Images\payment.png" />
 	  <None Remove="Resources\Images\qrcode.png" />
 	  <None Remove="Resources\Images\scan.png" />
+	  <None Remove="Resources\Images\settings.png" />
 	  <None Remove="Resources\Images\success.png" />
 	  <None Remove="Resources\Images\twitter.png" />
 	  <None Remove="Resources\Images\usertypeimg.png" />
@@ -95,17 +128,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="CommunityToolkit.Maui" Version="1.4.0" />
-	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0-preview1" />
-	  <PackageReference Include="DocumentFormat.OpenXml" Version="2.18.0" />
+	  <PackageReference Include="ARM" Version="2.0.0" />
+	  <PackageReference Include="CommunityToolkit.Maui" Version="3.1.0" />
+	  <PackageReference Include="DocumentFormat.OpenXml" Version="2.19.0" />
 	  <PackageReference Include="Microsoft.AspNet.SignalR.Client" Version="2.4.3" />
 	  <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="6.0.9" />
+	  <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="7.0.59" />
 	  <PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.2" />
 	  <PackageReference Include="Microsoft.VisualStudio.Utilities" Version="17.4.33103.184" />
 	  <PackageReference Include="MongoDB.Bson" Version="2.18.0" />
-	  <PackageReference Include="Mopups" Version="1.0.4" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-	  <PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.61" />
 	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
 	  <PackageReference Include="Xamarin.Firebase.iOS.Core" Version="8.10.0.3" />
 	  <PackageReference Include="ZXing.Net.Maui" Version="0.1.0-preview.5" />
@@ -115,10 +147,13 @@
 	  <MauiXaml Update="MainPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MyPopupPage.xaml">
+	  <MauiXaml Update="Pages\AboutPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\AboutPage.xaml">
+	  <MauiXaml Update="Pages\HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\SettingPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Tab\AboutPage.xaml">
@@ -133,7 +168,7 @@
 	  <MauiXaml Update="Views\AboutPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\ChargeStutes.xaml">
+	  <MauiXaml Update="Views\ActivityPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ConfiPage.xaml">
@@ -143,6 +178,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\MachinePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MapPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\NotificationPage.xaml">
@@ -178,6 +216,9 @@
 	  <MauiXaml Update="Views\SettingPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\TabbarPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\VerifiyOtpPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -209,28 +250,40 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Properties\Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\OrderPage.xaml.cs">
 	    <DependentUpon>OrderPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
-	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-android'">
+	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-android'">
 	  <PackageReference Include="BarcodeScanner.Mobile.Maui">
 	    <Version>6.3.0.23-pre</Version>
 	  </PackageReference>
 	</ItemGroup>
 
-	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-ios'">
+	<!--<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-ios'">
 	  <PackageReference Include="BarcodeScanner.Mobile.Maui">
 	    <Version>6.3.0.23-pre</Version>
 	  </PackageReference>
-	</ItemGroup>
+	</ItemGroup>-->
 	
 	<ItemGroup Condition="$(TargetFramework.StartsWith('net6.0-maccatalyst')) != true">
 		<Compile Remove="**\**\*.MacCatalyst.cs" />
 		<None Include="**\**\*.MacCatalyst.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
 	</ItemGroup>
+	
+	<ItemGroup>
+	  <EmbeddedResource Update="Properties\Resources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
 
-	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionAceMicEVHideInfoBar="True" XamarinHotReloadGenericExceptionInfoBarAceMicEVHideInfoBar="True" /></VisualStudio></ProjectExtensions>
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionAceMicEVHideInfoBar="True" XamarinHotReloadGenericExceptionInfoBarAceMicEVHideInfoBar="True" XamarinHotReloadUnhandledDeviceExceptionAceMicEVHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 </Project>

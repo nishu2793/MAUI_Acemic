@@ -3,6 +3,9 @@ using AceMicEV.Services;
 using System.Windows.Input;
 using AceMicEV.Views;
 using Microsoft.AspNetCore.SignalR.Client;
+using Android.Graphics;
+using CommunityToolkit.Maui.Views;
+using CommunityToolkit.Maui.Core.Views;
 
 namespace AceMicEV.Views;
 
@@ -15,31 +18,7 @@ public partial class LoginPage : ContentPage
     {
         InitializeComponent();
 
-        //var baseUrl = "";
-
-        //if (DeviceInfo.Current.Platform == DevicePlatform.Android)
-        //{
-        //    baseUrl = "https://acemicapi.azurewebsites.net/";
-        //}
-
-        //hubConnection = new HubConnectionBuilder()
-        //.WithUrl($"{baseUrl}/chatHub")
-        //.Build();
-
-        //hubConnection.On<string, string>("ReceiveMessageconectionid", (connectionid, message) =>
-        //{
-        //    lblChat.Text += $"<b>: {connectionid}</b>: {message}<br/>";
-        //});
-
-        //Task.Run(() =>
-        //{
-        //    Dispatcher.Dispatch(async () =>
-        //    {
-        //        await hubConnection.StartAsync();
-        //    });
-        //});
     }
-
 
     private double width = 0;
     private double height = 0;
@@ -54,12 +33,12 @@ public partial class LoginPage : ContentPage
             outerStack1.HeightRequest = height;
         }
     }
-
-
     private async void LogIn_Clicked(object sender, EventArgs e)
     {
-        LoginIndicator.IsRunning = true;
-        await Task.Delay(2000);
+
+        var popup = new ActivityPopup();
+        Shell.Current.ShowPopup(popup);
+       
 
         string userName = txtUserID.Text;
         string password = txtPassword.Text;
@@ -67,25 +46,32 @@ public partial class LoginPage : ContentPage
 
         if (userName == null || password == null)
         {
+            popup.Close();
+
             await DisplayAlert("Warning", "Please Input Username & Password", "Ok");
+
             return;
         }
         var userinfo = await _loginRepository.login(userName, password);
         if (userinfo)
         {
-            LoginIndicator.IsRunning = false;
+            popup.Close();
+
+
             await SignalRHubServices.OpenConnectionAsync(_signalRepository);
-            //var hubConnectionID = hubConnection.ConnectionId;
-            //var SignalInfo = await _signalRepository.Signaldata(hubConnectionID, userid);
 
-            //Preferences.Set("ConnectionKey", hubConnectionID);
-
-            await Navigation.PushAsync(new DashBoardPage());
+            await Shell.Current.GoToAsync($"//{nameof(TabbarPage)}");
         }
         else
         {
-            LoginIndicator.IsRunning = false;
+
+            popup.Close();
+
+
             await DisplayAlert("Invalid User", " Username or Password incorrect", "Ok");
+            LoginIndicator.IsRunning = false;
+
+
         }
 
     }
@@ -93,7 +79,7 @@ public partial class LoginPage : ContentPage
     {
         if(e.Value==true)
         {
-            
+           
         }
         else
         {

@@ -7,53 +7,61 @@
              NavigationPage.HasNavigationBar="False">
     <StackLayout x:Name="outerStack1">
         <StackLayout Style="{StaticResource lblScr}" VerticalOptions="Start">
-        <Image Style="{StaticResource lblimage2}"  Source="v1_136.png"/>
-        <StackLayout Margin="10">
-            <Label Style="{StaticResource lblHeader2}" Text=" Create an Account"/>
+            <Image Style="{StaticResource lblimage2}"  Source="v1_136.png"/>
+            <StackLayout Margin="10">
 
-            <StackLayout Style="{StaticResource lblline}">
-                <Entry x:Name="txtFirstName" Style="{StaticResource lblFn}" Placeholder= "   First Name" />
-                <Entry x:Name="txtLastName" Style="{StaticResource lblLn}" Placeholder= "   Last Name"  />
-            </StackLayout>
+                <Label Style="{StaticResource lblHeader2}" Text=" Create an Account"/>
+                <StackLayout Style="{StaticResource lblline}">
+                    
+                    <Border StrokeShape="RoundRectangle 10,10,10,10">
+                       <Entry x:Name="txtFirstName" Style="{StaticResource lblFn}" Placeholder= "   First Name" />
+                    </Border>
 
-            <StackLayout Style="{StaticResource lblline2}" Margin="0,0,20,0">
-                <Entry x:Name="txtEmail" Style="{StaticResource lblemail}" Placeholder="   Email / Phone Number"/>
-            </StackLayout>
-
-            <Label Style="{StaticResource lblDes}"  Text="By continuing, you agree to our Terms of Service and our Privacy Policy."/>
-
-            <StackLayout>
-                <ActivityIndicator x:Name="activityIndicator" VerticalOptions="Center" HorizontalOptions="Center" Color="#00BF81" IsRunning="False" WidthRequest="50" HeightRequest="50"/>
-                <Button Style="{StaticResource lblbtn3}" Clicked="SignUp_Clicked"></Button>
-            </StackLayout>
-
-            <StackLayout Orientation="Horizontal">
-                <Line X2="105" Stroke="black" StrokeThickness="1" Margin="0,35,0,0"></Line>
-                <Label Style="{StaticResource lbllin1}" Text="Or Continue With" TextColor="Black" />
-                <Line X2="95" Stroke="black" StrokeThickness="1" Margin="0,35,0,0"></Line>
-            </StackLayout>
-
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
-                <Image Source="google.png" Margin="10,0,40,0"></Image>
-                <Image Source="facebook.png" Margin="0,0,40,0"></Image>
-                <Image Source="twitter.png" Margin="0,0,10,0"></Image>
-            </StackLayout>
-
-            <StackLayout Style="{StaticResource lblSkipLine}" Spacing="0" Margin="45,45,0,0">
-                <Label Text="Already have an account?" FontSize="18"  Margin="5"></Label>
-
-                <StackLayout>
-                    <Label x:Name="Logcommand" Text="Log In" FontSize="18" TextColor="#007AFF" Margin="0,4,0,0" >
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding Logincommand}" Tapped="LoginTapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
-                        </Label.GestureRecognizers>
-                    </Label>
+                    <Border StrokeShape="RoundRectangle 10,10,10,10">
+                        <Entry x:Name="txtLastName" Style="{StaticResource lblLn}" Placeholder= "   Last Name"  />
+                    </Border>
+                    
                 </StackLayout>
 
+                <StackLayout Style="{StaticResource lblline2}" Margin="0,0,20,0">
+                    
+                    <Border StrokeShape="RoundRectangle 12,12,12,12">
+                        <Entry x:Name="txtEmail" Style="{StaticResource lblemail}" Placeholder="   Email / Phone Number"/>
+                    </Border>
+                    
+                </StackLayout>
+
+                 <Label Style="{StaticResource lblDes}"  Text="By continuing, you agree to our Terms of Service and our Privacy Policy."/>
+
+                <StackLayout>
+                    <ActivityIndicator x:Name="activityIndicator" VerticalOptions="Center" HorizontalOptions="Center" Color="#00BF81" IsRunning="False" WidthRequest="50" HeightRequest="50"/>
+                    <Button Style="{StaticResource lblbtn3}" Clicked="SignUp_Clicked"></Button>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Line X2="105" Stroke="black" StrokeThickness="1" Margin="0,35,0,0"></Line>
+                    <Label Style="{StaticResource lbllin1}" Text="Or Continue With" TextColor="Black" />
+                    <Line X2="95" Stroke="black" StrokeThickness="1" Margin="0,35,0,0"></Line>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
+                    <Image Source="google.png" Margin="10,0,40,0"></Image>
+                    <Image Source="facebook.png" Margin="0,0,40,0"></Image>
+                    <Image Source="twitter.png" Margin="0,0,10,0"></Image>
+                </StackLayout>
+
+                <StackLayout Style="{StaticResource lblSkipLine}" Spacing="0" Margin="45,45,0,0">
+                    <Label Text="Already have an account?" FontSize="18"  Margin="5"></Label>
+
+                    <StackLayout>
+                        <Label x:Name="Logcommand" Text="Log In" FontSize="18" TextColor="#007AFF" Margin="0,4,0,0" >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Logincommand}" Tapped="LoginTapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
             </StackLayout>
         </StackLayout>
-
-    </StackLayout>
-
     </StackLayout>
 </ContentPage>

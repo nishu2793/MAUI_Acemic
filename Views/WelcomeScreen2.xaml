@@ -4,7 +4,9 @@
              x:Class="AceMicEV.Views.WelcomeScreen2"
              Title="WelcomeScreen2"
              Shell.NavBarIsVisible="False"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             Shell.FlyoutBehavior="Disabled"
+             >
 
     <StackLayout Style="{StaticResource lblScr}">
         <Image Style="{StaticResource lblimage}"  Source="v1_121.png"/>

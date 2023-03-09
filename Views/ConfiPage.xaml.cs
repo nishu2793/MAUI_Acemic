@@ -8,7 +8,6 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Microsoft.AspNetCore.SignalR.Client;
 using Android.OS;
-using Mopups.Services;
 using AceMicEV.Models.Response;
 
 namespace AceMicEV.Views;
