@@ -4,32 +4,69 @@
              x:Class="AceMicEV.Views.WelcomeScreen"
              Shell.NavBarIsVisible="False"
              Title="WelcomeScreen"
+             FlowDirection="LeftToRight"
              NavigationPage.HasNavigationBar="False"
              xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
-             Shell.FlyoutBehavior="Disabled"
-             >
+             Shell.FlyoutBehavior="Disabled">
     <Page.Behaviors>
         <mct:StatusBarBehavior  x:Name="statusBar"/>
     </Page.Behaviors>
-    
-            <StackLayout>
-                <StackLayout Style="{StaticResource lblScr}">
-                <Image Style="{StaticResource lblimage}"  Source="v1_120.png"/>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Image Source="line1.png" Margin="0,0,10,0"></Image>
-                    <Image Source="line2.png" Margin="0,0,10,0"></Image>
-                    <Image Source="line3.png" Margin="0,0,10,0"></Image>
-                </StackLayout>
-                <Label Style="{StaticResource lblHeader}" Text="Acemic Charging Station for EV's" />
 
-                <Label Style="{StaticResource lbldescription1}"  Text="Our new electric vehicle (EV) charging points has arrived"/>
+    <ContentPage.Resources>
+        <Style x:Key="lblHeaderVivo" TargetType="Label">
+            <Setter Property="Margin" Value="0,10,0,15"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="WidthRequest" Value="328"/>
+            <Setter Property="TextColor" Value="#211e1f"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        </Style>
+        
+        <Style x:Key="lblBtnFsVivo"  TargetType="Button">
+            <Setter Property="WidthRequest" Value="180"/>
+            <Setter Property="HeightRequest" Value="60"/>
+            <Setter Property="BackgroundColor" Value="#00bf81"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+    </ContentPage.Resources>
 
-                <StackLayout Style="{StaticResource lblbtn1}">
-                     <Button Style="{StaticResource lblBtnFs}" Text="Next" CornerRadius="12" Clicked="NextBtn_Clicked"></Button>
-            </StackLayout>
-                <StackLayout>
-                     <Button Style="{StaticResource lblSkipbtn2}" Text="Skip" CornerRadius="12" Clicked="SkipBtn_Clicked" TextColor="Grey" BackgroundColor="White"></Button>
-                </StackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0">
+            <Image Style="{DynamicResource lblimage}"  Source="v1_120.png"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Image Source="line1.png" Margin="0,0,10,0"></Image>
+                <Image Source="line2.png" Margin="0,0,10,0"></Image>
+                <Image Source="line3.png" Margin="0,0,10,0"></Image>
             </StackLayout>
         </StackLayout>
+
+        <StackLayout Grid.Row="1">
+
+            <Label Style="{DynamicResource lblHeader}" Text="Acemic Charging Station for EV's" />
+            <Label Style="{DynamicResource lbldescription1}"  Text="Our new electric vehicle (EV) charging points has arrived"/>
+            
+        </StackLayout>
+
+        <StackLayout Grid.Row="2">
+
+            <Button Style="{DynamicResource lblBtnFs}" Text="Next" CornerRadius="12" Clicked="NextBtn_Clicked"></Button>
+            <Label x:Name="SkipBtn" Text="Skip" FontSize="18" TextColor="#848585" VerticalOptions="Center"  HorizontalOptions="Center" Margin="20">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="SkipTapped" ></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+
+
+        </StackLayout>
+
+    </Grid>
+
 </ContentPage>

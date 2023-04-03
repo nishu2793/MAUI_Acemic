@@ -23,15 +23,12 @@ public partial class SignUpPage : ContentPage
     protected override void OnSizeAllocated(double width, double height)
     {
         base.OnSizeAllocated(width, height);
-        if (width != this.width || height != this.height)
+
+        if (height <= 650)
         {
-            this.width = width;
-            this.height = height;
-            outerStack1.WidthRequest = width;
-            outerStack1.HeightRequest = height;
+            Resources["lblHeader2"] = Resources["lblHeader3Vivo"];
         }
     }
-
     private async void SignUp_Clicked(object sender, EventArgs e)
     {
         var popup = new ActivityPopup();
@@ -40,7 +37,7 @@ public partial class SignUpPage : ContentPage
         string firstName = txtFirstName.Text;
         string lastName = txtLastName.Text;
         string email = txtEmail.Text;
-            
+
         if (firstName == null || lastName == null || email == null)
         {
             popup.Close();
@@ -63,6 +60,6 @@ public partial class SignUpPage : ContentPage
     private void LoginTapped(object sender, EventArgs e)
     {
         Navigation.PushAsync(new LoginPage());
-        
+
     }
 }

@@ -7,8 +7,8 @@
     xmlns:localMain="clr-namespace:AceMicEV"
     xmlns:Control="clr-namespace:AceMicEV.Controls"
     xmlns:Page ="clr-namespace:AceMicEV.Pages"
-    Shell.NavBarIsVisible="True"
-    Shell.FlyoutBehavior="Flyout">
+    Shell.FlyoutBehavior="Disabled"
+    Shell.FlyoutWidth="240">
 
     <ShellContent
         Title="WelCome"
@@ -64,83 +64,83 @@
         ContentTemplate="{DataTemplate local:ProfilePage}"
         Route="ProfilePage" 
         Shell.FlyoutItemIsVisible="False"
-        Shell.FlyoutBehavior="Disabled"
-        />
-
-    <ShellContent
-        Title="LoginPage"
-        ContentTemplate="{DataTemplate local:LoginPage}"
-        Route="LoginPage" 
         Shell.FlyoutBehavior="Disabled"/>
 
-
-    <FlyoutItem FlyoutDisplayOptions="AsSingleItem">
-
-        <ShellContent
-          Title="TabbarPage"
-          ContentTemplate="{DataTemplate local:TabbarPage}"
-          Route="TabbarPage"           
-            />
-
-
-        <ShellContent
-          Title="DashBoard Page"
-          ContentTemplate="{DataTemplate local:DashBoardPage}"
-          Route="DashBoardPage"
-         
-            />
-
-
-        <ShellContent
-        Title="Setting Page"
-        ContentTemplate="{DataTemplate Page:SettingPage}"
-        Route="SettingPage" 
-        
-            />
-
-    </FlyoutItem>
+    <ShellContent
+        Title="Login Page"
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="LoginPage" 
+        Shell.FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"/>
 
     <ShellContent
-        Title="About Page"
+          Title="Tabbar Page"
+          ContentTemplate="{DataTemplate local:TabbarPage}"
+          Route="TabbarPage" 
+          Shell.FlyoutItemIsVisible="False"
+          Shell.FlyoutBehavior="Disabled"/>
+
+    <ShellContent
+          Title="Favourtie's Page"
+          ContentTemplate="{DataTemplate local:DashBoardPage}"
+          Route="DashBoardPage"
+          Icon="fav.png"
+          Shell.FlyoutBehavior="Disabled"/>
+
+    <ShellContent
+        Title="FAQ"
+        ContentTemplate="{DataTemplate Page:SettingPage}"
+        Route="SettingPage" 
+        Icon="faq.png"
+        Shell.FlyoutBehavior="Disabled"/>
+
+    <ShellContent
+        Title="About Us"
         ContentTemplate="{DataTemplate Page:AboutPage}"
-        Route="AboutPage" 
-        Shell.FlyoutItemIsVisible="False"/>
+        Route="AboutPage"
+        Icon="aboutus.png"
+        Shell.FlyoutBehavior="Disabled"/>
+
+    <ShellContent
+        Title="Privacy Policy"
+        ContentTemplate="{DataTemplate Page:HomePage}"
+        Route="HomePage" 
+        Icon="privacy.png"
+        Shell.FlyoutBehavior="Disabled"/>
+
     <ShellContent
         Title="MyMainPage"
         ContentTemplate="{DataTemplate localMain:MainPage}"
         Route="MyMainPage" 
-        Shell.FlyoutItemIsVisible="False"/>
+        Shell.FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"/>
 
     <ShellContent
         Title="ScanPage"
         ContentTemplate="{DataTemplate localMain:ScanPage}"
         Route="ScanPage" 
-        Shell.FlyoutItemIsVisible="False"/>
+        Shell.FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"/>
 
     <ShellContent
         Title="Payment"
         ContentTemplate="{DataTemplate local:PaymentStutes}"
         Route="PaymentStutes" 
-        Shell.FlyoutItemIsVisible="False"/>
+        Shell.FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"/>
 
     <ShellContent
         Title="Charge"
         ContentTemplate="{DataTemplate local:ChargeStatus}" 
         Route="ChargeStatus"
-        Shell.FlyoutItemIsVisible="False"/>
+        Shell.FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"/>
 
     <ShellContent
         Title="FlyoutHeader"
         ContentTemplate="{DataTemplate Control:FlyoutHeaderControl}"
         Route="FlyoutHeaderControl" 
         Shell.FlyoutItemIsVisible="False"/>
-
-    <ShellContent
-        Title="Home Page"
-        ContentTemplate="{DataTemplate Page:HomePage}"
-        Route="HomePage" 
-        Shell.FlyoutItemIsVisible="False"/>
-
 
 </Shell>
    

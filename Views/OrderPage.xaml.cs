@@ -15,12 +15,28 @@ public partial class OrderPage : ContentPage
         date.Text = DateTime.Now.ToString();
         resultaddress.Text = address1.ToString();
         resultaddress2.Text = address2.ToString();
-        cityWise.Text = city.ToString();    
+        cityWise.Text = city.ToString();
         zipCode.Text = zipcode.ToString();
         var LoginName = Preferences.Get("EmailKey", "Null");
         UserProfileName.Text = LoginName;
         txtMachine.Text = did;
 
+    }
+    private double width = 0;
+    private double height = 0;
+    protected override void OnSizeAllocated(double width, double height)
+    {
+        base.OnSizeAllocated(width, height);
+
+        if (height <= 650)
+        {
+            Resources["lblUserdetails"] = Resources["lblUserdetailsVivo"];
+            Resources["lblFont"] = Resources["lblFontVivo"];
+            Resources["lblBookdetails"] = Resources["lblBookdetailsVivo"];
+            Resources["lblMachine"] = Resources["lblMachineVivo"];
+            Resources["lblUserProfile"] = Resources["lblUserProfileVivo"];
+
+        }
     }
     private async void SubmitPage_Clicked(object sender, EventArgs e)
     {

@@ -4,29 +4,74 @@
              x:Class="AceMicEV.Views.WelcomeScreen3"
              Title="WelcomeScreen3"
              Shell.NavBarIsVisible="False"
-             NavigationPage.HasNavigationBar="False"> 
-    
-        <StackLayout Style="{StaticResource lblScr}">
-            <Image Style="{StaticResource lblimage}"   Source="welcome3.png" />
+             FlowDirection="LeftToRight"
+             NavigationPage.HasNavigationBar="False">
 
+
+    <ContentPage.Resources>
+        <Style x:Key="lblHeader3Vivo" TargetType="Label">
+            <Setter Property="Margin" Value="0,10,0,15"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="WidthRequest" Value="328"/>
+            <Setter Property="TextColor" Value="#211e1f"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        </Style>
+
+        <Style x:Key="lblBtn3FsVivo"  TargetType="Button">
+            <Setter Property="WidthRequest" Value="150"/>
+            <Setter Property="HeightRequest" Value="60"/>
+            <Setter Property="BackgroundColor" Value="#00bf81"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+
+        <Style x:Key="lblbtn6Vivo"  TargetType="Button">
+            <Setter Property="WidthRequest" Value="150"/>
+            <Setter Property="HeightRequest" Value="60"/>
+            <Setter Property="BackgroundColor" Value="#00BF81"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="0.40*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0">
+            <Image Style="{DynamicResource lblimage}"   Source="welcome3.png" />
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                 <Image Source="line2.png" Margin="0,0,10,0"></Image>
                 <Image Source="line3.png" Margin="0,0,10,0"></Image>
                 <Image Source="line1.png" Margin="0,0,10,0"></Image>
             </StackLayout>
-
-            <Label Style="{StaticResource lblHeader}" Text="Discover nearby locations to charge your electric vehicle"/>
-
-            <Label Style="{StaticResource lbldescription}"  Text=" "/>
-
-        <StackLayout Style="{StaticResource lblline}" Margin="0,0,20,0" Padding="0" Spacing="15">
-            <Button Style="{StaticResource lblPrebtn1}" Text="Previous" CornerRadius="12" BorderColor="#00BF81" BorderWidth="1" Clicked="PrevBtn3_Clicked"/>
-                <Button Style="{StaticResource lblbtn5}" Text="Next" CornerRadius="12" Clicked="NextBtn3_Clicked"/>
-            </StackLayout>
-
-            <StackLayout>
-                <Button Style="{StaticResource lblSkipbtn}" Text="Skip" CornerRadius="12" Clicked="SkipBtn3_Clicked" Margin="0,20,0,0" TextColor="Grey" BackgroundColor="White" />
-            </StackLayout>
         </StackLayout>
-    
+
+        <StackLayout Grid.Row="1" VerticalOptions="Center">
+            <Label Style="{DynamicResource lblHeader}" Text="Discover nearby locations to charge your electric vehicle"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="2" Style="{DynamicResource lblline}" Spacing="15" VerticalOptions="End">
+            <Button Style="{DynamicResource lblPrebtn1}" Text="Previous" CornerRadius="12" BorderColor="#00BF81" BorderWidth="1" Clicked="PrevBtn3_Clicked"/>
+            <Button Style="{DynamicResource lblbtn5}" Text="Next" CornerRadius="12" Clicked="NextBtn3_Clicked"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Start">
+            <Label x:Name="Skip3Btn" Text="Skip" FontSize="20" TextColor="#848585" VerticalOptions="Center"  HorizontalOptions="Center" Margin="0,30,10,0">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Skip3Tapped" ></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+        
+    </Grid>
+         
 </ContentPage>

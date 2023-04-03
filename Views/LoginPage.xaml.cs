@@ -19,20 +19,21 @@ public partial class LoginPage : ContentPage
         InitializeComponent();
 
     }
-
     private double width = 0;
     private double height = 0;
     protected override void OnSizeAllocated(double width, double height)
     {
         base.OnSizeAllocated(width, height);
-        if (width != this.width || height != this.height)
+
+        if (height <= 650)
         {
-            this.width = width;
-            this.height = height;
-            outerStack1.WidthRequest = width;
-            outerStack1.HeightRequest = height;
+            Resources["mylbl22"] = Resources["mylblVivo"];
+            Resources["lblbtnlogin3"] = Resources["lblbtnlogin3Vivo"];
+            Resources["lblmargin5"] = Resources["lblmargin5Vivo"];
+
         }
     }
+
     private async void LogIn_Clicked(object sender, EventArgs e)
     {
 
@@ -44,7 +45,7 @@ public partial class LoginPage : ContentPage
         string password = txtPassword.Text;
         string userid = Preferences.Get("DidKey", null);
 
-        if (userName == null || password == null)
+        if (userName == null || password == null) 
         {
             popup.Close();
 

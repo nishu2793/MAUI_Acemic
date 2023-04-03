@@ -1,4 +1,5 @@
 ﻿using Android.App;
+using Android.OS;
 using Android.Content.PM;
 using Android.Widget;
 
@@ -14,4 +15,9 @@ public class MainActivity : MauiAppCompatActivity
     //      //DependencyService.Get<IAndroidMethods>().CloseApp();
     //    }
     //}
+    protected override void OnCreate(Bundle savedInstanceState)
+    {
+        base.OnCreate(savedInstanceState);
+        Window.DecorView.LayoutDirection = Android.Views.LayoutDirection.Rtl;
+    }
 }

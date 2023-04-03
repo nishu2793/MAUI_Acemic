@@ -2,82 +2,111 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AceMicEV.Views.LoginPage"
-             Title="LoginPage"       
+             Title="LoginPage"      
+             FlowDirection="LeftToRight"
              Shell.NavBarIsVisible="false"
             NavigationPage.HasNavigationBar="False">
-    <StackLayout x:Name="outerStack1" >
-        <StackLayout  Style="{StaticResource lblScr}">
-            <Frame Style="{StaticResource lblProScr}">
-                <Label Style="{StaticResource lblWel}" Text="Welcome Back!"></Label>
-            </Frame>
 
-            <Label Text="Enter Your details to get sign in to your account" FontSize="18" Margin="10,10,40,0" />
+    <ContentPage.Resources>
+        <Style x:Key="mylblVivo" TargetType="Label">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="5,5,0,0"/>
+        </Style>
+        <Style x:Key="lblbtnlogin3Vivo" TargetType="Button">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="WidthRequest" Value="150"/>
+            <Setter Property="HeightRequest" Value="40"/>
+        </Style>
+        <Style x:Key="lblmargin5Vivo" TargetType="StackLayout">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </ContentPage.Resources>
 
-            <StackLayout Style="{StaticResource lblline2}" Margin="5,5,20,0">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0" BackgroundColor="#E6F9F2">
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+
+                <Label Style="{DynamicResource lblWel}" Text="Welcome Back!" HorizontalOptions="Center"></Label>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout Grid.Row="1">
+            <Label Text="Enter Your details to get sign in to your account" Style="{DynamicResource mylbl22}"/>
+
+            <StackLayout>
                 <StackLayout>
-                    <Label Text="E-mail / Phone Number" FontSize="18"/>
+                    <Label Text="E-mail / Phone Number"  Style="{DynamicResource mylbl22}" />
                 </StackLayout>
-                
-                <StackLayout Margin="0,10,0,0">
-                    <Border StrokeShape="RoundRectangle 12,12,12,12">
-                        <Entry x:Name="txtUserID" Style="{StaticResource lblemail3}" />
+
+                <StackLayout>
+                    <Border StrokeShape="RoundRectangle 12,12,12,12" WidthRequest="340" >
+                        <Entry x:Name="txtUserID" Style="{DynamicResource lblemail3}"/>
                     </Border>
                 </StackLayout>
             </StackLayout>
 
-            <StackLayout>
-                <Label Text="Password" FontSize="18" Margin="10,10,0,10"/>
+            <StackLayout Margin="3,0,0,0">
+                <Label Text="Password"  Style="{DynamicResource mylbl22}"/>
             </StackLayout>
 
             <StackLayout>
-                <Border StrokeShape="RoundRectangle 12,12,12,12" WidthRequest="345" Margin="0,0,18,0">
-                    <Entry x:Name="txtPassword" Style="{StaticResource lblPass3}"/>
+                <Border StrokeShape="RoundRectangle 12,12,12,12" WidthRequest="340" >
+                    <Entry x:Name="txtPassword" Style="{DynamicResource lblPass3}"/>
                 </Border>
             </StackLayout>
 
-            <StackLayout Style="{StaticResource lblline7}">
-                <StackLayout Style="{StaticResource lbllineCheck}">
+            <StackLayout Style="{DynamicResource lblline7}">
+                <StackLayout Style="{DynamicResource lbllineCheck}">
                     <CheckBox x:Name="checkBox" CheckedChanged="Check_Btn"/>
-                    <Label Style="{StaticResource lblRemember}" Margin="0,6,40,0"></Label>
+                    <Label Style="{DynamicResource lblRemember}" Margin="0,0,40,0" ></Label>
                 </StackLayout>
 
                 <StackLayout>
-                        <Label Text="Forgot Password?" FontSize="16" TextColor="#007AFF" Margin="0,10,60,0"/>
-                    </StackLayout>
+                    <Label Text="Forgot Password?" FontSize="16" TextColor="#007AFF" Margin="0,5,60,0"  Style="{DynamicResource mylbl22}"/>
+                </StackLayout>
             </StackLayout>
-
-            <Label
-                     x:Name="lblChat"
-                     FontSize="18"
-                     HorizontalOptions="StartAndExpand"
-                     TextType="Html"></Label>
 
             <StackLayout>
-                <Button Style="{StaticResource lblLoginbtn}" Text="Login" CornerRadius="10" HorizontalOptions="Center" VerticalOptions="Center" Clicked="LogIn_Clicked"></Button>
+                <Button Style="{DynamicResource lblbtnlogin3}" Text="Login" CornerRadius="10" HorizontalOptions="Center" VerticalOptions="Center" Clicked="LogIn_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout Grid.Row="2">
+
+            <StackLayout Orientation="Horizontal" Style="{DynamicResource lblmargin5}" HorizontalOptions="Center">
+                <Line X2="105" Stroke="black" StrokeThickness="1" Margin="0,12,0,0"></Line>
+                <Label Style="{DynamicResource lbllin2}" Text="Or Continue With" TextColor="Black" />
+                <Line X2="90" Stroke="black" StrokeThickness="1" Margin="0,12,0,0"></Line>
             </StackLayout>
 
-            
-            <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
-                <Line X2="115" Stroke="black" StrokeThickness="1" Margin="0,15,0,0"></Line>
-                <Label Style="{StaticResource lbllin2}" Text="Or Continue With" TextColor="Black"/>
-                <Line X2="100" Stroke="black" StrokeThickness="1" Margin="0,15,0,0"></Line>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,30,0,0">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Style="{DynamicResource lblmargin5}">
                 <Image Source="google.png" Margin="10,0,40,0"></Image>
                 <Image Source="facebook.png" Margin="0,0,40,0"></Image>
                 <Image Source="twitter.png" Margin="0,0,10,0"></Image>
             </StackLayout>
-            <StackLayout Style="{StaticResource lblSkipLine}" Spacing="5" Margin="45,30,0,0">
-                <Label Text="Don't have an account?" FontSize="17"></Label>
 
-                <StackLayout>
-                    <Label x:Name="SignupBtn" Text="Sign up" FontSize="17" TextColor="#007AFF">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding SignUpCommand}" Tapped="SignTapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
-                        </Label.GestureRecognizers>
-                    </Label>
+            <StackLayout Style="{DynamicResource lblmargin5}">
+                <StackLayout Style="{DynamicResource lblSkipLine}" Spacing="5" HorizontalOptions="Center" >
+                    <Label Text="Don't have an account?" FontSize="17"/>
+
+                    <StackLayout>
+                        <Label x:Name="SignupBtn" Text="Sign up" FontSize="17" TextColor="#007AFF">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SignUpCommand}" Tapped="SignTapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                    
                 </StackLayout>
             </StackLayout>
+
         </StackLayout>
-    </StackLayout>
+    </Grid>
+
 </ContentPage> 

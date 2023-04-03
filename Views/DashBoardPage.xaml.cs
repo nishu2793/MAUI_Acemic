@@ -1,4 +1,6 @@
 using AceMicEV.ViewModels;
+using Android.Icu.Text;
+using DocumentFormat.OpenXml.Drawing;
 
 namespace AceMicEV.Views;
 
@@ -13,26 +15,25 @@ public partial class DashBoardPage : ContentPage
 
         var LoginName = Preferences.Get("EmailKey", "Null");
         UserName.Text = LoginName;
-
-
     }
-
-   
-
     private double width = 0;
     private double height = 0;
     protected override void OnSizeAllocated(double width, double height)
     {
         base.OnSizeAllocated(width, height);
-        if (width != this.width || height != this.height)
+
+        if (height <= 650)
         {
-            this.width = width;
-            this.height = height;
-            outerStack2.WidthRequest = width;
-            outerStack2.HeightRequest = height;
-           
+            Resources["lblUserName"] = Resources["lblUserNameVivo"];
+            Resources["lblImageKey"] = Resources["lblImageKeyVivo"];
+            Resources["lblOrientation"] = Resources["lblOrientationVivo"];
+            Resources["lblOrientation1"] = Resources["lblOrientation1Vivo"];
+            Resources["lblBookSlot"] = Resources["lblBookSlotVivo"];
+
         }
     }
+
+
     private async void BarcodeClicked(object sender, EventArgs e)
     {
         bool allowed = false;
@@ -54,6 +55,12 @@ public partial class DashBoardPage : ContentPage
 
     private void PayClicked(object sender, EventArgs e)
     {
+
+    }
+
+    private void Tab_Clicked(object sender, EventArgs e)
+    {
+        //Shell.Current.FlyoutIsPresented = true;
 
     }
 }

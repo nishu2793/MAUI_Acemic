@@ -4,5 +4,5 @@
              xmlns:local="clr-namespace:AceMicEV.Views"
              x:Class="AceMicEV.MainPage"
              Shell.NavBarIsVisible="False">
-    
+
 </ContentPage>

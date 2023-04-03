@@ -4,20 +4,20 @@
              xmlns:tookit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="AceMicEV.Views.ConfiPage"
              Title="ConfiPage"
-             Shell.NavBarIsVisible="False"
+             Shell.NavBarIsVisible="False"  
+             FlowDirection="LeftToRight"
              NavigationPage.HasNavigationBar="False">
 
-    <StackLayout Style="{StaticResource lblScr}" MinimumHeightRequest="250" MinimumWidthRequest="300">
+    <StackLayout Style="{StaticResource lblScr}" MinimumHeightRequest="240" MinimumWidthRequest="300">
 
         <WebView x:Name="webView"                 
-                 WidthRequest="320" HeightRequest="630" Margin="0,10,20,0"/>
+                 WidthRequest="320" HeightRequest="600" Margin="0,10,20,0"/>
 
 
         <Button x:Name="btnexit"  Margin="20" Text="Exit" Clicked="WebClicked" WidthRequest="60" HeightRequest="35" BackgroundColor="#00BF81" IsVisible="False"/>
 
         <Label
                 x:Name="lblChat"
-               
                 FontSize="18"
                 HorizontalOptions="StartAndExpand"
                 TextType="Html"></Label>

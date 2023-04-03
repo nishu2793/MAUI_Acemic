@@ -3,87 +3,139 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AceMicEV.Views.OrderPage"
              Title="OrderPage"
+             FlowDirection="LeftToRight"
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False">
-    <StackLayout Style="{StaticResource lblScr}" VerticalOptions="Start">
-     
-        <StackLayout> 
-            <Image Source="hello.png" HorizontalOptions="Start" Margin="15,10,0,0"/>
-        </StackLayout>
-        <StackLayout>
-            <Label x:Name="UserProfileName" Text="User" HorizontalOptions="Start" Margin="15,0,0,20" FontSize="20" FontAttributes="Bold"></Label>
-        </StackLayout>
 
+    <ContentPage.Resources>
+        <Style x:Key="lblUserdetailsVivo" TargetType="Label">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Margin" Value="0,0,0,20"/>
+        </Style>
+        <Style x:Key="lblFontVivo" TargetType="Label">
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style x:Key="lblBookdetailsVivo" TargetType="Entry">
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="TextColor" Value="Black"/>
+        </Style>
+        <Style x:Key="lblMachineVivo" TargetType="Label">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="0,3,0,0"/>
+        </Style>
+        <Style x:Key="lblUserProfileVivo" TargetType="Entry">
+            <Setter Property="HeightRequest" Value="40"/>
+            <Setter Property="WidthRequest" Value="360"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="BackgroundColor" Value="#eef0f2"/>
+        </Style>
+       
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.8*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="0.1*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <StackLayout Grid.Row="0" Grid.ColumnSpan="2" Margin="10,10,0,0">
+                <StackLayout>
+                    <Image Source="hello.png" HorizontalOptions="Start" />
+                </StackLayout>
+                <StackLayout>
+                <Label x:Name="UserProfileName" Text="User" Style="{DynamicResource lblUserdetails}"></Label>
+                </StackLayout>
+            </StackLayout>
+
+        <StackLayout Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout>
+                <Label x:Name="BookDetails" Text="Booking Details" Style="{DynamicResource lblBookdetails}"/>
+            </StackLayout>
+        </StackLayout>
+        
         <!--BookDetails-->
 
-        <StackLayout>
-            <Label x:Name="BookDetails" Text="Booking Details" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" FontAttributes="Bold" />
+        <StackLayout Grid.Row="2" Grid.Column="0"  Margin="10,0,0,0" >
+            <StackLayout >
+                <Label x:Name="Date" Text="Date" />
+            </StackLayout>
+            <StackLayout >
+                <Label x:Name="txtCity" Text="City" />
+            </StackLayout>
+            <StackLayout >
+                <Label x:Name="txtZip" Text="ZipCode" />
+            </StackLayout>
+            <StackLayout >
+                <Label x:Name="Labeladdress" Text="Address1" />
+            </StackLayout>
+            <StackLayout >
+                <Label x:Name="Labeladdress1" Text="Address2" />
+            </StackLayout>
         </StackLayout>
 
-        <StackLayout Orientation="Horizontal" Margin="12,20,0,0" Spacing="160">
-            <Label x:Name="Date" Text="Date" FontSize="18"/>
-            <Label x:Name="date" HeightRequest="30" WidthRequest="200" TextColor="Black" FontAttributes="Bold"/>
-        </StackLayout>
-
-
-        <StackLayout Orientation="Horizontal" Margin="12,3,0,0" Spacing="168">
-            <Label x:Name="txtCity" Text="City" FontSize="18"/>
-            <Label x:Name="cityWise" HeightRequest="30" WidthRequest="200" TextColor="Black" FontAttributes="Bold"/>
-        </StackLayout>
-
-
-        <StackLayout Orientation="Horizontal" Margin="12,3,0,0" Spacing="135">
-            <Label x:Name="txtZip" Text="ZipCode" FontSize="18"/>
-            <Label x:Name="zipCode" HeightRequest="30" WidthRequest="200" TextColor="Black" FontAttributes="Bold"/>
-        </StackLayout>
-
-        <StackLayout Orientation="Horizontal" Margin="12,3,0,0" Spacing="128">
-            <Label x:Name="Labeladdress" Text="Address1" FontSize="18"/>
-            <Label x:Name="resultaddress" HeightRequest="30" WidthRequest="200" TextColor="Black" FontAttributes="Bold"/>
-        </StackLayout>
-
-        <StackLayout Orientation="Horizontal" Margin="12,3,0,0" Spacing="128">
-            <Label x:Name="Labeladdress1" Text="Address2" FontSize="18"/>
-            <Label x:Name="resultaddress2" HeightRequest="30" WidthRequest="200" TextColor="Black" FontAttributes="Bold"/>
+        <StackLayout Grid.Row="2" Grid.Column="1" >
+            <Label x:Name="date" Style="{DynamicResource lblNameWise}" />
+            <Label x:Name="cityWise" Style="{DynamicResource lblNameWise}"/>
+            <Label x:Name="zipCode" Style="{DynamicResource lblNameWise}"/>
+            <Label x:Name="resultaddress" Style="{DynamicResource lblNameWise}"/>
+            <Label x:Name="resultaddress2" Style="{DynamicResource lblNameWise}"/>
         </StackLayout>
         
         <!--order Form-->
 
-        <StackLayout>
-            <Label x:Name="txtOrder" Text="Order Form" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="Black" Margin="10"/>
-        </StackLayout>
-        
-        <StackLayout>
-            <Label Text="Machine ID" FontSize="16" Margin="12,10,0,0"/>
-        </StackLayout>
-        <StackLayout>
-            <Entry x:Name="txtMachine" Style="{StaticResource lblUserProfile}" Placeholder="  Machine ID" IsEnabled="False"/>
+        <StackLayout Grid.Row="3" Margin="10,0,0,0" Grid.ColumnSpan="2" HorizontalOptions="Center">
+
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="OrderForm" Text="Order Form" Style="{DynamicResource lblBookdetails}"/>
+                </StackLayout>
+         
+            <StackLayout>
+                <Label Text="Machine ID" Style="{DynamicResource lblMachine}"/>
+            </StackLayout>
+            <StackLayout>
+                <Border StrokeShape="RoundRectangle 12,12,12,12" WidthRequest="340" Margin="0,0,20,0">
+                    <Entry x:Name="txtMachine" Style="{StaticResource lblUserProfile}" Placeholder=" Machine ID" IsEnabled="False" />
+                </Border>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Amount (INR)" Style="{DynamicResource lblMachine}"/>
+            </StackLayout>
+            <StackLayout>
+                <Border StrokeShape="RoundRectangle 12,12,12,12" WidthRequest="340" Margin="0,0,20,0">
+                    <Entry x:Name="txtAmount" Style="{StaticResource lblUserProfile}" Placeholder=" ₹" />
+                </Border>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Order Type" Style="{DynamicResource lblMachine}"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Border StrokeShape="RoundRectangle 12,12,12,12" WidthRequest="340" Margin="0,0,20,0">
+                    <Picker x:Name="dwnSelctType" Title="  Please Select Order Type"  BackgroundColor="#eef0f2" WidthRequest="340" HeightRequest="50" HorizontalOptions="Start">
+                        <Picker.Items>
+                            <x:String>Fix</x:String>
+                            <x:String>Unit</x:String>
+                            <x:String>Time</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+            </StackLayout>
+            <StackLayout>
+                <Button Text="Order Now" CornerRadius="12" Clicked="SubmitPage_Clicked"  WidthRequest="150" HeightRequest="50" Margin="30" BackgroundColor="#00BF81"/>
+            </StackLayout>
+
         </StackLayout>
 
-        <StackLayout>
-            <Label Text="Amount (INR)" FontSize="16" Margin="12,0,0,0"/>
-        </StackLayout>
-        <StackLayout>
-            <Entry x:Name="txtAmount" Style="{StaticResource lblUserProfile}" Placeholder="  ₹"/>
-        </StackLayout>
-
-
-        <StackLayout>
-            <Label Text="Order Type" FontSize="16" Margin="12,10,0,0"/>
-        </StackLayout>
-        <Picker x:Name="dwnSelctType" Title="   Please Select Order Type"  BackgroundColor="#eef0f2" Margin="12,10,35,0" WidthRequest="330" HeightRequest="50">
-            <Picker.Items>
-                <x:String>Fix</x:String>
-                <x:String>Unit</x:String>
-                <x:String>Time</x:String>
-            </Picker.Items>
-        </Picker>
-
-        <StackLayout>
-            <Button Text="Order Now" CornerRadius="12" Clicked="SubmitPage_Clicked"  WidthRequest="100" HeightRequest="50" Margin="30" BackgroundColor="#00BF81"/>
-        </StackLayout>
-
-
-    </StackLayout>
-    
+    </Grid>
 </ContentPage>

@@ -9,6 +9,18 @@ public partial class WelcomeScreen : ContentPage
         InitializeComponent();
         BindingContext = this;
     }
+    private double width = 0;
+    private double height = 0;
+    protected override void OnSizeAllocated(double width, double height)
+    {
+        base.OnSizeAllocated(width, height);
+
+        if (height <= 650)
+        {
+            Resources["lblHeader"] = Resources["lblHeaderVivo"];
+            Resources["lblBtnFs"] = Resources["lblBtnFsVivo"];
+        }
+    }
 
     protected override bool OnBackButtonPressed()
     {
@@ -33,10 +45,9 @@ public partial class WelcomeScreen : ContentPage
         
         Navigation.PushAsync(new WelcomeScreen2());
 
-
     }
 
-    private void SkipBtn_Clicked(object sender, EventArgs e)
+    private void SkipTapped(object sender, TappedEventArgs e)
     {
         statusBar.StatusBarColor = Colors.MediumSeaGreen;
         statusBar.StatusBarStyle = CommunityToolkit.Maui.Core.StatusBarStyle.LightContent;

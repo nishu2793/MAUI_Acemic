@@ -3,33 +3,76 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AceMicEV.Views.WelcomeScreen2"
              Title="WelcomeScreen2"
+             FlowDirection="LeftToRight"
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False"
-             Shell.FlyoutBehavior="Disabled"
-             >
+             Shell.FlyoutBehavior="Disabled">
 
-    <StackLayout Style="{StaticResource lblScr}">
-        <Image Style="{StaticResource lblimage}"  Source="v1_121.png"/>
+    <ContentPage.Resources>
+        <Style x:Key="lblHeader2Vivo" TargetType="Label">
+            <Setter Property="Margin" Value="0,10,0,15"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="WidthRequest" Value="328"/>
+            <Setter Property="TextColor" Value="#211e1f"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        </Style>
+
+        <Style x:Key="lblBtn2FsVivo"  TargetType="Button">
+            <Setter Property="WidthRequest" Value="150"/>
+            <Setter Property="HeightRequest" Value="60"/>
+            <Setter Property="BackgroundColor" Value="#00bf81"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+
+        <Style x:Key="lblbtn5Vivo"  TargetType="Button">
+            <Setter Property="WidthRequest" Value="150"/>
+            <Setter Property="HeightRequest" Value="60"/>
+            <Setter Property="BackgroundColor" Value="#00BF81"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="0.25*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0">
+            <Image Style="{DynamicResource lblimage}"  Source="v1_121.png"/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Image Source="line2.png" Margin="0,0,10,0"></Image>
+                <Image Source="line2.png" Margin="0,10,10,0"></Image>
                 <Image Source="line1.png" Margin="0,0,10,0"></Image>
                 <Image Source="line3.png" Margin="0,0,10,0"></Image>
             </StackLayout>
-
-            <Label Style="{StaticResource lblHeade2}" Text="Looking for Charging Station for your electric vehicle ?"/>
-
-        <Label Style="{StaticResource lbldescription}"  Text="Acemic is offering EV Charging solutions for users"/>
-
-        <StackLayout Style="{StaticResource lblline}" Margin="0,0,20,0" Padding="0" Spacing="15">
-            <Button Style="{StaticResource lblPrebtn}" Text="Previous" CornerRadius="12" BorderColor="#00BF81" BorderWidth="1" Clicked="PreBtn2_Clicked"/>
-            <Button Style="{StaticResource lblbtn5}" Text="Next" CornerRadius="12" Clicked="NextBtn2_Clicked"></Button>
         </StackLayout>
 
-        <StackLayout>
-            <Button Style="{StaticResource lblSkipbtn1}" Text="Skip" CornerRadius="12" Clicked="SkipBtn2_Clicked" BackgroundColor="White" TextColor="Gray"></Button>
+        <StackLayout Grid.Row="1">
+            <Label Style="{DynamicResource lblHeade2}" Text="Looking for Charging Station for your electric vehicle ?"/>
+            <Label Style="{DynamicResource lbldescription}"  Text="Acemic is offering EV Charging solutions for users"/>
         </StackLayout>
 
-       
-    </StackLayout>
-    
+        <StackLayout Grid.Row="2" Style="{DynamicResource lblline}" Spacing="15" VerticalOptions="Start" Margin="10">
+                <Button Style="{DynamicResource lblPrebtn}" Text="Previous" CornerRadius="12" BorderColor="#00BF81" BorderWidth="1" Clicked="PreBtn2_Clicked"/>
+                <Button Style="{DynamicResource lblbtn5}" Text="Next" CornerRadius="12" Clicked="NextBtn2_Clicked"></Button>
+        </StackLayout>
+
+
+        <StackLayout Grid.Row="3" VerticalOptions="Center" HorizontalOptions="Center">
+            <Label x:Name="Skip1Btn" Text="Skip" FontSize="18" TextColor="#848585">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Skip1Tapped" ></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+        
+    </Grid>               
+
 </ContentPage>

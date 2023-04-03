@@ -19,7 +19,7 @@
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-		<ApplicationVersion>1</ApplicationVersion>
+		<ApplicationVersion>2</ApplicationVersion>
 
 		<!--<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>-->
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
@@ -88,6 +88,7 @@
 	  <None Remove="Resources\AppIcon\aacemic.png" />
 	  <None Remove="Resources\Fonts\Poppins-Regular.ttf" />
 	  <None Remove="Resources\Images\about.png" />
+	  <None Remove="Resources\Images\aboutus.png" />
 	  <None Remove="Resources\Images\acemiclogo.png" />
 	  <None Remove="Resources\Images\asddd.png" />
 	  <None Remove="Resources\Images\Book.png" />
@@ -97,9 +98,13 @@
 	  <None Remove="Resources\Images\card2.png" />
 	  <None Remove="Resources\Images\charging.png" />
 	  <None Remove="Resources\Images\checkcorrect.gif" />
+	  <None Remove="Resources\Images\dashboard.png" />
 	  <None Remove="Resources\Images\facebook.png" />
 	  <None Remove="Resources\Images\fail.png" />
+	  <None Remove="Resources\Images\faq.png" />
+	  <None Remove="Resources\Images\fav.png" />
 	  <None Remove="Resources\Images\forgot.png" />
+	  <None Remove="Resources\Images\gear.png" />
 	  <None Remove="Resources\Images\google.png" />
 	  <None Remove="Resources\Images\Hello.png" />
 	  <None Remove="Resources\Images\home.png" />
@@ -114,6 +119,7 @@
 	  <None Remove="Resources\Images\myprofile.png" />
 	  <None Remove="Resources\Images\nearbydevices.png" />
 	  <None Remove="Resources\Images\payment.png" />
+	  <None Remove="Resources\Images\privacy.png" />
 	  <None Remove="Resources\Images\qrcode.png" />
 	  <None Remove="Resources\Images\scan.png" />
 	  <None Remove="Resources\Images\settings.png" />
@@ -183,6 +189,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\MapPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MyFlyoutPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\NotificationPage.xaml">

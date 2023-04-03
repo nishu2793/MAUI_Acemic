@@ -38,6 +38,17 @@ public partial class ConfiPage : ContentPage
         WebClicked(btnexit,new EventArgs ());
 
     }
+    private double width = 0;
+    private double height = 0;
+    protected override void OnSizeAllocated(double width, double height)
+    {
+        base.OnSizeAllocated(width, height);
+
+        if (height <= 650)
+        {
+
+        }
+    }
 
     private async void WebClicked(object sender, EventArgs e)
     {

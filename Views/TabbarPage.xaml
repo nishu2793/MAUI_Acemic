@@ -2,14 +2,13 @@
 <Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AceMicEV.Views.TabbarPage"
+             FlowDirection="LeftToRight"
              xmlns:local="clr-namespace:AceMicEV.Views"
+             Shell.FlyoutBehavior="Flyout"
              Shell.NavBarIsVisible="False"
-            Shell.FlyoutBehavior="Flyout"
-            Shell.FlyoutItemIsVisible="True"
-             Title="TabbarPage"
-            >
-    
-    <TabBar FlyoutItemIsVisible="False">
+             Title="TabbarPage">
+
+    <TabBar>
 
         <Tab Title="Home" Icon="homeicon.png">
             <ShellContent ContentTemplate="{DataTemplate local:DashBoardPage}"></ShellContent>

@@ -3,54 +3,131 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AceMicEV.Views.ProfilePage"
              Title="ProfilePage"
+             FlowDirection="LeftToRight"
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False">
-    <StackLayout Style="{StaticResource lblScr}">
-        <Frame Style="{StaticResource lblProScr}">
-            <ImageButton x:Name="ImgBtn" Source="imagebox.png" Clicked="Image_Clicked" Margin="0,50,0,0" 
-                             HeightRequest="150" WidthRequest="150">
-            </ImageButton>
-        </Frame>
-        <StackLayout Style="{StaticResource lblScr2}" Spacing="10">
-            <StackLayout Style="{StaticResource lblFnln}">
-                <Label Style="{StaticResource LblFnLnName}" Text="First Name" Margin="8,100,100,0" VerticalOptions="Start" />
-                <Label Style="{StaticResource LblFnLnName}" Text="Last Name" Margin="0,100,0,0" VerticalOptions="Start" />
+
+    <ContentPage.Resources>
+        <Style x:Key="lblImageBtnVivo" TargetType="ImageButton">
+            <Setter Property="Margin" Value="0,50,0,0"/>
+        </Style>
+
+        <Style x:Key="LblFnVivoName" TargetType="Label">
+            <Setter Property="HeightRequest" Value="20"/>
+            <Setter Property="WidthRequest" Value="90"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="8,100,100,0"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+        </Style>
+        <Style x:Key="LblLnVivoName" TargetType="Label">
+            <Setter Property="HeightRequest" Value="20"/>
+            <Setter Property="WidthRequest" Value="90"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="0,100,0,0"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+        </Style>
+        <Style x:Key="lblbackgroundVivo" TargetType="StackLayout">
+            <Setter Property="HeightRequest" Value="140"/>
+        </Style>
+        <Style x:Key="lblRadiobtnVivo" TargetType="RadioButton">
+            <Setter Property="Margin" Value="62,5,0,0"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style x:Key="lblFeRadiobtnVivo" TargetType="RadioButton">
+            <Setter Property="Margin" Value="0,5,0,0"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style x:Key="lblFnln2Vivo" TargetType="StackLayout">
+            <Setter Property="HeightRequest" Value="35"/>
+            <Setter Property="Orientation" Value="Horizontal"/>
+        </Style>
+        <Style x:Key="lblPhoneNoVivo" TargetType="RadioButton">
+            <Setter Property="Margin" Value="10,0,0,0"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style x:Key="lblGenderVivo" TargetType="Label">
+            <Setter Property="Text" Value="Gender"/>
+            <Setter Property="Margin" Value="10,5,0,0"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style x:Key="lblE-mailVivo" TargetType="Label">
+            <Setter Property="Margin" Value="10,0,0,0"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style x:Key="lblDonebtnVivo"  TargetType="Button">
+            <Setter Property="WidthRequest" Value="180"/>
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="BackgroundColor" Value="#00bf81"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="0,20,0,0"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+    </ContentPage.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.7*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0" Grid.Column="0">
+            <StackLayout BackgroundColor="#E6F9F2" Style="{DynamicResource lblbackground}">
+                <ImageButton x:Name="ImgBtn" Source="imagebox.png" Clicked="Image_Clicked" Style="{DynamicResource lblImageBtn}">
+                </ImageButton>
             </StackLayout>
-            <StackLayout>
-                <StackLayout Style="{StaticResource lblFnln}" Spacing="5">
-                    <Entry x:Name="FName"  Style="{StaticResource lblFnln3}"/>
-                    <Entry x:Name="LName"  Style="{StaticResource lblFnln3}"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" Margin="5,0,0,0">
+            <StackLayout Spacing="5">
+                <StackLayout Style="{DynamicResource lblFnln}">
+                    <Label Style="{DynamicResource LblFnName}" Text="First Name"  />
+                    <Label Style="{DynamicResource LblLnName}" Text="Last Name"  />
                 </StackLayout>
                 <StackLayout>
-                    <StackLayout Style="{StaticResource lblFnln2}" Spacing="3">
-                        <Label Style="{StaticResource lblGender}"/>
-                        
-                        <StackLayout Margin="3,0,0,0">
-                                <RadioButton Content="Male" Margin="62,16,0,0" FontSize="18" GroupName="Gendergroup" CheckedChanged="RadioButton_CheckedChanged" />
-                         </StackLayout>
-                                 <StackLayout Margin="27,0,0,0">
-                            <RadioButton Content="Female" Margin="0,16,0,0" FontSize="18" IsChecked="True" GroupName="Gendergroup" CheckedChanged="RadioButton_CheckedChanged" />
-                                 </StackLayout>
-                     </StackLayout>
+                    <StackLayout Style="{DynamicResource lblFnln}" Spacing="10">
+                        <Border StrokeShape="RoundRectangle 12,12,12,12" WidthRequest="160">
+                            <Entry x:Name="FName"  Style="{DynamicResource lblFnln3}"/>
+                        </Border>
+                        <Border StrokeShape="RoundRectangle 12,12,12,12" WidthRequest="160">
+                            <Entry x:Name="LName"  Style="{DynamicResource lblFnln3}"/>
+                        </Border>
+                    </StackLayout>
+                    <StackLayout>
+                        <StackLayout Style="{DynamicResource lblFnln2}" Spacing="3">
+                            <Label Style="{DynamicResource lblGender}"/>
+                            <StackLayout Margin="3,0,0,0">
+                                <RadioButton Content="Male" CheckedChanged="RadioButton_CheckedChanged" Style="{DynamicResource lblRadiobtn}"/>
+                            </StackLayout>
+                            <StackLayout Margin="27,0,0,0">
+                                <RadioButton Content="Female" Style="{DynamicResource lblFeRadiobtn}" CheckedChanged="RadioButton_CheckedChanged" />
+                            </StackLayout>
+                        </StackLayout>
 
-                    <StackLayout>
-                        <Label Text="Phone Number" Margin="5,0,0,10" FontSize="18"/>
                         <StackLayout>
-                            <Entry x:Name="txtPhone" Style="{StaticResource lblPhoneNo}" Keyboard="Numeric"/>
+                            <Label Text="Phone Number" Style="{DynamicResource lblMobileNo}"/>
+                            <StackLayout>
+                                <Border StrokeShape="RoundRectangle 12,12,12,12" WidthRequest="340">
+                                    <Entry x:Name="txtPhone" Style="{DynamicResource lblPhoneNo}" Keyboard="Numeric"/>
+                                </Border>
+                            </StackLayout>
                         </StackLayout>
-                    </StackLayout>
-                    <StackLayout>
-                        <Label Text="E-mail" Margin="5,10,0,10" FontSize="18"/>
                         <StackLayout>
-                            <Entry x:Name="txtEmail" Style="{StaticResource lblemail2}"/>
+                            <Label Text="E-mail" Style="{DynamicResource lblE-mail}"/> 
+                            <StackLayout>
+                                <Border StrokeShape="RoundRectangle 12,12,12,12" WidthRequest="340">
+                                    <Entry x:Name="txtEmail" Style="{DynamicResource lblemail2}"/>
+                                </Border>
+                            </StackLayout>
                         </StackLayout>
+                        <StackLayout>
+                            <Button Style="{DynamicResource lblDonebtn}" Text="Done" CornerRadius="12"  Clicked="ProClicked_Clicked"/>
+                        </StackLayout>
+
                     </StackLayout>
-                    <StackLayout>
-                        <Button Style="{StaticResource lblbtn2}" Text="Done" CornerRadius="12" Margin="60" Clicked="ProClicked_Clicked"/>
-                    </StackLayout>
-                    
                 </StackLayout>
             </StackLayout>
         </StackLayout>
-    </StackLayout>
+
+    </Grid>
+
 </ContentPage>

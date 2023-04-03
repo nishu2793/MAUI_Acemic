@@ -19,6 +19,29 @@ public partial class ProfilePage : ContentPage
         txtEmail.Text = Preferences.Get("EmailKey", "Null").ToString();
 
     }
+    private double width = 0;
+    private double height = 0;
+    protected override void OnSizeAllocated(double width, double height)
+    {
+        base.OnSizeAllocated(width, height);
+
+        if (height <= 650)
+        {
+            Resources["LblFnName"] = Resources["LblFnVivoName"];
+            Resources["LblLnName"] = Resources["LblLnVivoName"];
+            Resources["lblbackground"] = Resources["lblbackgroundVivo"];
+            Resources["lblRadiobtn"] = Resources["lblRadiobtnVivo"];
+            Resources["lblFeRadiobtn"] = Resources["lblFeRadiobtnVivo"];
+            Resources["lblMobileNo"] = Resources["lblPhoneNoVivo"];
+            Resources["lblFnln2"] = Resources["lblFnln2Vivo"];
+            Resources["lblE-mail"] = Resources["lblE-mailVivo"];
+            Resources["lblDonebtn"] = Resources["lblDonebtnVivo"];
+            Resources["lblImageBtn"] = Resources["lblImageBtnVivo"];
+            Resources["lblGender"] = Resources["lblGenderVivo"];
+
+
+        }
+    }
     public async void Image_Clicked(object sender, EventArgs e)
     {
         PickOptions options = new PickOptions();
@@ -67,10 +90,10 @@ public partial class ProfilePage : ContentPage
         {
             await Navigation.PushAsync(new LoginPage());
         }
-        
 
-       
+
+
     }
 
-   
+
 }

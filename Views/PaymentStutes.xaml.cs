@@ -25,20 +25,6 @@ public partial class PaymentStutes : ContentPage
             lblPaymentorderid.Text = Paymentorderid;
     }
 
-    private double width = 0;
-    private double height = 0;
-    protected override void OnSizeAllocated(double width, double height)
-    {
-        base.OnSizeAllocated(width, height);
-        if (width != this.width || height != this.height)
-        {
-            this.width = width;
-            this.height = height;
-            outerStack2.WidthRequest = width;
-            outerStack2.HeightRequest = height;
-        }
-    }
-
     private void successlicked(object sender, EventArgs e)
     {
         Navigation.PushAsync(new DashBoardPage());

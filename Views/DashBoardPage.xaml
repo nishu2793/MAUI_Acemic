@@ -4,22 +4,69 @@
              x:Class="AceMicEV.Views.DashBoardPage"
              xmlns:local="clr-namespace:AceMicEV.Views"
              Title="DashBoardPage"
+             FlowDirection="LeftToRight"
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False"
-             Shell.FlyoutItemIsVisible="True"
-             Shell.FlyoutBehavior="Flyout">
+             Shell.FlyoutItemIsVisible="True"                 
+             Shell.FlyoutBehavior="Disabled">
 
-    <StackLayout x:Name="outerStack2">
+    <ContentPage.Resources>
+        <Style x:Key="lblUserNameVivo" TargetType="Label">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+        <Style x:Key="lblImageKeyVivo" TargetType="ImageButton">
+            <Setter Property="HeightRequest" Value="130"/>
+            <Setter Property="WidthRequest" Value="110"/>
+            <Setter Property="BorderWidth" Value="3"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="BackgroundColor" Value="#00BF81"/>
+        </Style>
+        <Style x:Key="lblOrientationVivo" TargetType="StackLayout">
+            <Setter Property="Margin" Value="25,90,0,0"/>
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="Spacing" Value="80"/>
+        </Style>
+        <Style x:Key="lblOrientation1Vivo" TargetType="StackLayout">
+            <Setter Property="Margin" Value="25,30,0,40"/>
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="Spacing" Value="80"/>
+        </Style>
+        <Style x:Key="lblbookingSlot" TargetType="ImageButton">
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="WidthRequest" Value="150"/>
+            <Setter Property="Margin" Value="0,5,165,0"/>
+            <Setter Property="BackgroundColor" Value="#D4F5FE"/>
+            <Setter Property="CornerRadius" Value="12"/>
+            <Setter Property="BorderWidth" Value="3"/>
+        </Style>
+        <Style x:Key="lblBookSlotVivo" TargetType="Label">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="Margin" Value="20,5,0,0"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+    </ContentPage.Resources>
 
-        <StackLayout>
-            <ImageButton Source="menubar.png"  HeightRequest="50" WidthRequest="30" Margin="0,0,20,0" HorizontalOptions="End" />
-        </StackLayout>
-            
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+
+
+        <StackLayout Grid.Row="0">
+            <StackLayout>
+                <ImageButton Source="menubar.png"  HeightRequest="50" WidthRequest="30" Margin="0,0,20,0" HorizontalOptions="End" Clicked="Tab_Clicked"/>
+            </StackLayout>
+
             <StackLayout>
                 <Image Source="hello.png" HorizontalOptions="Start" Margin="20,0,0,0" VerticalOptions="Start"/>
             </StackLayout>
             <StackLayout>
-                <Label x:Name="UserName" Text="User" HorizontalOptions="Start" Margin="20,0,0,0" FontSize="20" FontAttributes="Bold"></Label>
+                <Label x:Name="UserName" Text="User" Style="{DynamicResource lblUserName}"></Label>
             </StackLayout>
 
             <SearchBar x:Name="searchBar"
@@ -28,34 +75,39 @@
             </SearchBar>
 
             <StackLayout>
-                <Label Text="Book Now!" HorizontalOptions="Start" Margin="20,5,0,0" FontSize="18" FontAttributes="Bold"/>
+                <Label Text="Book Now!"  Style="{DynamicResource lblBookSlot}"/>
             </StackLayout>
             <StackLayout>
-                <ImageButton Source="bookslot.png" HeightRequest="60" WidthRequest="180" BackgroundColor="#D4F5FE" Margin="0,10,135,0" Clicked="slotClicked" CornerRadius="12" BorderWidth="3"/>
+                <ImageButton Source="bookslot.png"  Clicked="slotClicked" Style="{DynamicResource lblbookingSlot}"/>
             </StackLayout>
+        </StackLayout>
 
-            <StackLayout Orientation="Horizontal" Margin="25,20,0,0" Spacing="30">
+        <StackLayout Grid.Row="1">
+            <StackLayout Style="{DynamicResource lblOrientation}">
                 <StackLayout>
-                    <ImageButton Source="qrcode.png" CornerRadius="12" Clicked="BarcodeClicked" WidthRequest="140" HeightRequest="150" BorderWidth="3" BorderColor="#00BF81"/>
+                    <ImageButton Source="qrcode.png"  Clicked="BarcodeClicked"  Style="{DynamicResource lblImageKey}"/>
                 </StackLayout>
                 <StackLayout>
-                    <ImageButton Source="booking.png" CornerRadius="12" Clicked="ScanClicked" WidthRequest="140" HeightRequest="150" BorderWidth="3" BorderColor="#00BF81"/>
-                </StackLayout>
-            </StackLayout>
-
-            <StackLayout Orientation="Horizontal" Margin="25,55,0,40" Spacing="30">
-                <StackLayout>
-                    <ImageButton Source="nearbydevices.png" CornerRadius="12" Clicked="ScanClicked" WidthRequest="140" HeightRequest="150" BorderWidth="3" BorderColor="#00BF81"/>
-                </StackLayout>
-                <StackLayout>
-                    <ImageButton Source="myprofile.png" CornerRadius="12" Clicked="PayClicked" WidthRequest="140" HeightRequest="150" BorderWidth="3" BorderColor="#00BF81"/>
-                </StackLayout>
-                <StackLayout>
-                    <ImageButton Source="booking.png" CornerRadius="12" Clicked="ScanClicked" WidthRequest="140" HeightRequest="160" BorderWidth="3" BorderColor="#00BF81"/>
+                    <ImageButton Source="booking.png"  Clicked="ScanClicked" Style="{DynamicResource lblImageKey}"/>
                 </StackLayout>
             </StackLayout>
+        </StackLayout>
 
-    </StackLayout>
+
+
+        <StackLayout Grid.Row="2">
+                <StackLayout Style="{DynamicResource lblOrientation1}">
+                    <StackLayout>
+                    <ImageButton Source="nearbydevices.png"  Clicked="ScanClicked" Style="{DynamicResource lblImageKey}"/>
+                    </StackLayout>
+                    <StackLayout>
+                    <ImageButton Source="myprofile.png"  Clicked="PayClicked" Style="{DynamicResource lblImageKey}"/>
+                    </StackLayout>
+                </StackLayout>
+         </StackLayout>
+
+
+    </Grid>
 
 </ContentPage>  
 

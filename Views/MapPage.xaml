@@ -4,6 +4,7 @@
              xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
              xmlns:loc="clr-namespace:Microsoft.Maui.Devices.Sensors;assembly=Microsoft.Maui.Essentials"
              x:Class="AceMicEV.Views.MapPage"
+             FlowDirection="LeftToRight"
              NavigationPage.HasNavigationBar="False"
              Title="MapPage">
 

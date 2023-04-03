@@ -2,11 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AceMicEV.Views.AboutPage"
+             FlowDirection="LeftToRight"
              Title="AboutPage">
     <VerticalStackLayout>
         <Label 
-            Text="About Page"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            Text="About Page"/>
+
     </VerticalStackLayout>
 </ContentPage>

@@ -3,43 +3,49 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AceMicEV.Views.VerifiyOtpPage"
              Title="VerifiyOtpPage"
+             FlowDirection="LeftToRight"
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False">
-    <StackLayout Style="{StaticResource lblScr}">
-        <StackLayout Style="{StaticResource lblline3}">
-            <StackLayout Orientation="Horizontal">
-                <Label Text="VERIFY DETAILS" Margin="30" HeightRequest="200" FontAttributes="Bold" FontSize="22"  TextColor="Black"/>
-                <Image Style="{StaticResource lblImage3}" Source="v1_132.png"></Image>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.7*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0">
+            <StackLayout Style="{DynamicResource lblline3}">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="VERIFY DETAILS" Margin="30" HeightRequest="200" FontAttributes="Bold" FontSize="22"  TextColor="Black"/>
+                        <Image Style="{DynamicResource lblImage3}" Source="v1_132.png"></Image>
+                    </StackLayout>      
             </StackLayout>
         </StackLayout>
-        <StackLayout>
-            <Label Style="{StaticResource lblDes1}" Text="Enter the verification code we just sent on your email address."/>
-            <StackLayout>
-                <Label Style="{StaticResource lbllineSpace}" Text="Enter OTP" Margin="5,20,0,0"/>
-            </StackLayout>
 
-            <StackLayout Style="{StaticResource lblOtpline}" Margin="5,0,0,0">
-
-                <Entry x:Name="entry1" Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1" TextChanged="textChangeentry1"/>
-                <Entry x:Name="entry2" Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1" TextChanged="textChangeentry2"/>
-                <Entry x:Name="entry3" Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1" TextChanged="textChangeentry3"/>
-                <Entry x:Name="entry4" Style="{StaticResource lblotp1}" Keyboard="Numeric" MaxLength="1" TextChanged="textChangeentry4"/>
-            </StackLayout>
+        <StackLayout Grid.Row="1" Margin="10,0,0,0">
                 
-
-            <StackLayout>
-                <Label Style="{StaticResource lbltext}" Text="Didn't receive OTP? Retry in 00.15 "/>
-            </StackLayout>
-
-            <StackLayout>
-                <Button x:Name="Verify1" Style="{StaticResource lblbtn2}" Text="Verify" CornerRadius="12" Clicked="VerifyBtn_Clicked"/>
-            </StackLayout>
-            
-            <StackLayout>
-                <Label x:Name="OtpShow" HorizontalOptions="Center" Margin="0,20,0,0"/>
-            </StackLayout>
-            
+                <Label Style="{DynamicResource lblDes1}" Text="Enter the verification code we just sent on your email address."/>
+                <StackLayout>
+                    <Label Style="{DynamicResource lbllineSpace}" Text="Enter OTP" Margin="5,5,0,0"/>
+                </StackLayout>
+                <StackLayout Style="{DynamicResource lblOtpline}">
+                    <Entry x:Name="entry1" Style="{DynamicResource lblotp1}" Keyboard="Numeric" MaxLength="1" TextChanged="textChangeentry1"/>
+                    <Entry x:Name="entry2" Style="{DynamicResource lblotp1}" Keyboard="Numeric" MaxLength="1" TextChanged="textChangeentry2"/>
+                    <Entry x:Name="entry3" Style="{DynamicResource lblotp1}" Keyboard="Numeric" MaxLength="1" TextChanged="textChangeentry3"/>
+                    <Entry x:Name="entry4" Style="{DynamicResource lblotp1}" Keyboard="Numeric" MaxLength="1" TextChanged="textChangeentry4"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Style="{DynamicResource lbltext}" Text="Didn't receive OTP? Retry in 00.15 "/>
+                </StackLayout>
+                <StackLayout>
+                    <Label x:Name="OtpShow" HorizontalOptions="Center" Margin="0,5,0,0"/>
+                </StackLayout>
+                <StackLayout>
+                    <Button x:Name="Verify1" Style="{DynamicResource lblVerifybtn}" Text="Verify" CornerRadius="12" Clicked="VerifyBtn_Clicked"/>
+                </StackLayout>
+                
         </StackLayout>
-    </StackLayout>
+
+    </Grid>
 
 </ContentPage>
