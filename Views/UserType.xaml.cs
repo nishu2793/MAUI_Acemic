@@ -21,7 +21,7 @@ public partial class UserType : ContentPage
 
     private void UserBtn_Clicked(object sender, EventArgs e)
     {
-        Preferences.Set("IntroScreenKey", "Yes");
+        Preferences.Set("IntroScreenKey", "No");
         Navigation.PushAsync(new SignUpPage());
 
         var mytest = Preferences.Get("IntroScreenKey", "No");

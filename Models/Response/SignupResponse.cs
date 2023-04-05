@@ -20,7 +20,6 @@ namespace AceMicEV.Models.Response
         public string otp { get; set; }
 
         public string password { get; set; }
-
         public string mobileNo { get; set; }
         public string createdOn { get; set; }
         public string createdBy { get; set; }

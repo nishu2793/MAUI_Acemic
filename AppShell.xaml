@@ -94,6 +94,15 @@
         Icon="faq.png"
         Shell.FlyoutBehavior="Disabled"/>
 
+    <Shell.FlyoutFooter>
+        <StackLayout HeightRequest="50" WidthRequest="100" >
+        <Button Text="Log Out"
+                BackgroundColor="#00BF81"
+                Shell.FlyoutBehavior="Disabled"
+                Clicked="LogoutClicked"/>
+        </StackLayout>
+    </Shell.FlyoutFooter>
+         
     <ShellContent
         Title="About Us"
         ContentTemplate="{DataTemplate Page:AboutPage}"

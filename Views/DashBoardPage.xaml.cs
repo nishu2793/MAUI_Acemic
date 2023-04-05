@@ -63,4 +63,12 @@ public partial class DashBoardPage : ContentPage
         //Shell.Current.FlyoutIsPresented = true;
 
     }
+
+    private void logoutClicked(object sender, EventArgs e)
+    {
+        Preferences.Set("TokenKey", null);
+        Preferences.Set("EmailKey", null);
+        Navigation.PushAsync(new LoginPage());
+
+    }
 }
